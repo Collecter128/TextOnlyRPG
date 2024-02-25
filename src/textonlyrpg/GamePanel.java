@@ -20,7 +20,7 @@ public class GamePanel extends JPanel implements Runnable{
 	
 	Keyhandler keyHandler = new Keyhandler();
 	Thread gamethread;
-	
+	passwordRW PasswordRW = new passwordRW(this);
 	static int Ypos = 190; //CurserPosY
 	static int Xpos = 7; //CurserPosX
 	//int Ypos = 70; //CurserPosY
@@ -40,6 +40,17 @@ public class GamePanel extends JPanel implements Runnable{
 	//4 = Other Story
 	//5 = Glitch
 	//6 = Beta
+	
+	String OldPassword = "OldPassword";//Password being loaded from file
+	String Password = "EmptyPassword";
+	String FuturePassword = "??";//Random Password displayed at the end
+	static int PasswordMode = 1;//TODO Password Only in active Mode for testing ourposes
+	//0 = Normal Mode, Password screen is only a title screen...
+	//1 = "Active Mode" (During "Normal Gameplay" Cheats?) password screen Accessible from gameplay
+	
+	static int PasswordToggle = 0;
+	int ATurns = 0;//Action Turns
+	int BTurns = 0;//Battle Turns
 
 	int ScreenType = 0;//Password Screen
 	static int ScreenMode = 1;
@@ -3404,7 +3415,7 @@ public class GamePanel extends JPanel implements Runnable{
 				
 				//Password Screen Up
 				if(ScreenType == 0){
-					if(Xpos == 7 && Ypos == 190 && MainClass.PasswordMode == 1){// Active Mode
+					if(Xpos == 7 && Ypos == 190 && PasswordMode == 1){// Active Mode
 						Ypos = 165;
 					}
 				}
@@ -4296,35 +4307,36 @@ public class GamePanel extends JPanel implements Runnable{
 				//MoveScreen Down
 				if(ScreenType == 7){
 					if(AreasFound != 0){
+						System.out.println("What is area placement" + AreaPlacement);
 						if(Ypos == 165 && AreasFound >= 10 && AreaPlacement >= AreasFound - 10){
 							Ypos = 190;
 							Xpos = 140;
+						}//End of if has no more areas and can press down
+						else if(Ypos == 165 && AreasFound >= 10 && AreaPlacement < AreasFound - 10){
+							AreaPlacement = AreaPlacement + 1;
+							Area1 = NULLData;
+							Area2 = NULLData;
+							Area3 = NULLData;
+							Area4 = NULLData;
+							Area5 = NULLData;
+							Area6 = NULLData;
+							Area7 = NULLData;
+							Area8 = NULLData;
+							Area9 = NULLData;
+							Area10 = NULLData;
+							AreaD = AreaData.AList(Area1Found, CurrentArea.AreaNo, AccessArea);{
+								Area1 = AreaD[0 + AreaPlacement];
+								Area2 = AreaD[1 + AreaPlacement];
+								Area3 = AreaD[2 + AreaPlacement];
+								Area4 = AreaD[3 + AreaPlacement];
+								Area5 = AreaD[4 + AreaPlacement];
+								Area6 = AreaD[5 + AreaPlacement];
+								Area7 = AreaD[6 + AreaPlacement];
+								Area8 = AreaD[7 + AreaPlacement];
+								Area9 = AreaD[8 + AreaPlacement];
+								Area10 = AreaD[9 + AreaPlacement];
+							}
 						}
-						if(Ypos == 165 && AreasFound >= 10 && AreaPlacement < AreasFound - 10){
-						AreaPlacement = AreaPlacement + 1;
-						Area1 = NULLData;
-						Area2 = NULLData;
-						Area3 = NULLData;
-						Area4 = NULLData;
-						Area5 = NULLData;
-						Area6 = NULLData;
-						Area7 = NULLData;
-						Area8 = NULLData;
-						Area9 = NULLData;
-						Area10 = NULLData;
-						AreaD = AreaData.AList(Area1Found, CurrentArea.AreaNo, AccessArea);{
-							Area1 = AreaD[0 + AreaPlacement];
-							Area2 = AreaD[1 + AreaPlacement];
-							Area3 = AreaD[2 + AreaPlacement];
-							Area4 = AreaD[3 + AreaPlacement];
-							Area5 = AreaD[4 + AreaPlacement];
-							Area6 = AreaD[5 + AreaPlacement];
-							Area7 = AreaD[6 + AreaPlacement];
-							Area8 = AreaD[7 + AreaPlacement];
-							Area9 = AreaD[8 + AreaPlacement];
-							Area10 = AreaD[9 + AreaPlacement];
-						}
-					}
 						int YPOSNEW = 0;
 						int XPOSNEW = 0;
 						YPOSNEW = Movement.CurserMoveDown(Xpos, Ypos, ScreenType, AreasFound, AreaPlacement)[0];//Odd Placement like 0, 0 or 0 , 30
@@ -5553,7 +5565,7 @@ public class GamePanel extends JPanel implements Runnable{
 			}
 			
 			if(ScreenType == 0){
-				MainClass.PasswordToggle = 1;
+				PasswordToggle = 1;
 			}
 			
 			if(EventS == 1){//BattleStart
@@ -8700,7 +8712,7 @@ public class GamePanel extends JPanel implements Runnable{
 			//Password Screen Enter TODO Password Screen Enter
 			//Enter Password
 			//New Game
-			if(ScreenType == 0 && MainClass.PasswordToggle == 1){
+			if(ScreenType == 0 && PasswordToggle == 1){
 				//Back
 				if(Xpos == 7 && Ypos == 165){//Back to move screen
 					ScreenType = 7;
@@ -8711,6 +8723,7 @@ public class GamePanel extends JPanel implements Runnable{
 				else if(Xpos == 7 && Ypos == 190){//Load Currently Save Password
 					//LoadPassword();
 					//LoadFromPassword(Password);
+					LoadGamefromPassword();
 					//Area, X Y
 				}//password Screen Enter Load End
 				//Password
@@ -9928,7 +9941,7 @@ public class GamePanel extends JPanel implements Runnable{
 			ItemToggle = 0;
 			MoveToggle = 0;
 			EnterToggle = 0;
-			MainClass.PasswordToggle = 0;
+			PasswordToggle = 0;
 			
 			Keyhandler.EnterPressed = false;
 		}//Enter Pressed End
@@ -10099,6 +10112,10 @@ public class GamePanel extends JPanel implements Runnable{
 						g.drawString("Back", 15, 170);
 					//}
 						g.drawString(MainClass.GlitchHPString(15, 15, 15, 15, 1), 255, 170);
+						
+						g.drawString(OldPassword, 15, 215);
+						g.drawString(Password, 15, 235);
+						g.drawString(FuturePassword, 15, 235);
 				}//screentype 0 password end
 				
 				//NotesFound = TestNote1Found + TestNote2Found + TestNote3Found + TestNote4Found + TestNote5Found + TestNote6Found + TestNote7Found + TestNote8Found + TestNote9Found + TestNote10Found;---------------?
@@ -13154,6 +13171,9 @@ public void NewishGame(){
 			//6 = Beta
 		MainClass.XBattleMode = 0;
 		
+		AccessArea = AreaData.LoadAreaPathNormal();
+		AreasFound = AreaData.ATotal(Area1Found, GamePanel.CurrentArea.AreaNo, AccessArea);
+		
 		CurrentArea = AreaData.AData(9, 0, MainClass.SEventSecond);//Town Gate
 		AreaName = CurrentArea.AreaName;
 		AreaNumber = CurrentArea.AreaNo;
@@ -13172,5 +13192,17 @@ public void NewishGame(){
 		LoadCutscene(CurrentCutscene);
 		
 }//Newish Game End
+
+public void LoadGamefromPassword() {
+	String LoadedPassword = passwordRW.loadPassword();
+	OldPassword = Password;
+	Password = LoadedPassword;
+	int[] loadingfrompasswordint = new int[]{0};
+	loadingfrompasswordint = Passwords.LoadFromPasswordA(Password);
+	CHP1 = loadingfrompasswordint[0] - 48;
+	CHP2 = loadingfrompasswordint[1] - 48;
+	CHP3 = loadingfrompasswordint[2] - 48;
+	CHP4 = loadingfrompasswordint[3] - 48;
+}//Load from Password End
 	
 }//JPanel Class End

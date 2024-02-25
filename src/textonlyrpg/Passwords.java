@@ -71,6 +71,19 @@ public class Passwords {
 	public void Initialize(){
 	}
 	
+	public static int[] LoadFromPasswordA(String password) {
+		
+		int[] passwordAContents = new int[]{/*CHP*/0,0,0,0, /*Level*/0};
+		
+		//CHP
+		int i = 0;
+		while(i < 5) {
+			passwordAContents[i] = password.charAt(i);
+			i = i +1;
+		}
+		return passwordAContents;
+	}
+	
 	public static int[] Cheat(int keyPressed, int Var1, int VarM){
 		int[] CheatValue = new int[]{Var1,VarM};
 		
