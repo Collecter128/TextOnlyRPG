@@ -8,4 +8,9 @@ Features: Being my first game it's really not that fancy or special compaired to
 -Fight monsters
 -craft things at stores
 
+Controls:
+Arrow Keys to move curser
+Enter to select options
+That's mostly it...
+
 Please note that as of writing this, the RPG is still being worked on. So it's in a very incomplete state.
