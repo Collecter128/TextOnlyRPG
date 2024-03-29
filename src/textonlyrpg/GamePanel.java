@@ -894,7 +894,7 @@ public class GamePanel extends JPanel implements Runnable{
 	//Doppleganger?
 	///Drain/Vampire Slime
 	
-	int[] Monster1Found = new int[358];{
+	int[] Monster1Found = new int[360];{
 		Monster1Found[0] = 1; //Defaulter 0
 		Monster1Found[1] = 1; //00 Coded Edge 1
 		Monster1Found[2] = 1; //CodedEdge 1.5 2
@@ -1378,12 +1378,12 @@ public class GamePanel extends JPanel implements Runnable{
 		Monster1Found[356] = 1;//Scarecrow
 		Monster1Found[357] = 1;//Target
 		
-		//Monster1Found[0] = 0; //FF
-		//Monster1Found[0] = 0; //Gamebox
+		Monster1Found[358] = 1; //FF
+		Monster1Found[359] = 1; //Gamebox
 		
-		//Monster1Found[0] = 0; //Nameless
-		//Monster1Found[0] = 0; //Shapeless
-		//Monster1Found[0] = 0; //Formless
+		//Monster1Found[360] = 0; //Nameless
+		//Monster1Found[361] = 0; //Shapeless
+		//Monster1Found[362] = 0; //Formless
 		
 		//Monster1Found[0] = 0; //Red Armor 51
 		//Monster1Found[0] = 0; //Crimson Armor
@@ -1439,7 +1439,7 @@ public class GamePanel extends JPanel implements Runnable{
 	}
 	
 	
-	static int[] Monster1Defeated = new int[358];{//NoDefeated
+	static int[] Monster1Defeated = new int[360];{//NoDefeated
 		Monster1Defeated[0] = 0; //Defaulter 0
 		
 		Monster1Defeated[1] = 0;//Coded Edge 1
@@ -1924,12 +1924,12 @@ public class GamePanel extends JPanel implements Runnable{
 		Monster1Defeated[356] = 0;//Scarecrow
 		Monster1Defeated[357] = 0;//Target
 		
-		//Monster1Defeated[0] = 0; //FF
-		//Monster1Defeated[0] = 0; //Gamebox
+		Monster1Defeated[358] = 0; //FF
+		Monster1Defeated[359] = 0; //Gamebox
 		
-		//Monster1Defeated[0] = 0; //Nameless
-		//Monster1Defeated[0] = 0; //Shapeless
-		//Monster1Defeated[0] = 0; //Formless
+		//Monster1Defeated[360] = 0; //Nameless
+		//Monster1Defeated[361] = 0; //Shapeless
+		//Monster1Defeated[362] = 0; //Formless
 		
 		//Monster1Defeated[0] = 0; //Red Armor
 		//Monster1Defeated[0] = 0; //Crimson Armor
