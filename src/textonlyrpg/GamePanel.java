@@ -1385,57 +1385,57 @@ public class GamePanel extends JPanel implements Runnable{
 		//Monster1Found[361] = 0; //Shapeless
 		//Monster1Found[362] = 0; //Formless
 		
-		//Monster1Found[0] = 0; //Red Armor 51
-		//Monster1Found[0] = 0; //Crimson Armor
-		//Monster1Found[0] = 0; //Cookie Armor
+		//Monster1Found[363] = 0; //Red Armor 51
+		//Monster1Found[364] = 0; //Crimson Armor
+		//Monster1Found[365] = 0; //Cookie Armor
 		
-		//Monster1Found[0] = 0;//Pink Master
-		//Monster1Found[0] = 0;//Sakura Don
-		//Monster1Found[0] = 0;//Fusia Fighter
+		//Monster1Found[366] = 0;//Pink Master
+		//Monster1Found[367] = 0;//Sakura Don
+		//Monster1Found[368] = 0;//Fusia Fighter
 		
-		//Monster1Found[0] = 0;//Enemy Spy
-		//Monster1Found[0] = 0;//Ninja
-		//Monster1Found[0] = 0;//Thief
+		//Monster1Found[369] = 0;//Enemy Spy
+		//Monster1Found[370] = 0;//Ninja
+		//Monster1Found[371] = 0;//Thief
 		
-		//Monster1Found[0] = 0;//Warlock	
-		//Monster1Found[0] = 0;//Evil Warlock
-		//Monster1Found[0] = 0;//Magician
+		//Monster1Found[372] = 0;//Warlock	
+		//Monster1Found[373] = 0;//Evil Warlock
+		//Monster1Found[374] = 0;//Magician
 		
-		//Monster1Found[0] = 0;//Catapult
-		//Monster1Found[0] = 0;//Gatling
-		//Monster1Found[0] = 0;//Cannon
+		//Monster1Found[375] = 0;//Catapult
+		//Monster1Found[376] = 0;//Gatling
+		//Monster1Found[377] = 0;//Cannon
 		
-		//Monster1Found[0] = 0;//Pos Logger
-		//Monster1Found[0] = 0;//Compass Rose
-		//Monster1Found[0] = 0;//Comp Lost
+		//Monster1Found[378] = 0;//Pos Logger
+		//Monster1Found[379] = 0;//Compass Rose
+		//Monster1Found[380] = 0;//Comp Lost
 		
-		//Monster1Found[0] = 0;//Victory Sword
-		//Monster1Found[0] = 0;//Victory Blade
-		//Monster1Found[0] = 0;//Victory Dagger
+		//Monster1Found[381] = 0;//Victory Sword
+		//Monster1Found[382] = 0;//Victory Blade
+		//Monster1Found[383] = 0;//Victory Dagger
 		
-		//Monster1Found[0] = 0;//Blue Candle
-		//Monster1Found[0] = 0;//Green Candle
-		//Monster1Found[0] = 0;//Gold Candle
+		//Monster1Found[384] = 0;//Blue Candle
+		//Monster1Found[385] = 0;//Green Candle
+		//Monster1Found[386] = 0;//Gold Candle
 		
-		//Monster1Found[0] = 0;//Barrier	
-		//Monster1Found[0] = 0;//Aura
-		//Monster1Found[0] = 0;//Bubble
+		//Monster1Found[387] = 0;//Barrier	
+		//Monster1Found[388] = 0;//Aura
+		//Monster1Found[389] = 0;//Bubble
 		
-		//Monster1Found[0] = 0;//Shield	
-		//Monster1Found[0] = 0;//Barricade
-		//Monster1Found[0] = 0;//Buckler
+		//Monster1Found[390] = 0;//Shield	
+		//Monster1Found[391] = 0;//Barricade
+		//Monster1Found[392] = 0;//Buckler
 		
-		//Monster1Found[0] = 0;//Hyper Armor
-		//Monster1Found[0] = 0;//Aura Plate
-		//Monster1Found[0] = 0;//H Aura Mail
+		//Monster1Found[393] = 0;//Hyper Armor
+		//Monster1Found[394] = 0;//Aura Plate
+		//Monster1Found[395] = 0;//H Aura Mail
 		
-		//Monster1Found[0] = 0;//Arm0r
-		//Monster1Found[0] = 0;//Brittle Armor
-		//Monster1Found[0] = 0;//Mystery Armor
+		//Monster1Found[396] = 0;//Arm0r
+		//Monster1Found[397] = 0;//Brittle Armor
+		//Monster1Found[398] = 0;//Mystery Armor
 		
-		//Monster1Found[0] = 0;//01000010 01101001 01101110 01100001 01110010 01111001
-		//Monster1Found[0] = 0;//48 65 78 63 6f 64 65
-		//Monster1Found[0] = 0;//Safxoh
+		//Monster1Found[399] = 0;//01000010 01101001 01101110 01100001 01110010 01111001
+		//Monster1Found[400] = 0;//48 65 78 63 6f 64 65
+		//Monster1Found[401] = 0;//Safxoh
 	}
 	
 	
@@ -1931,57 +1931,57 @@ public class GamePanel extends JPanel implements Runnable{
 		//Monster1Defeated[361] = 0; //Shapeless
 		//Monster1Defeated[362] = 0; //Formless
 		
-		//Monster1Defeated[0] = 0; //Red Armor
-		//Monster1Defeated[0] = 0; //Crimson Armor
-		//Monster1Defeated[0] = 0; //Cookie Armor
+		//Monster1Defeated[363] = 0; //Red Armor
+		//Monster1Defeated[364] = 0; //Crimson Armor
+		//Monster1Defeated[365] = 0; //Cookie Armor
 
-		//Monster1Defeated[0] = 0; //Pink Master
-		//Monster1Defeated[0] = 0; //Sakura Don
-		//Monster1Defeated[0] = 0; //Fusia Fighter
+		//Monster1Defeated[366] = 0; //Pink Master
+		//Monster1Defeated[367] = 0; //Sakura Don
+		//Monster1Defeated[368] = 0; //Fusia Fighter
 		
-		//Monster1Defeated[0] = 0; //Enemy Spy
-		//Monster1Defeated[0] = 0; //Ninja
-		//Monster1Defeated[0] = 0; //Thief
+		//Monster1Defeated[369] = 0; //Enemy Spy
+		//Monster1Defeated[370] = 0; //Ninja
+		//Monster1Defeated[371] = 0; //Thief
 		
-		//Monster1Defeated[0] = 0; //Warlock	
-		//Monster1Defeated[0] = 0; //Evil Warlock
-		//Monster1Defeated[0] = 0; //Magician
+		//Monster1Defeated[372] = 0; //Warlock	
+		//Monster1Defeated[373] = 0; //Evil Warlock
+		//Monster1Defeated[374] = 0; //Magician
 		
-		//Monster1Defeated[0] = 0; //Catapult
-		//Monster1Defeated[0] = 0; //Gatling
-		//Monster1Defeated[0] = 0; //Cannon
+		//Monster1Defeated[375] = 0; //Catapult
+		//Monster1Defeated[376] = 0; //Gatling
+		//Monster1Defeated[377] = 0; //Cannon
 		
-		//Monster1Defeated[0] = 0; //Pos Logger
-		//Monster1Defeated[0] = 0; //Compass Rose
-		//Monster1Defeated[0] = 0; //Comp Lost
+		//Monster1Defeated[378] = 0; //Pos Logger
+		//Monster1Defeated[379] = 0; //Compass Rose
+		//Monster1Defeated[380] = 0; //Comp Lost
 		
-		//Monster1Defeated[0] = 0; //Victory Sword
-		//Monster1Defeated[0] = 0; //Victory Blade
-		//Monster1Defeated[0] = 0; //Victory Dagger
+		//Monster1Defeated[381] = 0; //Victory Sword
+		//Monster1Defeated[382] = 0; //Victory Blade
+		//Monster1Defeated[383] = 0; //Victory Dagger
 		
-		//Monster1Defeated[0] = 0; //Blue Candle
-		//Monster1Defeated[0] = 0; //Green Candle
-		//Monster1Defeated[0] = 0; //Gold Candle
+		//Monster1Defeated[384] = 0; //Blue Candle
+		//Monster1Defeated[385] = 0; //Green Candle
+		//Monster1Defeated[386] = 0; //Gold Candle
 		
-		//Monster1Defeated[0] = 0; //Barrier
-		//Monster1Defeated[0] = 0; //Aura
-		//Monster1Defeated[0] = 0; //Bubble
+		//Monster1Defeated[387] = 0; //Barrier
+		//Monster1Defeated[388] = 0; //Aura
+		//Monster1Defeated[389] = 0; //Bubble
 		
-		//Monster1Defeated[0] = 0; //Shield
-		//Monster1Defeated[0] = 0; //Barricade
-		//Monster1Defeated[0] = 0; //Buckler
+		//Monster1Defeated[390] = 0; //Shield
+		//Monster1Defeated[391] = 0; //Barricade
+		//Monster1Defeated[392] = 0; //Buckler
 		
-		//Monster1Defeated[0] = 0; //Hyper Armor
-		//Monster1Defeated[0] = 0; //Aura Plate
-		//Monster1Defeated[0] = 0; //H Aura Mail
+		//Monster1Defeated[393] = 0; //Hyper Armor
+		//Monster1Defeated[394] = 0; //Aura Plate
+		//Monster1Defeated[395] = 0; //H Aura Mail
 		
-		//Monster1Defeated[0] = 0; //Arm0r
-		//Monster1Defeated[0] = 0; //Brittle Armor
-		//Monster1Defeated[0] = 0; //Mystery Armor
+		//Monster1Defeated[396] = 0; //Arm0r
+		//Monster1Defeated[397] = 0; //Brittle Armor
+		//Monster1Defeated[398] = 0; //Mystery Armor
 		
-		//Monster1Defeated[0] = 0; //01000010 01101001 01101110 01100001 01110010 01111001
-		//Monster1Defeated[0] = 0; //48 65 78 63 6f 64 65
-		//Monster1Defeated[0] = 0; //Safxoh
+		//Monster1Defeated[399] = 0; //01000010 01101001 01101110 01100001 01110010 01111001
+		//Monster1Defeated[400] = 0; //48 65 78 63 6f 64 65
+		//Monster1Defeated[401] = 0; //Safxoh
 
 	}
 	
