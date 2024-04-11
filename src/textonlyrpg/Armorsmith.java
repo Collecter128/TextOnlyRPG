@@ -468,6 +468,369 @@ public class Armorsmith {
 				Total = Total + 1;
 			}//Alloy I
 			
+			if(ArmorFound[38] == 1){//Helmet
+				if(ArmorMade[38] == 0){
+					AData[Total] = new Armorsmith(39, 206, "Helmet", "A helmet", 104, "Metal C", 0, "", 1, 0, 3);
+				}
+				if(ArmorMade[38] == 1){
+					AData[Total] = new Armorsmith(39, 206, "Helmet", "A helmet", 104, "Metal C", 0, "", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Helmet
+			if(ArmorFound[39] == 1){//Armor
+				if(ArmorMade[39] == 0){
+					AData[Total] = new Armorsmith(40, 207, "Armor", "Body Armor", 104, "Metal C", 0, "", 1, 0, 3);
+				}
+				if(ArmorMade[39] == 1){
+					AData[Total] = new Armorsmith(40, 207, "Armor", "Body Armor", 104, "Metal C", 0, "", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Armor
+			if(ArmorFound[40] == 1){//Gauntlets
+				if(ArmorMade[40] == 0){
+					AData[Total] = new Armorsmith(41, 208, "Gauntlts", "Hand armor", 104, "Metal C", 0, "", 1, 0, 3);
+				}
+				if(ArmorMade[40] == 1){
+					AData[Total] = new Armorsmith(41, 208, "Gauntlts", "Hand armor", 104, "Metal C", 0, "", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Gauntlets
+			if(ArmorFound[41] == 1){//Boots
+				if(ArmorMade[41] == 0){
+					AData[Total] = new Armorsmith(42, 209, "Boots", "Foot armor", 104, "Metal C", 0, "", 1, 0, 3);
+				}
+				if(ArmorMade[41] == 1){
+					AData[Total] = new Armorsmith(42, 209, "Boots", "Foot armor", 104, "Metal C", 0, "", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Boots
+
+			if(ArmorFound[42] == 1){//Fire Helmet
+				if(ArmorMade[42] == 0){
+					AData[Total] = new Armorsmith(43, 210, "FireHelm", "Fire Helmet", 104, "Metal C", 112, "FrEnergy", 1, 0, 3);
+				}
+				if(ArmorMade[42] == 1){
+					AData[Total] = new Armorsmith(43, 210, "FireHelm", "Fire Helmet", 104, "Metal C", 112, "FrEnergy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Fire Helmet
+			if(ArmorFound[43] == 1){//Fire Armor
+				if(ArmorMade[43] == 0){
+					AData[Total] = new Armorsmith(44, 211, "FireArmr", "Fire Armor", 104, "Metal C", 112, "FrEnergy", 1, 0, 3);
+				}
+				if(ArmorMade[43] == 1){
+					AData[Total] = new Armorsmith(44, 211, "FireArmr", "Fire Armor", 104, "Metal C", 112, "FrEnergy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Fire Armor
+			if(ArmorFound[44] == 1){//Fire Gauntlets
+				if(ArmorMade[44] == 0){
+					AData[Total] = new Armorsmith(45, 212, "FireGntls", "Fire Gauntlets", 104, "Metal C", 112, "FrEnergy", 1, 0, 3);
+				}
+				if(ArmorMade[44] == 1){
+					AData[Total] = new Armorsmith(45, 212, "FireGntls", "Fire Gauntlets", 104, "Metal C", 112, "FrEnergy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Fire Gauntlets
+			if(ArmorFound[45] == 1){//Fire Boots
+				if(ArmorMade[45] == 0){
+					AData[Total] = new Armorsmith(46, 213, "FireBoots", "Fire Boots", 104, "Metal C", 112, "FrEnergy", 1, 0, 3);
+				}
+				if(ArmorMade[45] == 1){
+					AData[Total] = new Armorsmith(46, 213, "FireBoots", "Fire Boots", 104, "Metal C", 112, "FrEnergy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Fire Boots
+			
+			if(ArmorFound[46] == 1){//Water Helmet
+				if(ArmorMade[46] == 0){
+					AData[Total] = new Armorsmith(47, 214, "WtrHelm", "Water Helm", 104, "Metal C", 113, "WtEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[46] == 1){
+					AData[Total] = new Armorsmith(47, 214, "WtrHelm", "Water Helm", 104, "Metal C", 113, "WtEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Water Helmet
+			if(ArmorFound[47] == 1){//Water Armor
+				if(ArmorMade[47] == 0){
+					AData[Total] = new Armorsmith(48, 215, "WtrArmr", "Water Armor", 104, "Metal C", 113, "WtEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[47] == 1){
+					AData[Total] = new Armorsmith(48, 215, "WtrArmr", "Water Armor", 104, "Metal C", 113, "WtEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Water Armor
+			if(ArmorFound[48] == 1){//Water Gauntlets
+				if(ArmorMade[48] == 0){
+					AData[Total] = new Armorsmith(49, 216, "WtrGntls", "Water Gauntlets", 104, "Metal C", 113, "WtEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[48] == 1){
+					AData[Total] = new Armorsmith(49, 216, "WtrGntls", "Water Gauntlets", 104, "Metal C", 113, "WtEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Water Gauntlets
+			if(ArmorFound[49] == 1){//Water Boots
+				if(ArmorMade[49] == 0){
+					AData[Total] = new Armorsmith(50, 217, "WtrBoots", "Water Boots", 104, "Metal C", 113, "WtEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[49] == 1){
+					AData[Total] = new Armorsmith(50, 217, "WtrBoots", "Water Boots", 104, "Metal C", 113, "WtEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Water Boots
+			
+			if(ArmorFound[50] == 1){//Wind Helmet
+				if(ArmorMade[50] == 0){
+					AData[Total] = new Armorsmith(51, 218, "WndHelm", "Wind Helmet", 104, "Metal C", 114, "WdEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[50] == 1){
+					AData[Total] = new Armorsmith(51, 218, "WndHelm", "Wind Helmet", 104, "Metal C", 114, "WdEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Wind Helmet
+			if(ArmorFound[51] == 1){//Wind Armor
+				if(ArmorMade[51] == 0){
+					AData[Total] = new Armorsmith(52, 219, "WndArmr", "Wind Armor", 104, "Metal C", 114, "WdEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[51] == 1){
+					AData[Total] = new Armorsmith(52, 219, "WndArmr", "Wind Armor", 104, "Metal C", 114, "WdEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Wind Armor
+			if(ArmorFound[52] == 1){//Wind Gauntlets
+				if(ArmorMade[52] == 0){
+					AData[Total] = new Armorsmith(53, 220, "WndGntls", "Wind Gauntlets", 104, "Metal C", 114, "WdEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[52] == 1){
+					AData[Total] = new Armorsmith(53, 220, "WndGntls", "Wind Gauntlets", 104, "Metal C", 114, "WdEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Wind Gauntlets
+			if(ArmorFound[53] == 1){//Wind Boots
+				if(ArmorMade[53] == 0){
+					AData[Total] = new Armorsmith(54, 221, "WndBoots", "Wind Boots", 104, "Metal C", 114, "WdEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[53] == 1){
+					AData[Total] = new Armorsmith(54, 221, "WndBoots", "Wind Boots", 104, "Metal C", 114, "WdEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Wind Boots
+			
+			if(ArmorFound[54] == 1){//Earth Helmet
+				if(ArmorMade[54] == 0){
+					AData[Total] = new Armorsmith(55, 222, "ErthHelm", "Earth Helmet", 104, "Metal C", 115, "EthEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[54] == 1){
+					AData[Total] = new Armorsmith(55, 222, "ErthHelm", "Earth Helmet", 104, "Metal C", 115, "EthEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Earth Helmet
+			if(ArmorFound[55] == 1){//Earth Armor
+				if(ArmorMade[55] == 0){
+					AData[Total] = new Armorsmith(56, 223, "ErthArmr", "Earth Armor", 104, "Metal C", 115, "EthEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[55] == 1){
+					AData[Total] = new Armorsmith(56, 223, "ErthArmr", "Earth Armor", 104, "Metal C", 115, "EthEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Earth Armor
+			if(ArmorFound[56] == 1){//Earth Gauntlets
+				if(ArmorMade[56] == 0){
+					AData[Total] = new Armorsmith(57, 224, "ErthGntls", "Earth Gauntlets", 104, "Metal C", 115, "EthEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[56] == 1){
+					AData[Total] = new Armorsmith(57, 224, "ErthGntls", "Earth Gauntlets", 104, "Metal C", 115, "EthEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Earth Gauntlets
+			if(ArmorFound[57] == 1){//Earth Boots
+				if(ArmorMade[57] == 0){
+					AData[Total] = new Armorsmith(58, 225, "ErthBoots", "Earth Boots", 104, "Metal C", 115, "EthEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[57] == 1){
+					AData[Total] = new Armorsmith(58, 225, "ErthBoots", "Earth Boots", 104, "Metal C", 115, "EthEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Earth Boots
+			
+			if(ArmorFound[58] == 1){//Electric Helmet
+				if(ArmorMade[58] == 0){
+					AData[Total] = new Armorsmith(59, 226, "ElecHelm", "Electric Helmet", 104, "Metal C", 116, "ElcEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[58] == 1){
+					AData[Total] = new Armorsmith(59, 226, "ElecHelm", "Electric Helmet", 104, "Metal C", 116, "ElcEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Electric Helmet
+			if(ArmorFound[59] == 1){//Electric Armor
+				if(ArmorMade[59] == 0){
+					AData[Total] = new Armorsmith(60, 227, "ElecArmr", "Electric Armor", 104, "Metal C", 116, "ElcEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[59] == 1){
+					AData[Total] = new Armorsmith(60, 227, "ElecArmr", "Electric Armor", 104, "Metal C", 116, "ElcEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Electric Armor
+			if(ArmorFound[60] == 1){//Electric Gauntlets
+				if(ArmorMade[60] == 0){
+					AData[Total] = new Armorsmith(61, 228, "ElecGntlt", "Electric Gauntlets", 104, "Metal C", 116, "ElcEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[60] == 1){
+					AData[Total] = new Armorsmith(61, 228, "ElecGntlt", "Electric Gauntlets", 104, "Metal C", 116, "ElcEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Electric Gauntlets
+			if(ArmorFound[61] == 1){//Electric Boots
+				if(ArmorMade[61] == 0){
+					AData[Total] = new Armorsmith(62, 229, "ElecBoots", "Electric Boots", 104, "Metal C", 116, "ElcEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[61] == 1){
+					AData[Total] = new Armorsmith(62, 229, "ElecBoots", "Electric Boots", 104, "Metal C", 116, "ElcEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Electric Boots
+			
+			if(ArmorFound[62] == 1){//Ice Helmet
+				if(ArmorMade[62] == 0){
+					AData[Total] = new Armorsmith(63, 230, "IceHelm", "Ice Helmet", 104, "Metal C", 117, "IceEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[62] == 1){
+					AData[Total] = new Armorsmith(63, 230, "IceHelm", "Ice Helmet", 104, "Metal C", 117, "IceEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Ice Helmet
+			if(ArmorFound[63] == 1){//Ice Armor
+				if(ArmorMade[63] == 0){
+					AData[Total] = new Armorsmith(64, 231, "IceArmr", "Ice Armor", 104, "Metal C", 117, "IceEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[63] == 1){
+					AData[Total] = new Armorsmith(64, 231, "IceArmr", "Ice Armor", 104, "Metal C", 117, "IceEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Ice Armor
+			if(ArmorFound[64] == 1){//Ice Gauntlets
+				if(ArmorMade[64] == 0){
+					AData[Total] = new Armorsmith(65, 232, "IceGntlt", "Ice Gauntlets", 104, "Metal C", 117, "IceEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[64] == 1){
+					AData[Total] = new Armorsmith(65, 232, "IceGntlt", "Ice Gauntlets", 104, "Metal C", 117, "IceEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Ice Gauntlets
+			if(ArmorFound[65] == 1){//Ice Boots
+				if(ArmorMade[65] == 0){
+					AData[Total] = new Armorsmith(66, 233, "IceBoots", "Ice Boots", 104, "Metal C", 117, "IceEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[65] == 1){
+					AData[Total] = new Armorsmith(66, 233, "IceBoots", "Ice Boots", 104, "Metal C", 117, "IceEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Ice Boots
+			
+			if(ArmorFound[66] == 1){//Light Helmet
+				if(ArmorMade[66] == 0){
+					AData[Total] = new Armorsmith(67, 234, "LghtHelm", "Light Helmet", 104, "Metal C", 118, "LhtEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[66] == 1){
+					AData[Total] = new Armorsmith(67, 234, "LghtHelm", "Light Helmet", 104, "Metal C", 118, "LhtEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Light Helmet
+			if(ArmorFound[67] == 1){//Light Armor
+				if(ArmorMade[67] == 0){
+					AData[Total] = new Armorsmith(68, 235, "LghtArmr", "Light Armor", 104, "Metal C", 118, "LhtEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[67] == 1){
+					AData[Total] = new Armorsmith(68, 235, "LghtArmr", "Light Armor", 104, "Metal C", 118, "LhtEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Light Armor
+			if(ArmorFound[68] == 1){//Light Gauntlets
+				if(ArmorMade[68] == 0){
+					AData[Total] = new Armorsmith(69, 236, "LghtGntlt", "Light Gauntlets", 104, "Metal C", 118, "LhtEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[68] == 1){
+					AData[Total] = new Armorsmith(69, 236, "LghtGntlt", "Light Gauntlets", 104, "Metal C", 118, "LhtEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Light Gauntlets
+			if(ArmorFound[69] == 1){//Light Boots
+				if(ArmorMade[69] == 0){
+					AData[Total] = new Armorsmith(70, 237, "LghtBoots", "Light Boots", 104, "Metal C", 118, "LhtEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[69] == 1){
+					AData[Total] = new Armorsmith(70, 237, "LghtBoots", "Light Boots", 104, "Metal C", 118, "LhtEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Light Boots
+			
+			if(ArmorFound[70] == 1){//Dark Helmet
+				if(ArmorMade[70] == 0){
+					AData[Total] = new Armorsmith(71, 238, "DrkHelm", "Dark Helmet", 104, "Metal C", 119, "DrkEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[70] == 1){
+					AData[Total] = new Armorsmith(71, 238, "DrkHelm", "Dark Helmet", 104, "Metal C", 119, "DrkEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Dark Helmet
+			if(ArmorFound[71] == 1){//Dark Armor
+				if(ArmorMade[71] == 0){
+					AData[Total] = new Armorsmith(72, 239, "DrkArmr", "Dark Armor", 104, "Metal C", 119, "DrkEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[71] == 1){
+					AData[Total] = new Armorsmith(72, 239, "DrkArmr", "Dark Armor", 104, "Metal C", 119, "DrkEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Dark Armor
+			if(ArmorFound[72] == 1){//Dark Gauntlets
+				if(ArmorMade[72] == 0){
+					AData[Total] = new Armorsmith(73, 240, "DrkGntlt", "Dark Gauntlets", 104, "Metal C", 119, "DrkEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[72] == 1){
+					AData[Total] = new Armorsmith(73, 240, "DrkGntlt", "Dark Gauntlets", 104, "Metal C", 119, "DrkEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Dark Gauntlets
+			if(ArmorFound[73] == 1){//Dark Boots
+				if(ArmorMade[73] == 0){
+					AData[Total] = new Armorsmith(74, 241, "DrkBoots", "Dark Boots", 104, "Metal C", 119, "DrkEnrgy", 1, 0, 3);
+				}
+				if(ArmorMade[73] == 1){
+					AData[Total] = new Armorsmith(74, 241, "DrkBoots", "Dark Boots", 104, "Metal C", 119, "DrkEnrgy", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Dark Boots
+			//ArmorMade[73] = 1;//Dark Boots	241		Metal C 104		Dark Energy 119
+			
+			//ArmorMade[74] = 1;//Boots?	242			Metal C 104		Glitch 280
+			//ArmorMade[75] = 1;//Shield?	243			Metal C 104		Glitch 280
+			//ArmorMade[76] = 1;//Armor?	244			Metal C 104		Glitch 280
+			//ArmorMade[77] = 1;//Gauntlets?	245		Metal C 104		Glitch 280
+			//ArmorMade[78] = 1;//Helmet?	246			Metal C 104		Glitch 280
+			
+			//ArmorMade[79] = 1;//NULL Helmet	247		Metal C 104		Null 281
+			//ArmorMade[80] = 1;//NULL Armor	248		Metal C 104		Null 281
+			//ArmorMade[81] = 1;//NULL Gauntlets	249	Metal C 104		Null 281
+			//ArmorMade[82] = 1;//NULL Boots	250		Metal C 104		Null 281
+			
+			//ArmorMade[83] = 1;//Blueberry Armor	251   Blueberry 61	Glitch 280
+			
+			//ArmorMade[84] = 1;//Mystery Armor	252		Metal C 104		??? 284
+			
+			//ArmorMade[85] = 1;//Corrupt Helmet	253		RustyMetal	282
+			//ArmorMade[86] = 1;//Corrupt Armor		254		RustyMetal	282
+			//ArmorMade[87] = 1;//Corrupt Gauntlets		255	RustyMetal	282
+			//ArmorMade[88] = 1;//Corrupt Boots		256		RustyMetal	282
+			
+			//ArmorMade[89] = 1;//Corrupt Helmet	253		Item/Corr.name  283
+			//ArmorMade[90] = 1;//Corrupt Armor		254		Item/Corr.name  283
+			//ArmorMade[91] = 1;//Corrupt Gauntlets		255	Item/Corr.name  283
+			//ArmorMade[92] = 1;//Corrupt Boots		256		Item/Corr.name  283
+			
+			//ArmorMade[93] = 1;//Admin Armor	257		Null 281	??? 284
+			
+			//ArmorMade[94] = 1;//All Armor		258		Null 281	Glitch 280
+			
 		}
 		return AData;
 	}

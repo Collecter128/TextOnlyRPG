@@ -32,7 +32,7 @@ public class GamePanel extends JPanel implements Runnable{
 	//int Text1Y = 100;//? does not change as much as X
 	static int Text2X = 30;
 	//int Text2Y = 115;//?
-	int Gamemode = 1;//Normal Mode
+	int Gamemode = 0;//Cutscene Mode
 	//0 = Cutscene Quest
 	//1 = Normal Mode
 	//2 = Easy Mode
@@ -894,7 +894,7 @@ public class GamePanel extends JPanel implements Runnable{
 	//Doppleganger?
 	///Drain/Vampire Slime
 	
-	int[] Monster1Found = new int[360];{
+	int[] Monster1Found = new int[402];{
 		Monster1Found[0] = 1; //Defaulter 0
 		Monster1Found[1] = 1; //00 Coded Edge 1
 		Monster1Found[2] = 1; //CodedEdge 1.5 2
@@ -1381,65 +1381,69 @@ public class GamePanel extends JPanel implements Runnable{
 		Monster1Found[358] = 1; //FF
 		Monster1Found[359] = 1; //Gamebox
 		
-		//Monster1Found[360] = 0; //Nameless
-		//Monster1Found[361] = 0; //Shapeless
-		//Monster1Found[362] = 0; //Formless
+		//------------------------------------------------
 		
-		//Monster1Found[363] = 0; //Red Armor 51
-		//Monster1Found[364] = 0; //Crimson Armor
-		//Monster1Found[365] = 0; //Cookie Armor
+		Monster1Found[360] = 1; //Nameless
+		Monster1Found[361] = 1; //Shapeless
+		Monster1Found[362] = 1; //Formless
 		
-		//Monster1Found[366] = 0;//Pink Master
-		//Monster1Found[367] = 0;//Sakura Don
-		//Monster1Found[368] = 0;//Fusia Fighter
+		//------------------------------------------------
 		
-		//Monster1Found[369] = 0;//Enemy Spy
-		//Monster1Found[370] = 0;//Ninja
-		//Monster1Found[371] = 0;//Thief
+		Monster1Found[363] = 1; //Red Armor 51
+		Monster1Found[364] = 1; //Crimson Armor
+		Monster1Found[365] = 1; //Cookie Armor
 		
-		//Monster1Found[372] = 0;//Warlock	
-		//Monster1Found[373] = 0;//Evil Warlock
-		//Monster1Found[374] = 0;//Magician
+		Monster1Found[366] = 1;//Pink Master
+		Monster1Found[367] = 1;//Sakura Don
+		Monster1Found[368] = 1;//Fusia Fighter
 		
-		//Monster1Found[375] = 0;//Catapult
-		//Monster1Found[376] = 0;//Gatling
-		//Monster1Found[377] = 0;//Cannon
+		Monster1Found[369] = 1;//Enemy Spy
+		Monster1Found[370] = 1;//Ninja
+		Monster1Found[371] = 1;//Thief
 		
-		//Monster1Found[378] = 0;//Pos Logger
-		//Monster1Found[379] = 0;//Compass Rose
-		//Monster1Found[380] = 0;//Comp Lost
+		Monster1Found[372] = 1;//Warlock	
+		Monster1Found[373] = 1;//Evil Warlock
+		Monster1Found[374] = 1;//Magician
 		
-		//Monster1Found[381] = 0;//Victory Sword
-		//Monster1Found[382] = 0;//Victory Blade
-		//Monster1Found[383] = 0;//Victory Dagger
+		Monster1Found[375] = 1;//Catapult
+		Monster1Found[376] = 1;//Gatling
+		Monster1Found[377] = 1;//Cannon
 		
-		//Monster1Found[384] = 0;//Blue Candle
-		//Monster1Found[385] = 0;//Green Candle
-		//Monster1Found[386] = 0;//Gold Candle
+		Monster1Found[378] = 1;//Pos Logger
+		Monster1Found[379] = 1;//Compass Rose
+		Monster1Found[380] = 1;//Comp Lost
 		
-		//Monster1Found[387] = 0;//Barrier	
-		//Monster1Found[388] = 0;//Aura
-		//Monster1Found[389] = 0;//Bubble
+		Monster1Found[381] = 1;//Victory Sword
+		Monster1Found[382] = 1;//Victory Blade
+		Monster1Found[383] = 1;//Victory Dagger
 		
-		//Monster1Found[390] = 0;//Shield	
-		//Monster1Found[391] = 0;//Barricade
-		//Monster1Found[392] = 0;//Buckler
+		Monster1Found[384] = 1;//Blue Candle
+		Monster1Found[385] = 1;//Green Candle
+		Monster1Found[386] = 1;//Gold Candle
 		
-		//Monster1Found[393] = 0;//Hyper Armor
-		//Monster1Found[394] = 0;//Aura Plate
-		//Monster1Found[395] = 0;//H Aura Mail
+		Monster1Found[387] = 1;//Barrier	
+		Monster1Found[388] = 1;//Aura
+		Monster1Found[389] = 1;//Bubble
 		
-		//Monster1Found[396] = 0;//Arm0r
-		//Monster1Found[397] = 0;//Brittle Armor
-		//Monster1Found[398] = 0;//Mystery Armor
+		Monster1Found[390] = 1;//Shield	
+		Monster1Found[391] = 1;//Barricade
+		Monster1Found[392] = 1;//Buckler
 		
-		//Monster1Found[399] = 0;//01000010 01101001 01101110 01100001 01110010 01111001
-		//Monster1Found[400] = 0;//48 65 78 63 6f 64 65
-		//Monster1Found[401] = 0;//Safxoh
+		Monster1Found[393] = 1;//Hyper Armor
+		Monster1Found[394] = 1;//Aura Plate
+		Monster1Found[395] = 1;//H Aura Mail
+		
+		Monster1Found[396] = 1;//Arm0r
+		Monster1Found[397] = 1;//Brittle Armor
+		Monster1Found[398] = 1;//Mystery Armor
+		
+		Monster1Found[399] = 1;//01000010 01101001 01101110 01100001 01110010 01111001
+		Monster1Found[400] = 1;//48 65 78 63 6f 64 65
+		Monster1Found[401] = 1;//Safxoh
 	}
 	
 	
-	static int[] Monster1Defeated = new int[360];{//NoDefeated
+	static int[] Monster1Defeated = new int[402];{//NoDefeated
 		Monster1Defeated[0] = 0; //Defaulter 0
 		
 		Monster1Defeated[1] = 0;//Coded Edge 1
@@ -1927,61 +1931,65 @@ public class GamePanel extends JPanel implements Runnable{
 		Monster1Defeated[358] = 0; //FF
 		Monster1Defeated[359] = 0; //Gamebox
 		
-		//Monster1Defeated[360] = 0; //Nameless
-		//Monster1Defeated[361] = 0; //Shapeless
-		//Monster1Defeated[362] = 0; //Formless
+		//------------------------------------------------
 		
-		//Monster1Defeated[363] = 0; //Red Armor
-		//Monster1Defeated[364] = 0; //Crimson Armor
-		//Monster1Defeated[365] = 0; //Cookie Armor
+		Monster1Defeated[360] = 0; //Nameless
+		Monster1Defeated[361] = 0; //Shapeless
+		Monster1Defeated[362] = 0; //Formless
+		
+		//------------------------------------------------
+		
+		Monster1Defeated[363] = 0; //Red Armor
+		Monster1Defeated[364] = 0; //Crimson Armor
+		Monster1Defeated[365] = 0; //Cookie Armor
 
-		//Monster1Defeated[366] = 0; //Pink Master
-		//Monster1Defeated[367] = 0; //Sakura Don
-		//Monster1Defeated[368] = 0; //Fusia Fighter
+		Monster1Defeated[366] = 0; //Pink Master
+		Monster1Defeated[367] = 0; //Sakura Don
+		Monster1Defeated[368] = 0; //Fusia Fighter
 		
-		//Monster1Defeated[369] = 0; //Enemy Spy
-		//Monster1Defeated[370] = 0; //Ninja
-		//Monster1Defeated[371] = 0; //Thief
+		Monster1Defeated[369] = 0; //Enemy Spy
+		Monster1Defeated[370] = 0; //Ninja
+		Monster1Defeated[371] = 0; //Thief
 		
-		//Monster1Defeated[372] = 0; //Warlock	
-		//Monster1Defeated[373] = 0; //Evil Warlock
-		//Monster1Defeated[374] = 0; //Magician
+		Monster1Defeated[372] = 0; //Warlock	
+		Monster1Defeated[373] = 0; //Evil Warlock
+		Monster1Defeated[374] = 0; //Magician
 		
-		//Monster1Defeated[375] = 0; //Catapult
-		//Monster1Defeated[376] = 0; //Gatling
-		//Monster1Defeated[377] = 0; //Cannon
+		Monster1Defeated[375] = 0; //Catapult
+		Monster1Defeated[376] = 0; //Gatling
+		Monster1Defeated[377] = 0; //Cannon
 		
-		//Monster1Defeated[378] = 0; //Pos Logger
-		//Monster1Defeated[379] = 0; //Compass Rose
-		//Monster1Defeated[380] = 0; //Comp Lost
+		Monster1Defeated[378] = 0; //Pos Logger
+		Monster1Defeated[379] = 0; //Compass Rose
+		Monster1Defeated[380] = 0; //Comp Lost
 		
-		//Monster1Defeated[381] = 0; //Victory Sword
-		//Monster1Defeated[382] = 0; //Victory Blade
-		//Monster1Defeated[383] = 0; //Victory Dagger
+		Monster1Defeated[381] = 0; //Victory Sword
+		Monster1Defeated[382] = 0; //Victory Blade
+		Monster1Defeated[383] = 0; //Victory Dagger
 		
-		//Monster1Defeated[384] = 0; //Blue Candle
-		//Monster1Defeated[385] = 0; //Green Candle
-		//Monster1Defeated[386] = 0; //Gold Candle
+		Monster1Defeated[384] = 0; //Blue Candle
+		Monster1Defeated[385] = 0; //Green Candle
+		Monster1Defeated[386] = 0; //Gold Candle
 		
-		//Monster1Defeated[387] = 0; //Barrier
-		//Monster1Defeated[388] = 0; //Aura
-		//Monster1Defeated[389] = 0; //Bubble
+		Monster1Defeated[387] = 0; //Barrier
+		Monster1Defeated[388] = 0; //Aura
+		Monster1Defeated[389] = 0; //Bubble
 		
-		//Monster1Defeated[390] = 0; //Shield
-		//Monster1Defeated[391] = 0; //Barricade
-		//Monster1Defeated[392] = 0; //Buckler
+		Monster1Defeated[390] = 0; //Shield
+		Monster1Defeated[391] = 0; //Barricade
+		Monster1Defeated[392] = 0; //Buckler
 		
-		//Monster1Defeated[393] = 0; //Hyper Armor
-		//Monster1Defeated[394] = 0; //Aura Plate
-		//Monster1Defeated[395] = 0; //H Aura Mail
+		Monster1Defeated[393] = 0; //Hyper Armor
+		Monster1Defeated[394] = 0; //Aura Plate
+		Monster1Defeated[395] = 0; //H Aura Mail
 		
-		//Monster1Defeated[396] = 0; //Arm0r
-		//Monster1Defeated[397] = 0; //Brittle Armor
-		//Monster1Defeated[398] = 0; //Mystery Armor
+		Monster1Defeated[396] = 0; //Arm0r
+		Monster1Defeated[397] = 0; //Brittle Armor
+		Monster1Defeated[398] = 0; //Mystery Armor
 		
-		//Monster1Defeated[399] = 0; //01000010 01101001 01101110 01100001 01110010 01111001
-		//Monster1Defeated[400] = 0; //48 65 78 63 6f 64 65
-		//Monster1Defeated[401] = 0; //Safxoh
+		Monster1Defeated[399] = 0; //01000010 01101001 01101110 01100001 01110010 01111001
+		Monster1Defeated[400] = 0; //48 65 78 63 6f 64 65
+		Monster1Defeated[401] = 0; //Safxoh
 
 	}
 	
@@ -2807,7 +2815,7 @@ public class GamePanel extends JPanel implements Runnable{
 	int Amount2 = 0;
 	
 	
-	int[] ArmorRecipe = new int[38];{
+	int[] ArmorRecipe = new int[74];{
 		
 		ArmorRecipe[0] = 1;//TestItem 1?
 		ArmorRecipe[1] = 1;//TestItem2
@@ -2816,7 +2824,7 @@ public class GamePanel extends JPanel implements Runnable{
 		ArmorRecipe[4] = 1;//hood
 		ArmorRecipe[5] = 1;//robe
 		ArmorRecipe[6] = 1;//Shirt.
-		ArmorRecipe[7] = 1;//Gloves? Recipe
+		ArmorRecipe[7] = 0;//Gloves? Recipe
 		ArmorRecipe[8] = 1;//Pants
 		ArmorRecipe[9] = 1;//Socks
 		
@@ -2856,50 +2864,50 @@ public class GamePanel extends JPanel implements Runnable{
 		ArmorRecipe[36] = 1;//Alloy D
 		ArmorRecipe[37] = 1;//Alloy I
 		
-		//ArmorRecipe[38] = 1;//Helmet
-		//ArmorRecipe[39] = 1;//Armor
-		//ArmorRecipe[40] = 1;//Gauntlets
-		//ArmorRecipe[41] = 1;//Boots			
+		ArmorRecipe[38] = 1;//Helmet
+		ArmorRecipe[39] = 1;//Armor
+		ArmorRecipe[40] = 1;//Gauntlets
+		ArmorRecipe[41] = 1;//Boots			
 		
-		//ArmorRecipe[42] = 1;//Fire Helmet
-		//ArmorRecipe[43] = 1;//Fire Armor
-		//ArmorRecipe[44] = 1;//Fire Gauntlets
-		//ArmorRecipe[45] = 1;//Fire Boots
+		ArmorRecipe[42] = 1;//Fire Helmet
+		ArmorRecipe[43] = 1;//Fire Armor
+		ArmorRecipe[44] = 1;//Fire Gauntlets
+		ArmorRecipe[45] = 1;//Fire Boots
 		
-		//ArmorRecipe[46] = 1;//WaterHelmet
-		//ArmorRecipe[47] = 1;//Water Armor
-		//ArmorRecipe[48] = 1;//Water Gauntlets
-		//ArmorRecipe[49] = 1;//Water Boots	
+		ArmorRecipe[46] = 1;//WaterHelmet
+		ArmorRecipe[47] = 1;//Water Armor
+		ArmorRecipe[48] = 1;//Water Gauntlets
+		ArmorRecipe[49] = 1;//Water Boots	
 		
-		//ArmorRecipe[50] = 1;//Wind Helmet
-		//ArmorRecipe[51] = 1;//Wind Armor
-		//ArmorRecipe[52] = 1;//Wind Gauntlets
-		//ArmorRecipe[53] = 1;//Wind Boots	
+		ArmorRecipe[50] = 1;//Wind Helmet
+		ArmorRecipe[51] = 1;//Wind Armor
+		ArmorRecipe[52] = 1;//Wind Gauntlets
+		ArmorRecipe[53] = 1;//Wind Boots	
 		
-		//ArmorRecipe[54] = 1;//Earth Helmet
-		//ArmorRecipe[55] = 1;//Earth Armor
-		//ArmorRecipe[56] = 1;//Earth Gauntlets
-		//ArmorRecipe[57] = 1;//Earth Boots	
+		ArmorRecipe[54] = 1;//Earth Helmet
+		ArmorRecipe[55] = 1;//Earth Armor
+		ArmorRecipe[56] = 1;//Earth Gauntlets
+		ArmorRecipe[57] = 1;//Earth Boots	
 		
-		//ArmorRecipe[58] = 1;//Electric Helmet
-		//ArmorRecipe[59] = 1;//Electric Armor
-		//ArmorRecipe[60] = 1;//Electric Gauntlets
-		//ArmorRecipe[61] = 1;//Electric Boots		
+		ArmorRecipe[58] = 1;//Electric Helmet
+		ArmorRecipe[59] = 1;//Electric Armor
+		ArmorRecipe[60] = 1;//Electric Gauntlets
+		ArmorRecipe[61] = 1;//Electric Boots		
 		
-		//ArmorRecipe[62] = 1;//Ice Helmet
-		//ArmorRecipe[63] = 1;//Ice Armor
-		//ArmorRecipe[64] = 1;//Ice Gauntlets
-		//ArmorRecipe[65] = 1;//Ice Boots		
+		ArmorRecipe[62] = 1;//Ice Helmet
+		ArmorRecipe[63] = 1;//Ice Armor
+		ArmorRecipe[64] = 1;//Ice Gauntlets
+		ArmorRecipe[65] = 1;//Ice Boots		
 		
-		//ArmorRecipe[66] = 1;//Light Helmet
-		//ArmorRecipe[67] = 1;//Light Armor
-		//ArmorRecipe[68] = 1;//Light Gauntlets
-		//ArmorRecipe[69] = 1;//Light Boots		
+		ArmorRecipe[66] = 1;//Light Helmet
+		ArmorRecipe[67] = 1;//Light Armor
+		ArmorRecipe[68] = 1;//Light Gauntlets
+		ArmorRecipe[69] = 1;//Light Boots		
 		
-		//ArmorRecipe[70] = 1;//Dark Helmet
-		//ArmorRecipe[71] = 1;//Dark Armor
-		//ArmorRecipe[72] = 1;//Dark Gauntlets
-		//ArmorRecipe[73] = 1;//Dark Boots	
+		ArmorRecipe[70] = 1;//Dark Helmet
+		ArmorRecipe[71] = 1;//Dark Armor
+		ArmorRecipe[72] = 1;//Dark Gauntlets
+		ArmorRecipe[73] = 1;//Dark Boots	
 		
 		//ArmorRecipe[74] = 1;//Boots?
 		//ArmorRecipe[75] = 1;//Shield?
@@ -2921,11 +2929,16 @@ public class GamePanel extends JPanel implements Runnable{
 		//ArmorRecipe[87] = 1;//Corrupt Gauntlets
 		//ArmorRecipe[88] = 1;//Corrupt Boots		
 		
-		//ArmorRecipe[89] = 1;//Admin Armor
+		//ArmorRecipe[89] = 1;//Corrupt Helmet
+		//ArmorRecipe[90] = 1;//Corrupt Armor
+		//ArmorRecipe[91] = 1;//Corrupt Gauntlets
+		//ArmorRecipe[92] = 1;//Corrupt Boots		
 		
-		//ArmorRecipe[90] = 1;//All Armor
+		//ArmorRecipe[93] = 1;//Admin Armor
+		
+		//ArmorRecipe[94] = 1;//All Armor
 	}
-	int[] ArmorMade = new int[38];{
+	int[] ArmorMade = new int[74];{
 		
 		ArmorMade[0] = 1;//TestItem 1?
 		ArmorMade[1] = 1;//TestItem2
@@ -2974,50 +2987,50 @@ public class GamePanel extends JPanel implements Runnable{
 		ArmorMade[36] = 1;//Alloy D
 		ArmorMade[37] = 1;//Alloy I
 		
-		//ArmorMade[38] = 1;//Helmet
-		//ArmorMade[39] = 1;//Armor
-		//ArmorMade[40] = 1;//Gauntlets
-		//ArmorMade[41] = 1;//Boots			
+		ArmorMade[38] = 1;//Helmet
+		ArmorMade[39] = 1;//Armor
+		ArmorMade[40] = 1;//Gauntlets
+		ArmorMade[41] = 1;//Boots			
 		
-		//ArmorMade[42] = 1;//Fire Helmet
-		//ArmorMade[43] = 1;//Fire Armor
-		//ArmorMade[44] = 1;//Fire Gauntlets
-		//ArmorMade[45] = 1;//Fire Boots
+		ArmorMade[42] = 1;//Fire Helmet
+		ArmorMade[43] = 1;//Fire Armor
+		ArmorMade[44] = 1;//Fire Gauntlets
+		ArmorMade[45] = 1;//Fire Boots
 		
-		//ArmorMade[46] = 1;//WaterHelmet
-		//ArmorMade[47] = 1;//Water Armor
-		//ArmorMade[48] = 1;//Water Gauntlets
-		//ArmorMade[49] = 1;//Water Boots	
+		ArmorMade[46] = 1;//WaterHelmet
+		ArmorMade[47] = 1;//Water Armor
+		ArmorMade[48] = 1;//Water Gauntlets
+		ArmorMade[49] = 1;//Water Boots	
 		
-		//ArmorMade[50] = 1;//Wind Helmet
-		//ArmorMade[51] = 1;//Wind Armor
-		//ArmorMade[52] = 1;//Wind Gauntlets
-		//ArmorMade[53] = 1;//Wind Boots	
+		ArmorMade[50] = 1;//Wind Helmet
+		ArmorMade[51] = 1;//Wind Armor
+		ArmorMade[52] = 1;//Wind Gauntlets
+		ArmorMade[53] = 1;//Wind Boots	
 		
-		//ArmorMade[54] = 1;//Earth Helmet
-		//ArmorMade[55] = 1;//Earth Armor
-		//ArmorMade[56] = 1;//Earth Gauntlets
-		//ArmorMade[57] = 1;//Earth Boots	
+		ArmorMade[54] = 1;//Earth Helmet
+		ArmorMade[55] = 1;//Earth Armor
+		ArmorMade[56] = 1;//Earth Gauntlets
+		ArmorMade[57] = 1;//Earth Boots	
 		
-		//ArmorMade[58] = 1;//Electric Helmet
-		//ArmorMade[59] = 1;//Electric Armor
-		//ArmorMade[60] = 1;//Electric Gauntlets
-		//ArmorMade[61] = 1;//Electric Boots		
+		ArmorMade[58] = 1;//Electric Helmet
+		ArmorMade[59] = 1;//Electric Armor
+		ArmorMade[60] = 1;//Electric Gauntlets
+		ArmorMade[61] = 1;//Electric Boots		
 		
-		//ArmorMade[62] = 1;//Ice Helmet
-		//ArmorMade[63] = 1;//Ice Armor
-		//ArmorMade[64] = 1;//Ice Gauntlets
-		//ArmorMade[65] = 1;//Ice Boots		
+		ArmorMade[62] = 1;//Ice Helmet
+		ArmorMade[63] = 1;//Ice Armor
+		ArmorMade[64] = 1;//Ice Gauntlets
+		ArmorMade[65] = 1;//Ice Boots		
 		
-		//ArmorMade[66] = 1;//Light Helmet
-		//ArmorMade[67] = 1;//Light Armor
-		//ArmorMade[68] = 1;//Light Gauntlets
-		//ArmorMade[69] = 1;//Light Boots		
+		ArmorMade[66] = 1;//Light Helmet
+		ArmorMade[67] = 1;//Light Armor
+		ArmorMade[68] = 1;//Light Gauntlets
+		ArmorMade[69] = 1;//Light Boots		
 		
-		//ArmorMade[70] = 1;//Dark Helmet
-		//ArmorMade[71] = 1;//Dark Armor
-		//ArmorMade[72] = 1;//Dark Gauntlets
-		//ArmorMade[73] = 1;//Dark Boots	
+		ArmorMade[70] = 1;//Dark Helmet
+		ArmorMade[71] = 1;//Dark Armor
+		ArmorMade[72] = 1;//Dark Gauntlets
+		ArmorMade[73] = 1;//Dark Boots	
 		
 		//ArmorMade[74] = 1;//Boots?
 		//ArmorMade[75] = 1;//Shield?
@@ -3039,9 +3052,14 @@ public class GamePanel extends JPanel implements Runnable{
 		//ArmorMade[87] = 1;//Corrupt Gauntlets
 		//ArmorMade[88] = 1;//Corrupt Boots		
 		
-		//ArmorMade[89] = 1;//Admin Armor
+		//ArmorMade[89] = 1;//Corrupt Helmet
+		//ArmorMade[90] = 1;//Corrupt Armor
+		//ArmorMade[91] = 1;//Corrupt Gauntlets
+		//ArmorMade[92] = 1;//Corrupt Boots		
 		
-		//ArmorMade[90] = 1;//All Armor
+		//ArmorMade[93] = 1;//Admin Armor
+		
+		//ArmorMade[94] = 1;//All Armor
 		
 	}
 	Armorsmith NullArmor = new Armorsmith(00, 00, "", "No Disc", 0, "", 0, "", 0, 0, 0);
@@ -5995,6 +6013,10 @@ public class GamePanel extends JPanel implements Runnable{
 			//Navigation Screen: Move
 			if(Ypos == 115){
 				if(MoveUnlocked == 1){
+					if(Gamemode != 0) {
+						Text1 = "";
+						Text2 = "";
+					}
 					ScreenType = 7;
 					if(AreasFound != 0){
 						Ypos = 30;
@@ -8391,8 +8413,8 @@ public class GamePanel extends JPanel implements Runnable{
 					if(Gamemode == 0){
 						Text1 = CurrentArea.RandomText[0];
 						Text2 = CurrentArea.RandomText[1];
-						HiddenText1 = CurrentArea.RandomText[3];
-						HiddenText2 = CurrentArea.RandomText[4];
+						//HiddenText1 = CurrentArea.RandomText[3];
+						//HiddenText2 = CurrentArea.RandomText[4];
 					}
 					MoveToggle = 0;
 					ElderToggle = 0;
@@ -9108,6 +9130,7 @@ public class GamePanel extends JPanel implements Runnable{
 				}//End if second 5 on page
 				
 				if(Ypos != 190){
+					CurrentRandoName[0] = MNameRandom.nextInt(MDataSelected.MonsterName.length);
 					AreaNumber = 3;
 					ScreenType = 15;
 					Ypos = 70;
@@ -9117,6 +9140,7 @@ public class GamePanel extends JPanel implements Runnable{
 				//Monster List: Back
 				//if(MonsterPage = 1){
 				if(Ypos == 190 && Xpos == 5){
+					CurrentRandoName = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 					if(MonsterPage == 1){
 					AreaNumber = 3;
 					ScreenType = 11;
@@ -9174,7 +9198,7 @@ public class GamePanel extends JPanel implements Runnable{
 				
 				//Monster List: Back/Next
 				if(Ypos == 190 && Xpos == 140){
-					
+					CurrentRandoName = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 					if(MonstersFound <= ((MonsterPage)*10)){
 					AreaNumber = 3;
 					ScreenType = 11;
@@ -9234,6 +9258,16 @@ public class GamePanel extends JPanel implements Runnable{
 			//Monster Info Enter//15
 			//Exit
 			else if(ScreenType == 15){
+				CurrentRandoName[0] = MNameRandom.nextInt(Monster1.MonsterShortName.length);
+				CurrentRandoName[1] = MNameRandom.nextInt(Monster2.MonsterShortName.length);
+				CurrentRandoName[2] = MNameRandom.nextInt(Monster3.MonsterShortName.length);
+				CurrentRandoName[3] = MNameRandom.nextInt(Monster4.MonsterShortName.length);
+				CurrentRandoName[4] = MNameRandom.nextInt(Monster5.MonsterShortName.length);
+				CurrentRandoName[5] = MNameRandom.nextInt(Monster6.MonsterShortName.length);
+				CurrentRandoName[6] = MNameRandom.nextInt(Monster7.MonsterShortName.length);
+				CurrentRandoName[7] = MNameRandom.nextInt(Monster8.MonsterShortName.length);
+				CurrentRandoName[8] = MNameRandom.nextInt(Monster9.MonsterShortName.length);
+				CurrentRandoName[9] = MNameRandom.nextInt(Monster10.MonsterShortName.length);
 				AreaNumber = 3;
 				ScreenType = 12;
 				Ypos = 30;
@@ -10099,8 +10133,9 @@ public class GamePanel extends JPanel implements Runnable{
 				//NewGame
 				//Load
 				if(ScreenType == 0){
-					g.drawString("Enter Password", 10, 30);//Changes with Selection?
-					g.drawLine(30, 50, 180, 50);
+					//g.drawString("Enter Password", 10, 30);//Changes with Selection?
+					g.drawString("Text Only RPG", 55, 64);//Changes with Selection?
+					//g.drawLine(30, 50, 180, 50);
 					//KeyCode g.drawString("Code1", 15, 195);
 					//g.drawString(Password, 15, 195);
 					g.drawRect(30, 50, 130, 20);
@@ -10780,7 +10815,7 @@ public class GamePanel extends JPanel implements Runnable{
 				g.drawString("Move", 150, 195); //Next?
 				}//CookScreen 4 End
 				
-				if(ScreenType == 5){//TODO Back/Next Strangeness
+				if(ScreenType == 5){//Todo Notes Screen Display Next back strangness???
 					//Notes
 					//Last?
 					//Next?
@@ -10849,8 +10884,8 @@ public class GamePanel extends JPanel implements Runnable{
 					g.drawString(Area8.getAreaName(), 40, 140);
 					g.drawString(Area9.getAreaName(), 40, 155);
 					g.drawString(Area10.getAreaName(), 40, 170);
-					g.drawString(Text1, Text1X, 150);
-					g.drawString(Text2, Text2X, 165);//70
+					g.drawString(Text1, 100, 150);
+					g.drawString(Text2, 100, 165);//70
 					g.drawString("Enter", 80, 180);
 					g.drawString("Select>", 80, 195);
 					g.drawString("Back", 150, 195); //Next?
@@ -10974,26 +11009,17 @@ public class GamePanel extends JPanel implements Runnable{
 					//g.drawString("Test String", X, Y);
 					
 					g.drawString("Page " + MonsterPage, 150, 15);//?
-					g.drawString(Monster1.getMonsterShortName(
-							MNameRandom.nextInt(Monster1.MonsterShortName.length)), 30, 35);
-					g.drawString(Monster2.getMonsterShortName(
-							MNameRandom.nextInt(Monster2.MonsterShortName.length)), 30, 65);
-					g.drawString(Monster3.getMonsterShortName(
-							MNameRandom.nextInt(Monster3.MonsterShortName.length)), 30, 95);
-					g.drawString(Monster4.getMonsterShortName(
-							MNameRandom.nextInt(Monster4.MonsterShortName.length)), 30, 125);
-					g.drawString(Monster5.getMonsterShortName(
-							MNameRandom.nextInt(Monster5.MonsterShortName.length)), 30, 155);
-					g.drawString(Monster6.getMonsterShortName(
-							MNameRandom.nextInt(Monster6.MonsterShortName.length)), 120, 35);
-					g.drawString(Monster7.getMonsterShortName(
-							MNameRandom.nextInt(Monster7.MonsterShortName.length)), 120, 65);
-					g.drawString(Monster8.getMonsterShortName(
-							MNameRandom.nextInt(Monster8.MonsterShortName.length)), 120, 95);
-					g.drawString(Monster9.getMonsterShortName(
-							MNameRandom.nextInt(Monster9.MonsterShortName.length)), 120, 125);
-					g.drawString(Monster10.getMonsterShortName(
-							MNameRandom.nextInt(Monster10.MonsterShortName.length)), 120, 155);
+					g.drawString(Monster1.getMonsterShortName(CurrentRandoName[0]), 30, 35);
+					//MNameRandom.nextInt(Monster1.MonsterShortName.length)
+					g.drawString(Monster2.getMonsterShortName(CurrentRandoName[1]), 30, 65);
+					g.drawString(Monster3.getMonsterShortName(CurrentRandoName[2]), 30, 95);
+					g.drawString(Monster4.getMonsterShortName(CurrentRandoName[3]), 30, 125);
+					g.drawString(Monster5.getMonsterShortName(CurrentRandoName[4]), 30, 155);
+					g.drawString(Monster6.getMonsterShortName(CurrentRandoName[5]), 120, 35);
+					g.drawString(Monster7.getMonsterShortName(CurrentRandoName[6]), 120, 65);
+					g.drawString(Monster8.getMonsterShortName(CurrentRandoName[7]), 120, 95);
+					g.drawString(Monster9.getMonsterShortName(CurrentRandoName[8]), 120, 125);
+					g.drawString(Monster10.getMonsterShortName(CurrentRandoName[9]), 120, 155);
 					g.drawString("Enter", 80, 180);
 					g.drawString("Select>", 80, 195);
 					if(MonstersFound > 10 && MonsterPage < 2){
@@ -11036,15 +11062,15 @@ public class GamePanel extends JPanel implements Runnable{
 //					g.drawString("Test String", 5, 15);
 					if(MainClass.SEventSecond == 1) {
 						g.drawString(MDataSelected.DisplayNo1 + " - " + MDataSelected.MonsterName[
-					        MNameRandom.nextInt(MDataSelected.MonsterName.length)], 5, 15);//MDataSelected
+					        CurrentRandoName[0]], 5, 15);//MDataSelected
 						}
 					else if(MainClass.SEventSecond == 2) {
 						g.drawString(MDataSelected.DisplayNo2 + " - " + MDataSelected.MonsterName[
-						    MNameRandom.nextInt(MDataSelected.MonsterName.length)], 5, 15);//MDataSelected
+						    CurrentRandoName[0]], 5, 15);//MDataSelected
 						}
 					else
 						g.drawString(MDataSelected.MonsterID + " - " + MDataSelected.MonsterName[
-						    MNameRandom.nextInt(MDataSelected.MonsterName.length)], 5, 15);//MDataSelected                   	
+						    CurrentRandoName[0]], 5, 15);//MDataSelected                   	
 					
 					if(MDataSelected.MHp1 != 0){
 					g.drawString("Hp:" + MDataSelected.MHp1 + MDataSelected.MHp2 + MDataSelected.MHp3 + MDataSelected.MHp4, 25, 30);

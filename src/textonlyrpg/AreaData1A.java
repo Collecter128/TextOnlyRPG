@@ -79,7 +79,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},/*Ypos, Xpos*/70, 60, 
 							/*Cutscene*/new int[][]{{4, 29},{11, 37}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}),
+							/*ScreenMode*/1, /*RandomText*/new String[] {"Hello there!", ""}),
 					//1 = Normal Mode
 					new AreaData(2, "Elder", "Elder's Office", 11, "TownArea", 
 							/*ItemChance*/new int[]{1}, new int[]{20}, /*MoneyChance*/new int[]{1}, new int[]{10}, 
@@ -548,23 +548,23 @@ public class AreaData1A {//Chances before or after? Rarity
 		if(Area == 10){ //10
 			AData = new AreaData[]{
 					//0 = Cutscene Quest
-//					new AreaData(10, "Field Area1", "A Grassy Field", 1, "FieldArea", 
-//					/*ItemChance*/new int[]{5}, new int[]{30}, /*MoneyChance*/new int[]{3}, new int[]{50}, 
-//					/*BattleChance*/new int[]{1}, new int[]{25}, 
-//					/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100},
-//							/*Events*/new int[][]{
-//									/*Slime1*/
-//									/*EventType1*/{7, 7, 7, 7, 7},/*EventType2*/{1, 1, 1, 1, 1},/*EventData*/{39, 40, 41, 42, 43},/*EventFlag*/{5, 6, 7, 8, 9},/*EventChance*/{100, 100, 100, 100, 100}},
-//									/*Slime2*/
-//									///*EventType1*/{7},/*EventType2*/{1},/*EventData*/{40},/*EventFlag*/{6},/*EventChance*/{100},
-//									/*Slime3*/
-//									///*EventType1*/{7},/*EventType2*/{1},/*EventData*/{41},/*EventFlag*/{7},/*EventChance*/{100},
-//									/*Slime4*/
-//									///*EventType1*/{7},/*EventType2*/{1},/*EventData*/{42},/*EventFlag*/{8},/*EventChance*/{100},
-//									/*Slime5*/
-//									///*EventType1*/{7},/*EventType2*/{1},/*EventData*/{43},/*EventFlag*/{9},/*EventChance*/{100}}, 
-//							/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{3, 27}}, 
-//							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}),
+					new AreaData(10, "Field Area1", "A Grassy Field", 1, "FieldArea", 
+					/*ItemChance*/new int[]{5}, new int[]{30}, /*MoneyChance*/new int[]{3}, new int[]{50}, 
+					/*BattleChance*/new int[]{1}, new int[]{25}, 
+					/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100},
+							/*Events*/new int[][]{
+									/*Slime1*/
+									/*EventType1*/{7, 7, 7, 7, 7},/*EventType2*/{1, 1, 1, 1, 1},/*EventData*/{39, 40, 41, 42, 43},/*EventFlag*/{5, 6, 7, 8, 9},/*EventChance*/{100, 100, 100, 100, 100}},
+									/*Slime2*/
+									///*EventType1*/{7},/*EventType2*/{1},/*EventData*/{40},/*EventFlag*/{6},/*EventChance*/{100},
+									/*Slime3*/
+									///*EventType1*/{7},/*EventType2*/{1},/*EventData*/{41},/*EventFlag*/{7},/*EventChance*/{100},
+									/*Slime4*/
+									///*EventType1*/{7},/*EventType2*/{1},/*EventData*/{42},/*EventFlag*/{8},/*EventChance*/{100},
+									/*Slime5*/
+									///*EventType1*/{7},/*EventType2*/{1},/*EventData*/{43},/*EventFlag*/{9},/*EventChance*/{100}}, 
+							/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{3, 27}}, 
+							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}),
 					//1 = Normal Mode
 					new AreaData(10, "Field Area1", "A Grassy Field", 1, "FieldArea", 
 							/*ItemChance*/new int[]{5}, new int[]{30}, /*MoneyChance*/new int[]{3}, new int[]{50}, 

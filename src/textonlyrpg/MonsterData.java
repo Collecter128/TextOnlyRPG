@@ -355,8 +355,6 @@ public class MonsterData {
 			
 			if(MonsterNo > 108 && MonsterNo <= 216){
 				if(MonsterNo%3 == 1){
-					//System.out.println("This is the enemy number" + MonsterNo);
-					//System.out.println("This is the enemy value" + MonsterNo%3);
 					MInfo = new MonsterData[]{MonsterData02.MData(MonsterNo, Var),
 						};
 				}
@@ -373,8 +371,6 @@ public class MonsterData {
 			
 			if(MonsterNo > 216 && MonsterNo <= 324){
 				if(MonsterNo%3 == 1){
-					//System.out.println("This is the enemy number" + MonsterNo);
-					//System.out.println("This is the enemy value" + MonsterNo%3);
 					MInfo = new MonsterData[]{MonsterData03.MData(MonsterNo, Var),
 						};
 				}
@@ -549,6 +545,22 @@ public class MonsterData {
 				}
 			}//End of if Monster 359
 			
+			//If monsterdata is 360 - 401
+			if(MonsterNo > 359 && MonsterNo <= 401){
+				if(MonsterNo%3 == 0){//1 2
+					MInfo = new MonsterData[]{MonsterData0X.MData(MonsterNo, Var),
+						};
+				}
+				if(MonsterNo%3 == 1){//2 0 
+					MInfo = new MonsterData[]{MonsterData0XX.MData(MonsterNo, Var),
+						};
+				}
+				if(MonsterNo%3 == 2){//0 1
+					MInfo = new MonsterData[]{MonsterData0XR.MData(MonsterNo, Var),
+						};
+				}
+				
+			}//Monsters 363-401
 
 
 		}

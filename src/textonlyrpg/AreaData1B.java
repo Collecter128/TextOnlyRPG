@@ -2589,7 +2589,7 @@ public class AreaData1B {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}}, 
 							/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}),
+							/*ScreenMode*/1, /*RandomText*/new String[] {"Test Text1", "Testing Testing"}),
 					//1 = Normal Mode
 					new AreaData(64, "TestArea1", "has ancient plants", 1, "TestArea", 
 							/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
