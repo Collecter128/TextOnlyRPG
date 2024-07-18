@@ -62,6 +62,7 @@ public class GamePanel extends JPanel implements Runnable{
 	    //Glitch! = 5
 	    //Mystery = 6
 	    //Midnight = 7
+		//Water = 8
 	static int AreaScreenMode = 1;
 	static boolean RainbowAll = false;
 	static int EnterOK = 0;
@@ -120,20 +121,20 @@ public class GamePanel extends JPanel implements Runnable{
 	
 	int[] ItemAmount1 = new int[301];{//Quantity? if negative MItems?
 		ItemAmount1[0] = 1; //Potion
-		ItemAmount1[1] = 1; //Bread Dough
+		ItemAmount1[1] = 3; //Bread Dough
 		ItemAmount1[2] = 0; //Bread
 		ItemAmount1[3] = 0; //Toast
-		ItemAmount1[4] = 0; //Water
-		ItemAmount1[5] = 0; //Pancake Mix
+		ItemAmount1[4] = 5; //Water
+		ItemAmount1[5] = 5; //Pancake Mix
 		ItemAmount1[6] = 0; //Pancakes
 		ItemAmount1[7] = 0; //Thin Pancakes
-		ItemAmount1[8] = 0; //Cheese
+		ItemAmount1[8] = 5; //Cheese
 		ItemAmount1[9] = 0; //Cheese Fondue
 		ItemAmount1[10] = 0; //Cheese Sandwitch
 		ItemAmount1[11] = 0; //Cheese Toast
 		ItemAmount1[12] = 0; //Cheese Pancakes
 		ItemAmount1[13] = 0; //Grilled Cheese
-		ItemAmount1[14] = 0; //Meat
+		ItemAmount1[14] = 5; //Meat
 		ItemAmount1[15] = 0; //Chopped Steak
 		ItemAmount1[16] = 0; //Meat Bread
 		ItemAmount1[17] = 0; //Meat Bun
@@ -150,7 +151,7 @@ public class GamePanel extends JPanel implements Runnable{
 		ItemAmount1[28] = 0; //Cheeseburger
 		ItemAmount1[29] = 0; //SteakBurgerW.Cheese
 		ItemAmount1[30] = 0; //Cheesesteak Sandwitch
-		ItemAmount1[31] = 0; //Sugar
+		ItemAmount1[31] = 5; //Sugar
 		ItemAmount1[32] = 0; //Caramel
 		ItemAmount1[33] = 0; //Sweet Rolls
 		ItemAmount1[34] = 0; //Syrup
@@ -165,7 +166,7 @@ public class GamePanel extends JPanel implements Runnable{
 		ItemAmount1[43] = 0; //Caramel Syrup
 		ItemAmount1[44] = 0; //Hard Candies
 		ItemAmount1[45] = 0; //Jelly Beans
-		ItemAmount1[46] = 0; //Chocolate
+		ItemAmount1[46] = 5; //Chocolate
 		ItemAmount1[47] = 0; //Chocolate Fondue
 		ItemAmount1[48] = 0; //Hot Chocolate
 		ItemAmount1[50] = 0; //Chocolate Bar
@@ -178,7 +179,7 @@ public class GamePanel extends JPanel implements Runnable{
 		ItemAmount1[57] = 0; //Chocolate Pancakes W. Syrup
 		ItemAmount1[58] = 0; //Chocolate Pancakes W. Chocolate Syrup
 		ItemAmount1[59] = 0; //Chocolate Caramel Cake
-		ItemAmount1[60] = 0; //Blueberries
+		ItemAmount1[60] = 5; //Blueberries
 		ItemAmount1[61] = 0; //Blueberry Bread
 		ItemAmount1[62] = 0; //Blueberry Juice
 		ItemAmount1[63] = 0; //Blueberry Pancakes
@@ -198,7 +199,7 @@ public class GamePanel extends JPanel implements Runnable{
 		ItemAmount1[77] = 1; //Blueberry Pancakes W. Chocolate Syrup
 		ItemAmount1[78] = 1; //Blueberry Pancakes W. Blueberry Syrup
 		ItemAmount1[79] = 1; //Toast W. Blueberry Jelly
-		ItemAmount1[80] = 1; //Ice
+		ItemAmount1[80] = 5; //Ice
 		ItemAmount1[81] = 1; //Ice Sculpture
 		ItemAmount1[82] = 1; //Ice Water
 		ItemAmount1[83] = 1; //Crushed Ice
@@ -462,8 +463,8 @@ public class GamePanel extends JPanel implements Runnable{
 	int[] Item1Found = new int[301];{
 		Item1Found[0] = 1; //Potion
 		Item1Found[1] = 1; //Bread Dough
-		Item1Found[2] = 1; //Bread
-		Item1Found[3] = 1; //Toast
+		Item1Found[2] = 0; //Bread
+		Item1Found[3] = 0; //Toast
 		Item1Found[4] = 1; //Water
 		Item1Found[5] = 1; //Pancake Mix
 		Item1Found[6] = 1; //Pancakes
@@ -2061,7 +2062,7 @@ public class GamePanel extends JPanel implements Runnable{
 	
 	Items CurrentItem = NullItem;
 	
-	int[] CookRecipe = new int[96];{
+	int[] CookRecipe = new int[98];{
 		CookRecipe[0] = 1;//Bread
 		CookRecipe[1] = 1;//TestItem3
 		CookRecipe[2] = 1;//DebugBomb
@@ -2118,61 +2119,61 @@ public class GamePanel extends JPanel implements Runnable{
 		CookRecipe[46] = 1;//chocolate syrup
 		CookRecipe[47] = 1;//caramel hotchocolate
 		CookRecipe[48] = 1;//pancakes w ChocoSyrup
-		CookRecipe[47] = 1;//Thin Pancakes w choco syrup
-		CookRecipe[48] = 1;//Cheese pancakes w choco syrup
-		CookRecipe[49] = 1;//Choco pancakes w syrup
-		CookRecipe[50] = 1;//Choco pancakes w choco syrup
-		CookRecipe[51] = 1;//Choco caramel cake
-		CookRecipe[52] = 1;//Blueberry Bread
-		CookRecipe[53] = 1;//blueberry juice
-		CookRecipe[54] = 1;//Blueberry pancakes
-		CookRecipe[55] = 1;//blueberry steak
-		CookRecipe[56] = 1;//blueberry syrup
-		CookRecipe[57] = 1;//Choco covered blueberries
-		CookRecipe[58] = 1;//Cheese dipped blueberries
-		CookRecipe[59] = 1;//blueberry concentrate
-		CookRecipe[60] = 1;//bluberry jelly
-		CookRecipe[61] = 1;//blueberry jelly candy
-		CookRecipe[62] = 1;//blueberry jelly beans
-		CookRecipe[63] = 1;//pancakes w blueberry syrup
-		CookRecipe[64] = 1;//Thin pancakes w blueberry syrup
-		CookRecipe[65] = 1;//Cheese pancakes w blueberry syrup
-		CookRecipe[66] = 1;//choco pancakes w blueberry syrup
-		CookRecipe[67] = 1;//blueberry pancakes w syrup
-		CookRecipe[68] = 1;//blueberry pancakes w choco syrup
-		CookRecipe[69] = 1;//blueberry pancakes w blueberry syrup
-		CookRecipe[70] = 1;//toast w blueberry jelly
-		CookRecipe[71] = 1;//Ice sculpture
-		CookRecipe[72] = 1;//Ice water
-		CookRecipe[73] = 1;//crushed ice
-		CookRecipe[74] = 1;//blueberry icicle
-		CookRecipe[75] = 1;//shaved ice
-		CookRecipe[76] = 1;//blueberry shaved ice
-		CookRecipe[77] = 1;//refreshing choco drink
-		CookRecipe[78] = 1;//Caramel Pancakes
-		CookRecipe[79] = 1;//Caramel Bread
-		CookRecipe[80] = 1;//Caramel Choco bar
-		CookRecipe[81] = 1;//Caramel Pancakes w syrup
-		CookRecipe[82] = 1;//caramel pancakes w choco syrup
-		CookRecipe[83] = 1;//Caramel pancakes w blueberry syrup
-		CookRecipe[84] = 1;//Stale Bread
-		CookRecipe[85] = 1;//rotten Meat
-		CookRecipe[86] = 1;//Cursed Meat
-		CookRecipe[87] = 1;//Prison Food
-		CookRecipe[88] = 1;//Dry Bread
-		CookRecipe[89] = 1;//Pancake Armor
-		CookRecipe[90] = 1;//Pancake Armor w Syrup
-		CookRecipe[91] = 1;//Blueberry Armor
-		CookRecipe[92] = 1;//NULL Pancakes
-		CookRecipe[93] = 1;//Unused Item
-		CookRecipe[94] = 1;//CookItem
-		CookRecipe[95] = 1;//Potion
+		CookRecipe[49] = 1;//Thin Pancakes w choco syrup
+		CookRecipe[50] = 1;//Cheese pancakes w choco syrup
+		CookRecipe[51] = 1;//Choco pancakes w syrup
+		CookRecipe[52] = 1;//Choco pancakes w choco syrup
+		CookRecipe[53] = 1;//Choco caramel cake
+		CookRecipe[54] = 1;//Blueberry Bread
+		CookRecipe[55] = 1;//blueberry juice
+		CookRecipe[56] = 1;//Blueberry pancakes
+		CookRecipe[57] = 1;//blueberry steak
+		CookRecipe[58] = 1;//blueberry syrup
+		CookRecipe[59] = 1;//Choco covered blueberries
+		CookRecipe[60] = 1;//Cheese dipped blueberries
+		CookRecipe[61] = 1;//blueberry concentrate
+		CookRecipe[62] = 1;//bluberry jelly
+		CookRecipe[63] = 1;//blueberry jelly candy
+		CookRecipe[64] = 1;//blueberry jelly beans
+		CookRecipe[65] = 1;//pancakes w blueberry syrup
+		CookRecipe[66] = 1;//Thin pancakes w blueberry syrup
+		CookRecipe[67] = 1;//Cheese pancakes w blueberry syrup
+		CookRecipe[68] = 1;//choco pancakes w blueberry syrup
+		CookRecipe[69] = 1;//blueberry pancakes w syrup
+		CookRecipe[70] = 1;//blueberry pancakes w choco syrup
+		CookRecipe[71] = 1;//blueberry pancakes w blueberry syrup
+		CookRecipe[72] = 1;//toast w blueberry jelly
+		CookRecipe[73] = 1;//Ice sculpture
+		CookRecipe[74] = 1;//Ice water
+		CookRecipe[75] = 1;//crushed ice
+		CookRecipe[76] = 1;//blueberry icicle
+		CookRecipe[77] = 1;//shaved ice
+		CookRecipe[78] = 1;//blueberry shaved ice
+		CookRecipe[79] = 1;//refreshing choco drink
+		CookRecipe[80] = 1;//Caramel Pancakes
+		CookRecipe[81] = 1;//Caramel Bread
+		CookRecipe[82] = 1;//Caramel Choco bar
+		CookRecipe[83] = 1;//Caramel Pancakes w syrup
+		CookRecipe[84] = 1;//caramel pancakes w choco syrup
+		CookRecipe[85] = 1;//Caramel pancakes w blueberry syrup
+		CookRecipe[86] = 1;//Stale Bread
+		CookRecipe[87] = 1;//rotten Meat
+		CookRecipe[88] = 1;//Cursed Meat
+		CookRecipe[89] = 1;//Prison Food
+		CookRecipe[90] = 1;//Dry Bread
+		CookRecipe[91] = 1;//Pancake Armor
+		CookRecipe[92] = 1;//Pancake Armor w Syrup
+		CookRecipe[93] = 1;//Blueberry Armor
+		CookRecipe[94] = 1;//NULL Pancakes
+		CookRecipe[95] = 1;//Unused Item
+		CookRecipe[96] = 1;//CookItem
+		CookRecipe[97] = 1;//Potion
 	}
-	int[] CookMade = new int[96];{
+	int[] CookMade = new int[98];{
 		CookMade[0] = 0;//Bread
 		CookMade[1] = 0;//TestItem3
 		CookMade[2] = 0;//DebugBomb
-		CookMade[3] = 1;//Toast
+		CookMade[3] = 0;//Toast
 		//CookMade[4] = 1;//TestItem5
 		//CookMade[5] = 1;//TestItem6
 		//CookMade[6] = 1;//TestItem7
@@ -2180,7 +2181,6 @@ public class GamePanel extends JPanel implements Runnable{
 		//CookMade[8] = 1;//TestItem9
 		//CookMade[9] = 1;//TestItem10
 		//CookMade[10] = 1;//TestItem11
-		//CookMade[4] = 1;//Pancakes
 		CookMade[4] = 1;//Pancakes
 		CookMade[5] = 1;//Thin Pancakes
 		CookMade[6] = 1;//Cheese Fondue
@@ -2226,62 +2226,62 @@ public class GamePanel extends JPanel implements Runnable{
 		CookMade[46] = 1;//chocolate syrup
 		CookMade[47] = 1;//caramel hotchocolate
 		CookMade[48] = 1;//pancakes w ChocoSyrup
-		CookMade[47] = 1;//Thin Pancakes w choco syrup
-		CookMade[48] = 1;//Cheese pancakes w choco syrup
-		CookMade[49] = 1;//Choco pancakes w syrup
-		CookMade[50] = 1;//Choco pancakes w choco syrup
-		CookMade[51] = 1;//Choco caramel cake
-		CookMade[52] = 1;//Blueberry Bread
-		CookMade[53] = 1;//blueberry juice
-		CookMade[54] = 1;//Blueberry pancakes
-		CookMade[55] = 1;//blueberry steak
-		CookMade[56] = 1;//blueberry syrup
-		CookMade[57] = 1;//Choco covered blueberries
-		CookMade[58] = 1;//Cheese dipped blueberries
-		CookMade[59] = 1;//blueberry concentrate
-		CookMade[60] = 1;//bluberry jelly
-		CookMade[61] = 1;//blueberry jelly candy
-		CookMade[62] = 1;//blueberry jelly beans
-		CookMade[63] = 1;//pancakes w blueberry syrup
-		CookMade[64] = 1;//Thin pancakes w blueberry syrup
-		CookMade[65] = 1;//Cheese pancakes w blueberry syrup
-		CookMade[66] = 1;//choco pancakes w blueberry syrup
-		CookMade[67] = 1;//blueberry pancakes w syrup
-		CookMade[68] = 1;//blueberry pancakes w choco syrup
-		CookMade[69] = 1;//blueberry pancakes w blueberry syrup
-		CookMade[70] = 1;//toast w blueberry jelly
-		CookMade[71] = 1;//Ice sculpture
-		CookMade[72] = 1;//Ice water
-		CookMade[73] = 1;//crushed ice
-		CookMade[74] = 1;//blueberry icicle
-		CookMade[75] = 1;//shaved ice
-		CookMade[76] = 1;//blueberry shaved ice
-		CookMade[77] = 1;//refreshing choco drink
-		CookMade[78] = 1;//Caramel Pancakes
-		CookMade[79] = 1;//Caramel Bread
-		CookMade[80] = 1;//Caramel Choco bar
-		CookMade[81] = 1;//Caramel Pancakes w syrup
-		CookMade[82] = 1;//caramel pancakes w choco syrup
-		CookMade[83] = 1;//Caramel pancakes w blueberry syrup
-		CookMade[84] = 1;//Stale Bread
-		CookMade[85] = 1;//rotten Meat
-		CookMade[86] = 1;//Cursed Meat
-		CookMade[87] = 1;//Prison Food
-		CookMade[88] = 1;//Dry Bread
-		CookMade[89] = 1;//Pancake Armor
-		CookMade[90] = 1;//Pancake Armor w Syrup
-		CookMade[91] = 1;//Blueberry Armor
-		CookMade[92] = 1;//NULL Pancakes
-		CookMade[93] = 1;//UnusedItem
-		CookMade[94] = 1;//CookItem
-		CookMade[95] = 1;//Potion
+		CookMade[49] = 1;//Thin Pancakes w choco syrup
+		CookMade[50] = 1;//Cheese pancakes w choco syrup
+		CookMade[51] = 1;//Choco pancakes w syrup
+		CookMade[52] = 1;//Choco pancakes w choco syrup
+		CookMade[53] = 1;//Choco caramel cake
+		CookMade[54] = 1;//Blueberry Bread
+		CookMade[55] = 1;//blueberry juice
+		CookMade[56] = 1;//Blueberry pancakes
+		CookMade[57] = 1;//blueberry steak
+		CookMade[58] = 1;//blueberry syrup
+		CookMade[59] = 1;//Choco covered blueberries
+		CookMade[60] = 1;//Cheese dipped blueberries
+		CookMade[61] = 1;//blueberry concentrate
+		CookMade[62] = 1;//bluberry jelly
+		CookMade[63] = 1;//blueberry jelly candy
+		CookMade[64] = 1;//blueberry jelly beans
+		CookMade[65] = 1;//pancakes w blueberry syrup
+		CookMade[66] = 1;//Thin pancakes w blueberry syrup
+		CookMade[67] = 1;//Cheese pancakes w blueberry syrup
+		CookMade[68] = 1;//choco pancakes w blueberry syrup
+		CookMade[69] = 1;//blueberry pancakes w syrup
+		CookMade[70] = 1;//blueberry pancakes w choco syrup
+		CookMade[71] = 1;//blueberry pancakes w blueberry syrup
+		CookMade[72] = 1;//toast w blueberry jelly
+		CookMade[73] = 1;//Ice sculpture
+		CookMade[74] = 1;//Ice water
+		CookMade[75] = 1;//crushed ice
+		CookMade[76] = 1;//blueberry icicle
+		CookMade[77] = 1;//shaved ice
+		CookMade[78] = 1;//blueberry shaved ice
+		CookMade[79] = 1;//refreshing choco drink
+		CookMade[80] = 1;//Caramel Pancakes
+		CookMade[81] = 1;//Caramel Bread
+		CookMade[82] = 1;//Caramel Choco bar
+		CookMade[83] = 1;//Caramel Pancakes w syrup
+		CookMade[84] = 1;//caramel pancakes w choco syrup
+		CookMade[85] = 1;//Caramel pancakes w blueberry syrup
+		CookMade[86] = 1;//Stale Bread
+		CookMade[87] = 1;//rotten Meat
+		CookMade[88] = 1;//Cursed Meat
+		CookMade[89] = 1;//Prison Food
+		CookMade[90] = 1;//Dry Bread
+		CookMade[91] = 1;//Pancake Armor
+		CookMade[92] = 1;//Pancake Armor w Syrup
+		CookMade[93] = 1;//Blueberry Armor
+		CookMade[94] = 1;//NULL Pancakes
+		CookMade[95] = 1;//UnusedItem
+		CookMade[96] = 1;//CookItem
+		CookMade[97] = 1;//Potion
 	}
-	Cook CookedItem = new Cook(-1, "", "", 0, 0);
+	Cook CookedItem = new Cook(0, -1, "", "", 0, 0);
 	
 	Items CookItem = NullItem;
 	Items CookItem1 = NullItem;
 	Items CookItem2 = NullItem;
-	Cook NullCook = new Cook(0, "", "", 0, 0);
+	Cook NullCook = new Cook(0, 0, "", "", 0, 0);
 	Cook CookItem3 = NullCook;
 	
 	int MoveToggle = 0;
@@ -2815,7 +2815,7 @@ public class GamePanel extends JPanel implements Runnable{
 	int Amount2 = 0;
 	
 	
-	int[] ArmorRecipe = new int[74];{
+	int[] ArmorRecipe = new int[95];{
 		
 		ArmorRecipe[0] = 1;//TestItem 1?
 		ArmorRecipe[1] = 1;//TestItem2
@@ -2909,36 +2909,36 @@ public class GamePanel extends JPanel implements Runnable{
 		ArmorRecipe[72] = 1;//Dark Gauntlets
 		ArmorRecipe[73] = 1;//Dark Boots	
 		
-		//ArmorRecipe[74] = 1;//Boots?
-		//ArmorRecipe[75] = 1;//Shield?
-		//ArmorRecipe[76] = 1;//Armor?
-		//ArmorRecipe[77] = 1;//Gauntlets?
-		//ArmorRecipe[78] = 1;//Helmet?
+		ArmorRecipe[74] = 1;//Boots?
+		ArmorRecipe[75] = 1;//Shield?
+		ArmorRecipe[76] = 1;//Armor?
+		ArmorRecipe[77] = 1;//Gauntlets?
+		ArmorRecipe[78] = 1;//Helmet?
 		
-		//ArmorRecipe[79] = 1;//NULL Helmet
-		//ArmorRecipe[80] = 1;//NULL Armor
-		//ArmorRecipe[81] = 1;//NULL Gauntlets
-		//ArmorRecipe[82] = 1;//NULL Boots		
+		ArmorRecipe[79] = 1;//NULL Helmet
+		ArmorRecipe[80] = 1;//NULL Armor
+		ArmorRecipe[81] = 1;//NULL Gauntlets
+		ArmorRecipe[82] = 1;//NULL Boots		
 		
-		//ArmorRecipe[83] = 1;//Blueberry Armor
+		ArmorRecipe[83] = 1;//Blueberry Armor
 		
-		//ArmorRecipe[84] = 1;//Mystery Armor
+		ArmorRecipe[84] = 1;//Mystery Armor
 		
-		//ArmorRecipe[85] = 1;//Corrupt Helmet
-		//ArmorRecipe[86] = 1;//Corrupt Armor
-		//ArmorRecipe[87] = 1;//Corrupt Gauntlets
-		//ArmorRecipe[88] = 1;//Corrupt Boots		
+		ArmorRecipe[85] = 1;//Corrupt Helmet
+		ArmorRecipe[86] = 1;//Corrupt Armor
+		ArmorRecipe[87] = 1;//Corrupt Gauntlets
+		ArmorRecipe[88] = 1;//Corrupt Boots		
 		
-		//ArmorRecipe[89] = 1;//Corrupt Helmet
-		//ArmorRecipe[90] = 1;//Corrupt Armor
-		//ArmorRecipe[91] = 1;//Corrupt Gauntlets
-		//ArmorRecipe[92] = 1;//Corrupt Boots		
+		ArmorRecipe[89] = 1;//Corrupt Helmet
+		ArmorRecipe[90] = 1;//Corrupt Armor
+		ArmorRecipe[91] = 1;//Corrupt Gauntlets
+		ArmorRecipe[92] = 1;//Corrupt Boots		
 		
-		//ArmorRecipe[93] = 1;//Admin Armor
+		ArmorRecipe[93] = 1;//Admin Armor
 		
-		//ArmorRecipe[94] = 1;//All Armor
+		ArmorRecipe[94] = 1;//All Armor
 	}
-	int[] ArmorMade = new int[74];{
+	int[] ArmorMade = new int[95];{
 		
 		ArmorMade[0] = 1;//TestItem 1?
 		ArmorMade[1] = 1;//TestItem2
@@ -3032,34 +3032,34 @@ public class GamePanel extends JPanel implements Runnable{
 		ArmorMade[72] = 1;//Dark Gauntlets
 		ArmorMade[73] = 1;//Dark Boots	
 		
-		//ArmorMade[74] = 1;//Boots?
-		//ArmorMade[75] = 1;//Shield?
-		//ArmorMade[76] = 1;//Armor?
-		//ArmorMade[77] = 1;//Gauntlets?
-		//ArmorMade[78] = 1;//Helmet?
+		ArmorMade[74] = 1;//Boots?
+		ArmorMade[75] = 1;//Shield?
+		ArmorMade[76] = 1;//Armor?
+		ArmorMade[77] = 1;//Gauntlets?
+		ArmorMade[78] = 1;//Helmet?
 		
-		//ArmorMade[79] = 1;//NULL Helmet
-		//ArmorMade[80] = 1;//NULL Armor
-		//ArmorMade[81] = 1;//NULL Gauntlets
-		//ArmorMade[82] = 1;//NULL Boots		
+		ArmorMade[79] = 1;//NULL Helmet
+		ArmorMade[80] = 1;//NULL Armor
+		ArmorMade[81] = 1;//NULL Gauntlets
+		ArmorMade[82] = 1;//NULL Boots		
 		
-		//ArmorMade[83] = 1;//Blueberry Armor
+		ArmorMade[83] = 1;//Blueberry Armor
 		
-		//ArmorMade[84] = 1;//Mystery Armor
+		ArmorMade[84] = 1;//Mystery Armor
 		
-		//ArmorMade[85] = 1;//Corrupt Helmet
-		//ArmorMade[86] = 1;//Corrupt Armor
-		//ArmorMade[87] = 1;//Corrupt Gauntlets
-		//ArmorMade[88] = 1;//Corrupt Boots		
+		ArmorMade[85] = 1;//Corrupt Helmet
+		ArmorMade[86] = 1;//Corrupt Armor
+		ArmorMade[87] = 1;//Corrupt Gauntlets
+		ArmorMade[88] = 1;//Corrupt Boots		
 		
-		//ArmorMade[89] = 1;//Corrupt Helmet
-		//ArmorMade[90] = 1;//Corrupt Armor
-		//ArmorMade[91] = 1;//Corrupt Gauntlets
-		//ArmorMade[92] = 1;//Corrupt Boots		
+		ArmorMade[89] = 1;//Corrupt Helmet
+		ArmorMade[90] = 1;//Corrupt Armor
+		ArmorMade[91] = 1;//Corrupt Gauntlets
+		ArmorMade[92] = 1;//Corrupt Boots		
 		
-		//ArmorMade[93] = 1;//Admin Armor
+		ArmorMade[93] = 1;//Admin Armor
 		
-		//ArmorMade[94] = 1;//All Armor
+		ArmorMade[94] = 1;//All Armor
 		
 	}
 	Armorsmith NullArmor = new Armorsmith(00, 00, "", "No Disc", 0, "", 0, "", 0, 0, 0);
@@ -3095,17 +3095,17 @@ public class GamePanel extends JPanel implements Runnable{
 		
 		EventSale[0] = 1;//Bread Dough
 		EventSale[1] = 1;//Gloves? Recipe
-		EventSale[2] = 1;
-		EventSale[3] = 1;
-		EventSale[4] = 1;
-		EventSale[5] = 1;
-		EventSale[6] = 1;
-		EventSale[7] = 1;
-		EventSale[8] = 1;
-		EventSale[9] = 1;
-		EventSale[10] = 1;
-		EventSale[11] = 1;
-		EventSale[12] = 1;
+		EventSale[2] = 0;
+		EventSale[3] = 0;
+		EventSale[4] = 0;
+		EventSale[5] = 0;
+		EventSale[6] = 0;
+		EventSale[7] = 0;
+		EventSale[8] = 0;
+		EventSale[9] = 0;
+		EventSale[10] = 0;
+		EventSale[11] = 0;
+		EventSale[12] = 0;
 	}
 	int EventSaleTotal = Market.MarketTotal(EventSale);
 	
@@ -6368,7 +6368,7 @@ public class GamePanel extends JPanel implements Runnable{
 					}//Battle: If can escape End
 				}//Battle Screen: Escape End
 				
-					System.out.println("Battle Turn is" + Turn);
+					//System.out.println("Battle Turn is" + Turn);
 					}//Normal No Bomb battle turn End
 					if(BombCounter >= 2){//Bomb Attack 
 						
@@ -6882,8 +6882,8 @@ public class GamePanel extends JPanel implements Runnable{
 						AntiLuck = 0;
 					
 					if(DodgeRoll <= (DodgeChance + Speed - MSpeed + AntiLuck)){
-						Text1X = 70;
-						Text2X = 70;
+						Text1X = 30;
+						Text2X = 30;
 						Text1 = MName + "'s attack";
 						Text2 = "missed!";
 					}
@@ -7086,7 +7086,7 @@ public class GamePanel extends JPanel implements Runnable{
 					CHP3 = CHP[2];
 					CHP4 = CHP[3];
 					
-					Text1X = 80;
+					Text1X = 30;
 					Text1 = "Took "+ MDmg4 + " Damage";
 					Text2 = "from Poison!";
 					
@@ -7288,7 +7288,7 @@ public class GamePanel extends JPanel implements Runnable{
 							else if(ItemSelected.NegStatus == 1){//Poison
 								Status = 1;
 								StatusTurns = 5;
-								Text1X = 80;
+								Text1X = 30;
 								Text1 = "You became Poisoned!";
 								Text2 = "How Unlucky!";
 							}
@@ -7296,21 +7296,21 @@ public class GamePanel extends JPanel implements Runnable{
 								Status = 2;
 								StatusTurns = 5;
 								Luck = LevelUpData.LoadStats(Level, Gamemode)[14] + CurrentHood.Luck + CurrentHelmet.Luck + CurrentRobe.Luck + CurrentArmor.Luck + CurrentShirt.Luck + CurrentGuantlets.Luck + CurrentGloves.Luck + CurrentPants.Luck + CurrentSocks.Luck + CurrentBoots.Luck + CursedLuck;
-								Text1X = 80;
+								Text1X = 30;
 								Text1 = "You became Cursed!";
 								Text2 = "How Unlucky!";
 							}
 							else if(ItemSelected.NegStatus == 3){//Sticky
 								Status = 3;
 								StatusTurns = 5;
-								Text1X = 80;
+								Text1X = 30;
 								Text1 = "You became Sticky!";
 								Text2 = "How Unlucky!";
 							}
 							else if(ItemSelected.NegStatus == 4){//???
 								Status = 4;
 								StatusTurns = 5;
-								Text1X = 80;
+								Text1X = 30;
 								Text1 = "What just happened?";
 								Text2 = "Something unlucky?";
 							}
@@ -7318,14 +7318,14 @@ public class GamePanel extends JPanel implements Runnable{
 								Status = 5;
 								StatusTurns = 5;
 								Luck = LevelUpData.LoadStats(Level, Gamemode)[14] + CurrentHood.Luck + CurrentHelmet.Luck + CurrentRobe.Luck + CurrentArmor.Luck + CurrentShirt.Luck + CurrentGuantlets.Luck + CurrentGloves.Luck + CurrentPants.Luck + CurrentSocks.Luck + CurrentBoots.Luck + CursedLuck;
-								Text1X = 80;
+								Text1X = 30;
 								Text1 = "All?";
 								Text2 = "That's not good";
 							}
 							else if(ItemSelected.NegStatus == 6 && Status != 0){//Cure!
 								Status = 0;
 								StatusTurns = 0;
-								Text1X = 80;
+								Text1X = 30;
 								Text1 = "Your status is normal?";
 								Text2 = "What happened?";
 							}
@@ -8480,8 +8480,8 @@ public class GamePanel extends JPanel implements Runnable{
 				if(ScreenType == 4 && ItemsFound == 0){//CookScreen, Has no items yet
 					Ypos = 190;
 					Xpos = 140;
-					Text1X = 80;
-					Text2X = 80;
+					Text1X = 30;
+					Text2X = 30;
 					CookItem1 = NullItem;
 					CookItem2 = NullItem;
 					CookItem3 = NullCook;
@@ -8594,9 +8594,11 @@ public class GamePanel extends JPanel implements Runnable{
 						if(CookItem1 == NullItem && CookItem2 == NullItem){
 							CookItem1 = CookItem;
 						}
+						//RecipeNo = Cook.CookRecipeNo(CookItem1.ItemNo,CookItem2.ItemNo, Gamemode);
 						//CookedItem = Cook.CookItems(CookItem1.ItemNo, CookItem2.ItemNo);
-						CookItem3 = Cook.CookItems(CookItem1.ItemNo, CookItem2.ItemNo, CookRecipe, CookMade);//Cook.CookedItem(CookedItem.getCookedItemNo());
+						CookItem3 = Cook.CookItems(CookItem1.ItemNo, CookItem2.ItemNo, CookRecipe, CookMade, Gamemode);//Cook.CookedItem(CookedItem.getCookedItemNo());
 						//System.out.println("Item: " + CookItem3.getItemName());
+						RecipeNo = CookItem3.RecipeNo;
 						Price = CookedItem.getPrice();
 						CookToggle = 0;
 					}
@@ -8648,7 +8650,8 @@ public class GamePanel extends JPanel implements Runnable{
 						}
 						if(Money >= Price){
 							Money = Money - Price;
-							Item1Found[Cook.CookedItem(CookItem3.CookedItem).CookedItem - 1] = 1;
+							//Item1Found[Cook.CookedItem(CookItem3.CookedItem).CookedItem - 1] = 1;
+							Item1Found[CookItem3.CookedItem - 1] = 1;
 						
 						UpdateItem(ItemPlacement, 0);
 						//Use up CookItem1
@@ -8676,9 +8679,12 @@ public class GamePanel extends JPanel implements Runnable{
 						UpdateItem(ItemPlacement, 0);
 						CookToggle = 0;
 						if(CookItem3.CookedItem != -2){
-							RecipeNo = Cook.CookRecipeNo(CookItem1.ItemNo,CookItem2.ItemNo);
-							CookMade[RecipeNo - 1] = 1;
-							CookItem3 = Cook.CookItems(CookItem1.ItemNo, CookItem2.ItemNo, CookRecipe, CookMade);
+							//RecipeNo = Cook.CookRecipeNo(CookItem1.ItemNo,CookItem2.ItemNo, Gamemode);
+							//RecipeNo = Cook.CookRecipeNo(CookItem1.ItemNo,CookItem2.ItemNo, Gamemode);
+							CookItem3 = Cook.CookItems(CookItem1.ItemNo, CookItem2.ItemNo, CookRecipe, CookMade, Gamemode);
+							CookMade[CookItem3.RecipeNo - 1] = 1;
+							System.out.println("Cooked Recipe is " + RecipeNo);
+							System.out.println("Cooked Recipe Made is " + CookMade[CookItem3.RecipeNo - 1]);
 //							Text1 = "Obtained " + CookItem3.ItemName;
 //							Text2 = "";
 							
@@ -8693,7 +8699,7 @@ public class GamePanel extends JPanel implements Runnable{
 						if(CookItem3.CookedItem == -2){
 							Text1 = "Sorry, it didn't work";
 							Text2 = "";
-						}
+						}//Cooking wasted ingredients
 					}
 						}
 					}
@@ -8705,18 +8711,21 @@ public class GamePanel extends JPanel implements Runnable{
 					if(CookItem1 == NullItem && CookItem2 == NullItem){
 						Text1 = "Nothing Selected";
 						Text2 = "";
+						//RecipeNo = Cook.CookRecipeNo(CookItem1.ItemNo,CookItem2.ItemNo, Gamemode);
 						//CookedItem = Cook.CookItems(CookItem1.ItemNo, CookItem2.ItemNo);
-						CookItem3 = Cook.CookItems(CookItem1.ItemNo, CookItem2.ItemNo, CookRecipe, CookMade);//Cook.CookedItem(CookedItem.getCookedItemNo());
+						CookItem3 = Cook.CookItems(CookItem1.ItemNo, CookItem2.ItemNo, CookRecipe, CookMade, Gamemode);//Cook.CookedItem(CookedItem.getCookedItemNo());
 					}
 					if(CookItem1 != NullItem && CookItem2 == NullItem){
 						CookItem1 = NullItem;
+						//RecipeNo = Cook.CookRecipeNo(CookItem1.ItemNo,CookItem2.ItemNo, Gamemode);
 						//CookedItem = Cook.CookItems(CookItem1.ItemNo, CookItem2.ItemNo);
-						CookItem3 = Cook.CookItems(CookItem1.ItemNo, CookItem2.ItemNo, CookRecipe, CookMade);//Cook.CookedItem(CookedItem.getCookedItemNo());
+						CookItem3 = Cook.CookItems(CookItem1.ItemNo, CookItem2.ItemNo, CookRecipe, CookMade, Gamemode);//Cook.CookedItem(CookedItem.getCookedItemNo());
 					}
 					if(CookItem1 != NullItem && CookItem2 != NullItem){
 						CookItem2 = NullItem;
+						//RecipeNo = Cook.CookRecipeNo(CookItem1.ItemNo,CookItem2.ItemNo, Gamemode);
 						//CookedItem = Cook.CookItems(CookItem1.ItemNo, CookItem2.ItemNo);
-						CookItem3 = Cook.CookItems(CookItem1.ItemNo, CookItem2.ItemNo, CookRecipe, CookMade);//Cook.CookedItem(CookedItem.getCookedItemNo());
+						CookItem3 = Cook.CookItems(CookItem1.ItemNo, CookItem2.ItemNo, CookRecipe, CookMade, Gamemode);//Cook.CookedItem(CookedItem.getCookedItemNo());
 					}
 					CookToggle = 0;
 				}
@@ -10119,6 +10128,10 @@ public class GamePanel extends JPanel implements Runnable{
 					g.fillRect(0, 0, 500, 500);
 					g.setColor(Color.white);
 				}
+				if(ScreenMode == 8) {//Water
+					g.setColor(Color.BLUE);
+					g.fillRect(0, 0, 500, 500);
+				}
 				//RGB
 				//White is (255, 255, 255) and black is (0,0,0).
 				//Color c = new Color(int Red, int Green, int Blue)
@@ -10137,6 +10150,8 @@ public class GamePanel extends JPanel implements Runnable{
 					g.drawString("Text Only RPG", 55, 64);//Changes with Selection?
 					//g.drawLine(30, 50, 180, 50);
 					//KeyCode g.drawString("Code1", 15, 195);
+					g.drawString(Text1, Text1X, 80);
+					g.drawString(Text2, Text2X, 95);
 					//g.drawString(Password, 15, 195);
 					g.drawRect(30, 50, 130, 20);
 					g.drawString("Load", 15, 195);
@@ -10787,11 +10802,14 @@ public class GamePanel extends JPanel implements Runnable{
 				}
 				//g.drawLine(X1, Y1, X2, Y2);
 				if(Gamemode == 6){
-					g.drawLine(70, 0, 70, 200);
-				}
-				else{
+					//g.drawLine(70, 0, 70, 200);
 					g.drawLine(70, 0, 70, 135);
 					g.drawLine(0, 135, 70, 135);
+				}
+				else{
+					g.drawString("Ingredient:", 10, 10);
+					g.drawLine(72, 0, 72, 130);
+					g.drawLine(0, 130, 72, 130);
 				}
 				g.drawString("Money: " + Money, 90, 30);
 				g.drawString("Price: " + Price, 90, 45);
@@ -11741,22 +11759,22 @@ public class GamePanel extends JPanel implements Runnable{
 		
 		public void DamageEnemy(){
 			if(CDmg1 != 0){
-				Text1X = 80;
+				Text1X = 30;
 				Text1 = "did " + CDmg1 + CDmg2 + CDmg3 + CDmg4 + " Damage";
 				Text2 = "";
 			}
 			else if(CDmg1 == 0 && CDmg2 != 0){
-				Text1X = 80;
+				Text1X = 30;
 				Text1 = "did " + CDmg2 + CDmg3 + CDmg4 + " Damage";
 				Text2 = "";
 			}
 			else if(CDmg1 == 0 && CDmg2 == 0 && CDmg3 != 0){
-				Text1X = 80;
+				Text1X = 30;
 				Text1 = "did " + CDmg3 + CDmg4 + " Damage";
 				Text2 = "";
 			}
 			else if(CDmg1 == 0 && CDmg2 == 0 && CDmg3 == 0){
-				Text1X = 80;
+				Text1X = 30;
 				Text1 = "did " + CDmg4 + " Damage";
 				Text2 = "";
 			}
@@ -11767,22 +11785,22 @@ public class GamePanel extends JPanel implements Runnable{
 			//Text2 = "Recovered " + ????? + " HP"
 			if(RecovType == 0){//Normal Recover
 			if(CDmg1 == 0 && CDmg2 == 0 && CDmg3 == 0){
-				Text1X = 80;
+				Text1X = 30;
 				Text1 = "Enemy recovered "+ -CDmg4 + " HP"; //Gave Negative Damage?
 				Text2 = "";
 			}
 			if(CDmg1 == 0 && CDmg2 == 0 && CDmg3 != 0){
-				Text1X = 80;
+				Text1X = 30;
 				Text1 = "Enemy recovered "+ -CDmg3 + -CDmg4 + " HP";
 				Text2 = "";
 			}
 			if(CDmg1 == 0 && CDmg2 != 0){
-				Text1X = 80;
+				Text1X = 30;
 				Text1 = "Enemy recovered "+ -CDmg2 + -CDmg3 + -CDmg4 + " HP";
 				Text2 = "";
 			}
 			if(CDmg1 != 0){
-				Text1X = 80;
+				Text1X = 30;
 				Text1 = "Enemy recovered "+ -CDmg1 + -CDmg2 + -CDmg3 + -CDmg4 + " HP";
 				Text2 = "";
 			}
@@ -12016,6 +12034,36 @@ public class GamePanel extends JPanel implements Runnable{
 				if(EventSaleTotal >=7){
 					ItemS7 = ShopList[6];}
 			}
+			if(ItemS7.ItemNo == 0 && Ypos == 120) {
+				Ypos = 105;
+				CurrentItemS = ItemS6;
+			}
+			if(ItemS6.ItemNo == 0 && Ypos == 105) {
+				Ypos = 90;
+				CurrentItemS = ItemS5;
+			}
+			if(ItemS5.ItemNo == 0 && Ypos == 90) {
+				Ypos = 75;
+				CurrentItemS = ItemS4;
+			}
+			if(ItemS4.ItemNo == 0 && Ypos == 75) {
+				Ypos = 60;
+				CurrentItemS = ItemS3;
+			}
+			if(ItemS3.ItemNo == 0 && Ypos == 60) {
+				Ypos = 45;
+				CurrentItemS = ItemS2;
+			}
+			if(ItemS2.ItemNo == 0 && Ypos == 45) {
+				Ypos = 30;
+				CurrentItemS = ItemS1;
+			}
+			if(ItemS1.ItemNo == 0 && Ypos == 30) {
+				Ypos = 190;
+				Xpos = 140;
+				CurrentItemS = ItemS1;
+			}
+			
 		}
 		
 		//Areas
@@ -12102,74 +12150,74 @@ public class GamePanel extends JPanel implements Runnable{
 		public void TookDamage(int ModeM){
 			if(ModeM == 1){//Took Damage from Item
 				if(MDmg1 == 0 && MDmg2 == 0 && MDmg3 == 0){
-					Text1X = 50;
+					Text1X = 30;
 					Text1 = "Took "+ MDmg4 + " Damage";
 					Text2 = "";
 				}
 				if(MDmg1 == 0 && MDmg2 == 0 && MDmg3 != 0){
-					Text1X = 50;
+					Text1X = 30;
 					Text1 = "Took "+ MDmg3 + MDmg4 + " Damage";
 					Text2 = "";
 				}
 				if(MDmg1 == 0 && MDmg2 != 0){
-					Text1X = 50;
+					Text1X = 30;
 					Text1 = "Took "+ + MDmg2 + MDmg3 + MDmg4 + " Damage";
 					Text2 = "";
 				}
 				if(MDmg1 != 0){
-					Text1X = 50;
+					Text1X = 30;
 					Text1 = "Took "+ + MDmg1 + MDmg2 + MDmg3 + MDmg4 + " Damage";
 					Text2 = "";
 				}
 			}//Mode1 Took Damage from Item End
 			if(ModeM == 2){//Took Damage from Monster
 				if(MDmg1 == 0 && MDmg2 == 0 && MDmg3 == 0){
-					Text1X = 50;
-					Text2X = 50;
+					Text1X = 30;
+					Text2X = 30;
 					Text1 = "Took "+ MDmg4 + " Damage";
 					Text2 = "from " + BattleM.MonsterD[MTurn - 1].MonsterName[0]; //MonsterData.MInfo(BattleM.MonsterD[MTurn - 1].MonsterID).getMonsterName();
 				}
 				if(MDmg1 == 0 && MDmg2 == 0 && MDmg3 != 0){
-					Text1X = 50;
-					Text2X = 50;
+					Text1X = 30;
+					Text2X = 30;
 					Text1 = "Took "+ MDmg3 + MDmg4 + " Damage";
 					Text2 = "from " + BattleM.MonsterD[MTurn - 1].MonsterName[0];
 				}
 				if(MDmg1 == 0 && MDmg2 != 0){
-					Text1X = 50;
-					Text2X = 50;
+					Text1X = 30;
+					Text2X = 30;
 					Text1 = "Took "+ + MDmg2 + MDmg3 + MDmg4 + " Damage";
 					Text2 = "from " + BattleM.MonsterD[MTurn - 1].MonsterName[0];
 				}
 				if(MDmg1 != 0){
-					Text1X = 50;
-					Text2X = 50;
+					Text1X = 30;
+					Text2X = 30;
 					Text1 = "Took "+ + MDmg1 + MDmg2 + MDmg3 + MDmg4 + " Damage";
 					Text2 = "from " + BattleM.MonsterD[MTurn - 1].MonsterName[0];
 				}
 			}//Took Damage from Monster End
 			if(ModeM == 3){//Took Damage from Monster Critical
 				if(MDmg1 == 0 && MDmg2 == 0 && MDmg3 == 0){
-					Text1X = 50;
-					Text2X = 50;
+					Text1X = 30;
+					Text2X = 30;
 					Text1 = "Took a "+ MDmg4 + " Critical Hit";
 					Text2 = "from " + BattleM.MonsterD[MTurn - 1].MonsterName[0]; //MonsterData.MInfo(BattleM.MonsterD[MTurn - 1].MonsterID).getMonsterName();
 				}
 				if(MDmg1 == 0 && MDmg2 == 0 && MDmg3 != 0){
-					Text1X = 50;
-					Text2X = 50;
+					Text1X = 30;
+					Text2X = 30;
 					Text1 = "Took a "+ MDmg3 + MDmg4 + " Critical Hit";
 					Text2 = "from " + BattleM.MonsterD[MTurn - 1].MonsterName[0];
 				}
 				if(MDmg1 == 0 && MDmg2 != 0){
-					Text1X = 50;
-					Text2X = 50;
+					Text1X = 30;
+					Text2X = 30;
 					Text1 = "Took a "+ + MDmg2 + MDmg3 + MDmg4 + " Critical Hit";
 					Text2 = "from " + BattleM.MonsterD[MTurn - 1].MonsterName[0];
 				}
 				if(MDmg1 != 0){
-					Text1X = 50;
-					Text2X = 50;
+					Text1X = 30;
+					Text2X = 30;
 					Text1 = "Took a "+ + MDmg1 + MDmg2 + MDmg3 + MDmg4 + " Critical Hit";
 					Text2 = "from " + BattleM.MonsterD[MTurn - 1].MonsterName[0];
 				}
@@ -13098,7 +13146,7 @@ public class GamePanel extends JPanel implements Runnable{
 			DisplayM.MHp4 = 0;
 			//}
 			
-			Text1X = 80;
+			Text1X = 30;
 			Text1 = "Enemy Defeated";// or Battle Start? ???
 			Text2 = "";
 			Monster1Defeated[BattleM.MonsterD[CurrentM].MonsterID - 1] = Monster1Defeated[BattleM.MonsterD[CurrentM].MonsterID - 1] + 1;

@@ -221,129 +221,51 @@ public class TalkTextCutscene {
 //				if(LoadNo == 44){//Field Area 1: Giant Slime (Found)
 //					LoadedCutscene = new TalkTextCutscene(44, "Giant Slime: Defeated", "After Giant Slime", new int[]{83}, new int[][]{{10, }}, 1);
 //				}
+				
+				if(LoadNo == 45){//Cook Normal Food
+					LoadedCutscene = new TalkTextCutscene(25, "CookFood", "Cook normal foods", new int[]{31, 105}, new int[][]{{0, 0},{0, 0}}, 1);
+				}
+				
+//				Item1Found[7] = 1; //Thin Pancakes	31 Cook: Here you go!  Cook: Turned out okay			
+//				Item1Found[19] = 1; //Meatloaf Stuffed Bread	This is interesting		Cook: It's good right?					Yeah. It is.
+//				Item1Found[20] = 1; //Breading Stuffed Meat		This is an odd dish		Cook: <mumble> Will still taste good    Looks good
+//				Item1Found[21] = 1; //Meaty Pasta				How did you do this?	Cook: Huh? I just made it.  			Nevermind
+
+//				Item1Found[40] = 1; //Hard Candy		31 Cook: Here you go!     It's kind of hard to eat...
+//				Item1Found[44] = 1; //Hard Candies		Cook: There, better?		Yes actually. It is.
+//				Item1Found[59] = 1; //Chocolate Caramel Cake  31 Cook: Here you go!	 Wow~! It's... Amazing!
+//				Item1Found[68] = 1; //Blueberry Concentrate    It's powder? 		Cook: Tasty powder
+//				Item1Found[81] = 1; //Ice Sculpture		Wow! It's nice. 	Cook: Yeah, I'm awesome
+//				Item1Found[82] = 1; //Ice Water			You just put the ice in. Cook: What else was I supposed to do?
+//				Item1Found[83] = 1; //Crushed Ice		Cook: Hiiiyaaa! <Crash>	Here you go!
+//				Item1Found[84] = 1; //Blueberry Icicle  OOOH, what's this?		Cook: It's food. Duh.
+//				Item1Found[119] = 1; //Stale Bread		Hmmm	Cook: Well, this is what happened.
+//				Item1Found[120] = 1; //Rotten Meat		Cook: Hunting a ghoul?		Something like that
+//				Item1Found[121] = 1; //Cursed Meat		Cook: Ew! You take it.		I can't eat this.
+//				Item1Found[122] = 1; //Prison Food		Cook: <snicker> Here you go		Okay
+//				Item1Found[123] = 1; //Dry Bread		Cook: This is disapointing		I'll still eat it.		Cook: Okay?
+//				Item1Found[203] = 1; //Pancake Armor		It's armor!			Cook: Yeah... It is?
+//				Item1Found[204] = 1; //Pancake Armor W. Syrup	Cook: There ya go. It's sticky now.		Thanks
+//				Item1Found[251] = 1; //Blueberry Armor		It's armor!			Cook: Yeah... It is?
+//				Item1Found[284] = 1; //Null Pancakes		Cook: ...			...
+//				Item1Found[287] = 1; //Unused Item			Cook: One thing. Here you go.		Okay?
 		
-		//Meets with ??? Gamemode 0
+		//Meets with ??? Gamemode ?
 //		if(LoadNo == 39){//AreaCutscene Test3
 //			LoadedCutscene = new TalkTextCutscene(39, "AreaCutscene3", "Tests Find Area 1", new int[]{25}, new int[][]{{5, 12}}, 1);
 //		}
-		//Meets with ??? Gamemode 1
-//		if(LoadNo == 40){//AreaCutscene Test3
-//			LoadedCutscene = new TalkTextCutscene(40, "AreaCutscene3", "Tests Find Area 1", new int[]{25}, new int[][]{{5, 12}}, 1);
-//		}
-		//Meets with ??? Gamemode 2
-//		if(LoadNo == 41){//AreaCutscene Test3
-//			LoadedCutscene = new TalkTextCutscene(41, "AreaCutscene3", "Tests Find Area 1", new int[]{25}, new int[][]{{5, 12}}, 1);
-//		}
-		//Meets with ??? Gamemode 3
-//		if(LoadNo == 42){//AreaCutscene Test3
-//			LoadedCutscene = new TalkTextCutscene(42, "AreaCutscene3", "Tests Find Area 1", new int[]{25}, new int[][]{{5, 12}}, 1);
-//		}
-		//Meets with ??? Gamemode 4
-//		if(LoadNo == 43){//AreaCutscene Test3
-//			LoadedCutscene = new TalkTextCutscene(43, "AreaCutscene3", "Tests Find Area 1", new int[]{25}, new int[][]{{5, 12}}, 1);
-//		}
-		//Meets with ??? Gamemode 5
-//		if(LoadNo == 44){//AreaCutscene Test3
-//			LoadedCutscene = new TalkTextCutscene(44, "AreaCutscene3", "Tests Find Area 1", new int[]{25}, new int[][]{{5, 12}}, 1);
-//		}
-		//Meets with ??? Gamemode 6
-//		if(LoadNo == 45){//AreaCutscene Test3
-//			LoadedCutscene = new TalkTextCutscene(45, "AreaCutscene3", "Tests Find Area 1", new int[]{25}, new int[][]{{5, 12}}, 1);
-//		}
-				
-//				Item1Found[2] = 1; //Bread
-//				Item1Found[3] = 1; //Toast
-//				Item1Found[6] = 1; //Pancakes
-//				Item1Found[7] = 1; //Thin Pancakes
-//				Item1Found[9] = 1; //Cheese Fondue
-//				Item1Found[10] = 1; //Cheese Sandwitch
-//				Item1Found[11] = 1; //Cheese Toast
-//				Item1Found[12] = 1; //Cheese Pancakes
-//				Item1Found[13] = 1; //Grilled Cheese
-//				Item1Found[15] = 1; //Chopped Steak
-//				Item1Found[16] = 1; //Meat Bread
-//				Item1Found[17] = 1; //Meat Bun
-//				Item1Found[18] = 1; //Burger Bytes
-//				Item1Found[19] = 1; //Meatloaf Stuffed Bread
-//				Item1Found[20] = 1; //Breading Stuffed Meat
-//				Item1Found[21] = 1; //Meaty Pasta
-//				Item1Found[22] = 1; //Stuffed Sandwitch
-//				Item1Found[23] = 1; //Hamburger
-//				Item1Found[24] = 1; //Boiled Meat
-//				Item1Found[25] = 1; //SteakBurger
-//				Item1Found[26] = 1; //SteakHouse Burger
-//				Item1Found[27] = 1; //Cheese Steak
-//				Item1Found[28] = 1; //Cheeseburger
-//				Item1Found[29] = 1; //SteakBurgerW.Cheese
-//				Item1Found[30] = 1; //Cheesesteak Sandwitch
-//				Item1Found[32] = 1; //Caramel
-//				Item1Found[33] = 1; //Sweet Rolls
-//				Item1Found[34] = 1; //Syrup
-//				Item1Found[35] = 1; //Sticky Buns
-//				Item1Found[36] = 1; //Pancakes W. Syrup
-//				Item1Found[37] = 1; //Thin Pancakes W. Syrup
-//				Item1Found[38] = 1; //Cheese Pancakes W Syrup
-//				Item1Found[39] = 1; //Caramels
-//				Item1Found[40] = 1; //Hard Candy
-//				Item1Found[41] = 1; //Jelly Candy
-//				Item1Found[42] = 1; //Sugar Frosted Caramels
-//				Item1Found[43] = 1; //Caramel Syrup
-//				Item1Found[44] = 1; //Hard Candies
-//				Item1Found[45] = 1; //Jelly Beans
-//				Item1Found[47] = 1; //Chocolate Fondue
-//				Item1Found[48] = 1; //Hot Chocolate
-//				Item1Found[50] = 1; //Chocolate Bar
-//				Item1Found[51] = 1; //Chocolate Caramels
-//				Item1Found[52] = 1; //Chocolate Syrup
-//				Item1Found[53] = 1; //Caramel Hot chocolate
-//				Item1Found[54] = 1; //Pancakes W. Chocolate Syrup
-//				Item1Found[55] = 1; //Thin Pancakes W. Chocolate Syrup
-//				Item1Found[56] = 1; //Cheese Pancakes W. Chocolate Syrup
-//				Item1Found[57] = 1; //Chocolate Pancakes W. Syrup
-//				Item1Found[58] = 1; //Chocolate Pancakes W. Chocolate Syrup
-//				Item1Found[59] = 1; //Chocolate Caramel Cake
-//				Item1Found[61] = 1; //Blueberry Bread
-//				Item1Found[62] = 1; //Blueberry Juice
-//				Item1Found[63] = 1; //Blueberry Pancakes
-//				Item1Found[64] = 1; //Blueberry Steak
-//				Item1Found[65] = 1; //Blueberry Syrup
-//				Item1Found[66] = 1; //Chocolate Covered Blueberries
-//				Item1Found[67] = 1; //Cheese Dipped Blueberries
-//				Item1Found[68] = 1; //Blueberry Concentrate
-//				Item1Found[69] = 1; //Blueberry Jelly
-//				Item1Found[70] = 1; //Blueberry Jelly Candy
-//				Item1Found[71] = 1; //Blueberry Jelly Beans
-//				Item1Found[72] = 1; //Pancakes W. Blueberry Syrup
-//				Item1Found[73] = 1; //Thin Pancakes W. Blueberry Syrup
-//				Item1Found[74] = 1; //Cheese Pancakes W. Blueberry Syrup
-//				Item1Found[75] = 1; //Chocolate Pancakes W. Blueberry Syrup
-//				Item1Found[76] = 1; //Blueberry Pancakes W. Syrup
-//				Item1Found[77] = 1; //Blueberry Pancakes W. Chocolate Syrup
-//				Item1Found[78] = 1; //Blueberry Pancakes W. Blueberry Syrup
-//				Item1Found[79] = 1; //Toast W. Blueberry Jelly
-//				Item1Found[81] = 1; //Ice Sculpture
-//				Item1Found[82] = 1; //Ice Water
-//				Item1Found[83] = 1; //Crushed Ice
-//				Item1Found[84] = 1; //Blueberry Icicle
-//				Item1Found[85] = 1; //Shaved Ice
-//				Item1Found[86] = 1; //Blueberry Shaved Ice
-//				Item1Found[87] = 1; //Refreshing Chocolate Drink
-//				Item1Found[88] = 1; //Caramel Pancakes
-//				Item1Found[89] = 1; //Caramel Bread
-//				Item1Found[90] = 1; //Caramel Chocolate Bar
-//				Item1Found[91] = 1; //Caramel Pancakes W. Syrup
-//				Item1Found[92] = 1; //Caramel Pancakes W. Chocolate Syrup
-//				Item1Found[93] = 1; //Caramel Pancakes W. Blueberry Syrup
-//				Item1Found[119] = 1; //Stale Bread
-//				Item1Found[120] = 1; //Rotten Meat
-//				Item1Found[121] = 1; //Cursed Meat
-//				Item1Found[122] = 1; //Prison Food
-//				Item1Found[123] = 1; //Dry Bread
-//				Item1Found[203] = 1; //Pancake Armor
-//				Item1Found[204] = 1; //Pancake Armor W. Syrup
-//				Item1Found[251] = 1; //Blueberry Armor
-//				Item1Found[284] = 1; //Null Pancakes
-//				Item1Found[287] = 1; //Unused Item
+				//In an old version of the game, this was going to be me talking about the game. 
+				//I was going to talk about making it and things in it. 
+				//I was going to do this to share unused things that didn't get in the game.
+				//I decided not to do it. 
+				//I'll just tell you here. 
+				//1. More enemy types than the ones in the game.
+				//Not added because it was already lots of enemies.
+				//2. The game was originally made because I couldn't make a more complicated one.
+				//Then I made this one more complicated anyway.
+				//3. Every cook recipe was going to have a cutscene, but that was a lot, so I cut it down.
+				//Those are the more interesting little tidbits. There was some more about me talking to the player.
+
 		
 		return LoadedCutscene;
 	}
@@ -351,7 +273,7 @@ public class TalkTextCutscene {
 
 //There are two tales I want to tell, that I may not make much of, but other may.
 
-//In some other game released long ago, during the age of 64, a seperate other type of cutscene was found.
+//In some other game released long ago, during the age of 64, a separate other type of cutscene was found.
 //Due to the strange nature of this other cutscene, allowing others to see things from earlier versions, it was called Beta Quest
 //This Cutscene Quest allows one to walk around during cutscenes, seeing things as they are in a different way.
 //This mode may exist in other games, one other I know of featuring a Bear and Bird. You can move outside a cutscene and see what happens hidden outside of normal sight.
@@ -360,5 +282,4 @@ public class TalkTextCutscene {
 //In a certain game featuring a blue robot from the future, this type can make odd thing occur.
 //The cutscene moves with you into other areas, affecting them in odd ways. If such a type of cutscene exists in other games, maybe the scenes would change if they load in the wrong places?
 
-//As with other uses of this strange power, it may change and take yet more undiscovered forms depending on where it is found.
-//Maybe it would one day appear as described above? Only time will tell.
+//What is this strange power? To you maybe it is one thing, but what about those experiencing it firsthand?

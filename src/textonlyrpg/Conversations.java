@@ -155,15 +155,15 @@ public class Conversations {
 			Text2 = "Found TestArea3!";
 		}
 		if(TextNo == 22){//Cooking Failed
-			Text1 = "It Didn't Work,";
+			Text1 = "Cook: It Didn't Work,";
 			Text2 = "Sorry";
 		}
 		if(TextNo == 23){//Cooking Success TestFood
-			Text1 = "Here you go!";
+			Text1 = "Cook: Here you go!";
 			Text2 = "Obtained TestItem3.";
 		}
 		if(TextNo == 24){//Cooking Success Bomb
-			Text1 = "How Strange!";
+			Text1 = "Cook: How Strange!";
 			Text2 = "Obtained a bomb???";
 		}
 		if(TextNo == 25){//AreaTest
@@ -191,7 +191,7 @@ public class Conversations {
 			Text2 = "";
 		}
 		if(TextNo == 31){//Cooked Some Bread
-			Text1 = "Here you go!";
+			Text1 = "CooK: Here you go!";
 			Text2 = "";
 		}
 		if(TextNo == 32){//Cooked Some Bread
@@ -546,7 +546,7 @@ public class Conversations {
 			        //How Long Can This Text Real
 		}
 		if(TextNo == 100){// Coded Edge
-			Text1 = "\"It glows with a powerful                   This is something you will not see";
+			Text1 = "\"It glows with a powerful                            This is something you will not see"; //But apparently someone is now.
 			Text2 = "light\"";
 			HText1 = "";
 			HText2 = "";
@@ -563,92 +563,75 @@ public class Conversations {
 		
 		//104 newest
 		
-		if(TextNo == 91){//
-			Text1 = "";
+		if(TextNo == 105){//Cooked Some Food 2
+			Text1 = "Cook: It turned out good~!";
 			Text2 = "";
 			HText1 = "";
 			HText2 = "";
-			        //How Long Can This Text Real
+			//       How Long Can This Text Real
 		}
 		
-		if(TextNo == 9999999){//Hidden Influence
-			Text1 = "To see what inspired";
-			Text2 = "If it is desired";
-			HText1 = "A Key you must find";
-			HText2 = "For a time back in time";
-			        //How Long Can This Text Real
-		}
+//		if(TextNo == ??){//
+//			Text1 = "";
+//			Text2 = "";
+//			HText1 = "";
+//			HText2 = "";
+//			        //How Long Can This Text Real
+//		}
 		
-		if(TextNo == 10000000){//Hidden Influence
-			Text1 = "The key is hidden";
-			Text2 = "Within code";
-			HText1 = "An enemy hides it";
-			HText2 = "A Rare type of enemy";
-			        //How Long Can This Text Real
-		}
+
 		
-		if(TextNo == 10000001){//Hidden Influence
-			Text1 = "What does the fox do?";
-			Text2 = "An easy code";
-			HText1 = "But some is confusing";
-			HText2 = "The wise can figure it out";
-			        //How Long Can This Text Real
-		}
-		
-		//hovohodso
-		//xkkfj://tulatnedd.bedkob.dok/
-		//xkkfj://ricrufotau.ricruwuhtod.dok/naba/Wcaksx_Feb%S3%U9med
-		//xkkfj://rudzebuqeeao.vudtem.sem/naba/Jkef_%27d%27_Jnef
-		//xkkfj://wumovugj.wumojfek.sem/d64/197771-kxo-cowodt-ev-qoctu-esuhadu-ev-kamo/vugj/40317
-		//xkkfj://nnn.qoctupkhomo.sem/esuhadu-ev-kamo/wumojxuhb-setoj-lohjaed-1.0/
-		//xkkfj://nnn.oposicadb.sem/~muwwa/nrn/Kxaht_Eikoh_Nucc.xkmc
-		//xkkf://nor.uhsxalo.ehw/nor/20050321035346/xkkf://nnn.wumonaddohj.sem/d64/Rudze-Buqeeao.xkm
-		
-		//This stuff may be removed in a future release. Copyright and stuff you know.
-		//What is all this though? Well, I would say stuff that inspired me to make this game the way that I made it.
-		//I really like that ship one. The fake cheat that doesn't really exist anymore.
+
 		
 		//You see...
 		
 		//There is an old era of games that I'm not sure people know about nowadays.
 		//In that era there were several things that happened.
-		//Well, people imigined several things they wanted to happen.
+		//Well, people imagined several things they wanted to happen.
 		
-		//I know what I make will be different.
-		//I'm counting on it. Even if it isn't that good, I hope it does what I wanted it to.
+		//I know what I make will not be as fancy.
+		//Even if it isn't that good, I hope it does what I wanted it to.
 		
 		//Because some of those things from back then didn't lead as far as people may have thought they could.
 		//Fake cheats, codes, hacks. Usually the strange things are small
 		//Glitches can be fun. Some of them lead to some unexpected places. I once discovered something, but was never able to reproduce it.
 		//Then there are canceled features. Leftover data. Stuff that may be interesting or sad when people look at them.
 		//Admin only things seem to break the rules.
-		//Cheat devices where you enter in codes to change the game, heheheh.
+		//Cheat devices where you enter in codes to change the game.
 		//I once cut an npc that was basically me talking about the game
 		//Basically they talked about a game they were making. But I'm not sure I should make an NPC like that.
-		//It is't really the whole story.
+		//It isn't really the whole story.
 		
-		//I had to redo a lot. Especially in 2023 when I got a new computer and a new version of Java.
+		//I started the game at least ten years ago. It was probably sometime around... 2007-2012 ish
+		//I made the error in thinking it would be easy to make this.
+		//I got a few screens working then lost everything!
+		//So I began to take notes on a word document. Then I lost it all again.
+		//Luckily I had backups. So I kept going. I would get stuck, try again, make things, and then change them.
+		//Progress started fast but slowed down to a crawl. Then I started redoing things. Making them better, but only slightly.
+		//Eventually I stopped and didn't work on it for a looong time. Eventually I picked it back up again.
+		//I had to redo a lot. Especially since in 2023 when I got a new computer and a new version of Java.
+		//Now I kind of on and off work on it. Progress is happening though. I realized just how much work I created!
+		//So much not done, and lots of it inefficient. That is the story of this game.
 		
-		//Anhyway....
+		//Anyway....
 		
-		//I think there was another NPC that I forgot to add. Oops.
+		//I think there was another NPC that I forgot to add. Oops. Well it's okay.
 		
-		//I know I may not be able to live up to these things.
-		//I expect it really.
 		//I hope some people do enjoy this game and find it interesting.
-		//If that is the case then I have succeded.
+		//If that is the case then I have succeeded.
 		
 		//	Corruption is dangerous to games, but they become un-playable.
 		//	There is something scary about it. 
+		//In that I have not done so much.
 		//	Will I make a sequal? Will people even want one?
 		//	Some things do not go as planned you see.
 		//	One idea I had is complicated to program, heck I don't even know what all I would do with it!
 		//	I have to be careful about what things I want to plant for the possibility of a future game.
-		//	This one took me a looong time to make.
-		//	I started it back in 2013. Then I would pick it up and leave it.
-		//	Lots have changed since then. I kept adding things.
-		//	First it was only one. Then it became three.
-		//	Luckily I didn't plan on adding any extra worlds right? heheheh.
+		//This one took me a looong time to make.
+		//I started it back in 2013. Then I would pick it up and leave it.
+		//Lots have changed since then. I kept adding things.
+		//First it was only one. Then it became three.
+		//	Luckily I didn't plan on adding any extra worlds right?
 		
 		//		There are some things I wanted in a sequel. If this game never materializes maybe I will talk about it.
 		//		It was complicated. Not sure it would be even playable really.
@@ -660,38 +643,24 @@ public class Conversations {
 		//		Right?
 		//		Then there is the other way it could go. "Oh who is that now"
 		//		It was possible a fun idea if it could work. That is a capital IF.
-		//I'm not sure some of the things I want to add will work. Just that I added them and
+		//I'm not sure some of the things I want to add will work. Just that I added them.
 		
-		//Only time will tell I had lots of ideas for stuff. Some things for not even this game!
+		//Only time will tell I had lots of ideas for stuff.
 		
-		//Let me tell youo a story about the first idea. The big one.
+		//Let me tell you a story about the first idea. The big one.
 		//It begins in a castle. You play as a hero.
 		//There is a baron. They do something...
 		//Maybe it will be one day.
 		
-		//I will tell you some thing.
-		//What was pink master supposed to be?
-		//Maybe not what you were thinking.
-		//Maybe? You might be close.
-		//Basically in an old game there is a golden master you fight.
-		//A fake cheat says to read the mail and do all sorts of stuff and he will turn pink.
-		//Something specific about a flying turtle companion too.
-		//In that state he will be easier.
-		//He is something old and something new.
-		//	Maybe something old and something new will work?
-		//		Not sure about it yet though.
-		//	I am sure about some things I want to do in the future.
-		
 		//...
 		//Alright. I'm not doing this to say I think I might actually get popular. But just in case.
 		//I like how fangames can go. If someone takes this idea and runs with it then that's cool
-		//Everyone has a different interpretation of what Glitches and things are.
+		//Everyone has a different interpretation of what certain things are.
 		//And really with all the glitches out there they aren't wrong.
 		//If they make one, it will be different, and that is good.
 		//Even if it's only different in small ways.
 		
 		//	Read into this what you will. There may be nothing of it. Or something. I'm not sure yet.
-		//This one is only about 20% done right now.
 		
 		TalkText[0] = Text1;
 		TalkText[1] = Text2;

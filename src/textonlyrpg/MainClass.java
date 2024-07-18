@@ -4,9 +4,10 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.util.Random;
 
+import javax.swing.JApplet;
 import javax.swing.JFrame;
 
-public class MainClass {
+public class MainClass extends JApplet{
 	
 	//Initialize variables
 			
@@ -60,17 +61,6 @@ public class MainClass {
 				
 				int[] Updater;
 				
-				String OldPassword;//Password being loaded from file
-				String Password = "EmptyPassword";
-				String FuturePassword;//Random Password displayed at the end
-				static int PasswordMode = 1;//TODO Password Only in active Mode for testing ourposes
-				//0 = Normal Mode
-				//1 = "Active Mode" (During "Normal Gameplay" Cheats?)
-				
-				static int PasswordToggle = 0;
-				int ATurns = 0;//Action Turns
-				int BTurns = 0;//Battle Turns
-				
 				static int XBattleMode = 0;//Xtra, Xtreme?
 					//0 = No XMode Enemies
 					//1 = XMode enemies can happen at random Chance
@@ -112,7 +102,7 @@ public class MainClass {
 					//0 Enemies are always normal
 					//1 Enemies are sometimes Xmode
 					//2 Enemies are sometimes rare
-					//3 Enemies are sometimes XMode oe Rare
+					//3 Enemies are sometimes XMode or Rare
 					//4 Enemies are always rare
 					//5 Enemies are always X Mode
 					//6 Enemies are Rare, sometimes Xmode
@@ -120,7 +110,22 @@ public class MainClass {
 				
 				int XModifier = 0;
 				
+				public void init() {
+					JFrame Window = new JFrame();
+					Window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+					Window.setResizable(true);
+					Window.setTitle("Text Only RPG");
+					
+					GamePanel gamepanel = new GamePanel();
+					Window.add(gamepanel);
+					
+					Window.pack();
 				
+					Window.setLocationRelativeTo(null);
+					Window.setVisible(true);
+					
+					gamepanel.Startgamethread();
+				}
 	
 	public static void main (String[] args) {
 

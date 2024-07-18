@@ -1,6 +1,6 @@
 package textonlyrpg;
 
-public class AreaData1A {//Chances before or after? Rarity
+public class AreaData3A {//Chances before or after? Rarity
 	//Areas 0-35
 
 	//Remeber, PasswordData Loading Events!!!, Init CurrentArea, and other areadata things
@@ -23,7 +23,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*BattleChance*/new int[]{1}, new int[]{66}, 
 							/*XBattleChance*/new int[]{22}, new int[]{0}, /*RBattleChance*/new int[]{22}, new int[]{0}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},/*Ypos, Xpos*/30, 30, /*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"Welcome!", "Buy something!"}),
+							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}),
 					//1 = Normal Mode
 					new AreaData(1, "Market", "a quiet markerplace", 13, "TownArea", 
 							/*ItemChance*/new int[]{1}, new int[]{20}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -141,7 +141,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22},new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},/*Ypos, Xpos*/30, 5, 
 							/*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"Welcome!", ""}),
+							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}),
 					//1 = Normal Mode
 					new AreaData(3, "Cook", "Cooks Kitchen", 4, "TownArea", 
 							/*ItemChance*/new int[]{1}, new int[]{20}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -203,7 +203,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},/*Ypos, Xpos*/190, 140, 
 							/*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"Hey there!", "This is my shop"}),
+							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}),
 					//1 = Normal Mode
 					new AreaData(4, "WeaponSmith", "WeaponSmith's Shop", 10, "TownArea", 
 							/*ItemChance*/new int[]{1}, new int[]{20}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -265,7 +265,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},/*Ypos, Xpos*/190, 140, 
 							/*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"Hiya bud.", "Wanna make something?"}),
+							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}),
 					//1 = Normal Mode
 					new AreaData(5, "ArmorSmith", "ArmorSmith's Shop", 16, "TownArea", 
 							/*ItemChance*/new int[]{1}, new int[]{20}, /*MoneyChance*/new int[]{3}, new int[]{33}, 

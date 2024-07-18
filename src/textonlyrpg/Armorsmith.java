@@ -800,36 +800,203 @@ public class Armorsmith {
 				}
 				Total = Total + 1;
 			}//Dark Boots
-			//ArmorMade[73] = 1;//Dark Boots	241		Metal C 104		Dark Energy 119
 			
-			//ArmorMade[74] = 1;//Boots?	242			Metal C 104		Glitch 280
-			//ArmorMade[75] = 1;//Shield?	243			Metal C 104		Glitch 280
-			//ArmorMade[76] = 1;//Armor?	244			Metal C 104		Glitch 280
-			//ArmorMade[77] = 1;//Gauntlets?	245		Metal C 104		Glitch 280
-			//ArmorMade[78] = 1;//Helmet?	246			Metal C 104		Glitch 280
+			if(ArmorFound[74] == 1){//Boots?
+				if(ArmorMade[74] == 0){
+					AData[Total] = new Armorsmith(75, 242, "Boots", "Boots?", 104, "Metal C", 280, "Glitch", 1, 0, 3);
+				}
+				if(ArmorMade[74] == 1){
+					AData[Total] = new Armorsmith(75, 242, "Boots?", "Boots?", 104, "Metal C", 280, "Glitch", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Boots?
+			if(ArmorFound[75] == 1){//Shield?
+				if(ArmorMade[75] == 0){
+					AData[Total] = new Armorsmith(76, 243, "Sheild", "Sheild?", 104, "Metal C", 280, "Glitch", 1, 0, 3);
+				}
+				if(ArmorMade[75] == 1){
+					AData[Total] = new Armorsmith(76, 243, "Shield?", "Sheild?", 104, "Metal C", 280, "Glitch", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Sheild?
+			if(ArmorFound[76] == 1){//Armor?
+				if(ArmorMade[76] == 0){
+					AData[Total] = new Armorsmith(77, 244, "Armor", "Armor?", 104, "Metal C", 280, "Glitch", 1, 0, 3);
+				}
+				if(ArmorMade[76] == 1){
+					AData[Total] = new Armorsmith(77, 244, "Armor?", "Armor?", 104, "Metal C", 280, "Glitch", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Armor?
+			if(ArmorFound[77] == 1){//Guantlets?
+				if(ArmorMade[77] == 0){
+					AData[Total] = new Armorsmith(78, 245, "Gntlets", "Gauntlets?", 104, "Metal C", 280, "Glitch", 1, 0, 3);
+				}
+				if(ArmorMade[77] == 1){
+					AData[Total] = new Armorsmith(78, 245, "Gntlets?", "Gauntlets?", 104, "Metal C", 280, "Glitch", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Gauntlets?
+			if(ArmorFound[78] == 1){//Helmet?
+				if(ArmorMade[78] == 0){
+					AData[Total] = new Armorsmith(79, 246, "Helmet", "Helmet?", 104, "Metal C", 280, "Glitch", 1, 0, 3);
+				}
+				if(ArmorMade[78] == 1){
+					AData[Total] = new Armorsmith(79, 246, "Helmet?", "Helmet?", 104, "Metal C", 280, "Glitch", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Helmet?
 			
-			//ArmorMade[79] = 1;//NULL Helmet	247		Metal C 104		Null 281
-			//ArmorMade[80] = 1;//NULL Armor	248		Metal C 104		Null 281
-			//ArmorMade[81] = 1;//NULL Gauntlets	249	Metal C 104		Null 281
-			//ArmorMade[82] = 1;//NULL Boots	250		Metal C 104		Null 281
+			if(ArmorFound[79] == 1){//Null Helmet
+				if(ArmorMade[79] == 0){
+					AData[Total] = new Armorsmith(80, 247, "NULLHelm", "NULL Helmet", 104, "Metal C", 281, "Null", 1, 0, 3);
+				}
+				if(ArmorMade[79] == 1){
+					AData[Total] = new Armorsmith(80, 247, "NULLHelm", "NULL Helmet", 104, "Metal C", 281, "Null", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Null Helmet
+			if(ArmorFound[80] == 1){//Null Armor
+				if(ArmorMade[80] == 0){
+					AData[Total] = new Armorsmith(81, 248, "NULLArmr", "NULL Armor", 104, "Metal C", 281, "Null", 1, 0, 3);
+				}
+				if(ArmorMade[80] == 1){
+					AData[Total] = new Armorsmith(81, 248, "NULLArmr", "NULL Armor", 104, "Metal C", 281, "Null", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Null Armor
+			if(ArmorFound[81] == 1){//Null Gauntlets
+				if(ArmorMade[81] == 0){
+					AData[Total] = new Armorsmith(82, 249, "NULLGntlt", "NULL Gauntlets", 104, "Metal C", 281, "Null", 1, 0, 3);
+				}
+				if(ArmorMade[81] == 1){
+					AData[Total] = new Armorsmith(82, 249, "NULLGntlt", "NULL Gauntlets", 104, "Metal C", 281, "Null", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Null Gauntlets
+			if(ArmorFound[82] == 1){//Null Boots
+				if(ArmorMade[82] == 0){
+					AData[Total] = new Armorsmith(83, 250, "NULLBoots", "NULL Boots", 104, "Metal C", 281, "Null", 1, 0, 3);
+				}
+				if(ArmorMade[82] == 1){
+					AData[Total] = new Armorsmith(83, 250, "NULLBoots", "NULL Boots", 104, "Metal C", 281, "Null", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Null Boots
 			
-			//ArmorMade[83] = 1;//Blueberry Armor	251   Blueberry 61	Glitch 280
+			if(ArmorFound[83] == 1){//Blueberry Armor
+				if(ArmorMade[83] == 0){
+					AData[Total] = new Armorsmith(84, 251, "BBArmor", "Blueberry Armor", 61, "Blueberry", 280, "Glitch", 1, 0, 3);
+				}
+				if(ArmorMade[83] == 1){
+					AData[Total] = new Armorsmith(84, 251, "BBArmor", "Blueberry Armor", 61, "Blueberry", 280, "Glitch", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Blueberry Armor
 			
-			//ArmorMade[84] = 1;//Mystery Armor	252		Metal C 104		??? 284
+			if(ArmorFound[84] == 1){//Mystery Armor
+				if(ArmorMade[84] == 0){
+					AData[Total] = new Armorsmith(85, 252, "MysArmr", "Mystery Armor", 104, "Metal C", 284, "???", 1, 0, 3);
+				}
+				if(ArmorMade[84] == 1){
+					AData[Total] = new Armorsmith(85, 252, "MysArmr", "Mystery Armor", 104, "Metal C", 284, "???", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Mystery Armor
 			
-			//ArmorMade[85] = 1;//Corrupt Helmet	253		RustyMetal	282
-			//ArmorMade[86] = 1;//Corrupt Armor		254		RustyMetal	282
-			//ArmorMade[87] = 1;//Corrupt Gauntlets		255	RustyMetal	282
-			//ArmorMade[88] = 1;//Corrupt Boots		256		RustyMetal	282
+			if(ArmorFound[85] == 1){//Corrupt Helmet
+				if(ArmorMade[85] == 0){
+					AData[Total] = new Armorsmith(86, 253, "CorrHelm", "Corrupt Helmet", 282, "RustyMetal", 0, "", 1, 0, 3);
+				}
+				if(ArmorMade[85] == 1){
+					AData[Total] = new Armorsmith(86, 253, "CorrHelm", "Corrupt Helmet", 282, "RustyMetal", 0, "", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Corrupt Helmet
+			if(ArmorFound[86] == 1){//Corrupt Armor
+				if(ArmorMade[86] == 0){
+					AData[Total] = new Armorsmith(87, 254, "CorrArmr", "Corrupt Armor", 282, "RustyMetal", 0, "", 1, 0, 3);
+				}
+				if(ArmorMade[86] == 1){
+					AData[Total] = new Armorsmith(87, 254, "CorrArmr", "Corrupt Armor", 282, "RustyMetal", 0, "", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Corrupt Armor
+			if(ArmorFound[87] == 1){//Corrupt Gauntlets
+				if(ArmorMade[87] == 0){
+					AData[Total] = new Armorsmith(88, 255, "CorrGntlt", "Corrupt Gauntlets", 282, "RustyMetal", 0, "", 1, 0, 3);
+				}
+				if(ArmorMade[87] == 1){
+					AData[Total] = new Armorsmith(88, 255, "CorrGntlt", "Corrupt Gauntlets", 282, "RustyMetal", 0, "", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Corrupt Gauntlets
+			if(ArmorFound[88] == 1){//Corrupt Boots
+				if(ArmorMade[88] == 0){
+					AData[Total] = new Armorsmith(89, 256, "CorrBoots", "Corrupt Boots", 282, "RustyMetal", 0, "", 1, 0, 3);
+				}
+				if(ArmorMade[88] == 1){
+					AData[Total] = new Armorsmith(89, 256, "CorrBoots", "Corrupt Boots", 282, "RustyMetal", 0, "", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Corrupt Boots
 			
-			//ArmorMade[89] = 1;//Corrupt Helmet	253		Item/Corr.name  283
-			//ArmorMade[90] = 1;//Corrupt Armor		254		Item/Corr.name  283
-			//ArmorMade[91] = 1;//Corrupt Gauntlets		255	Item/Corr.name  283
-			//ArmorMade[92] = 1;//Corrupt Boots		256		Item/Corr.name  283
+			if(ArmorFound[89] == 1){//Corrupt Helmet
+				if(ArmorMade[89] == 0){
+					AData[Total] = new Armorsmith(90, 253, "CorrHelm", "Corrupt Helmet", 283, "Item/Corr.name", 0, "", 1, 0, 3);
+				}
+				if(ArmorMade[89] == 1){
+					AData[Total] = new Armorsmith(90, 253, "CorrHelm", "Corrupt Helmet", 283, "Item/Corr.name", 0, "", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Corrupt Helmet
+			if(ArmorFound[90] == 1){//Corrupt Armor
+				if(ArmorMade[90] == 0){
+					AData[Total] = new Armorsmith(91, 254, "CorrArmr", "Corrupt Armor", 283, "Item/Corr.name", 0, "", 1, 0, 3);
+				}
+				if(ArmorMade[90] == 1){
+					AData[Total] = new Armorsmith(91, 254, "CorrArmr", "Corrupt Armor", 283, "Item/Corr.name", 0, "", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Corrupt Armor
+			if(ArmorFound[91] == 1){//Corrupt Gauntlets
+				if(ArmorMade[91] == 0){
+					AData[Total] = new Armorsmith(92, 255, "CorrGntlt", "Corrupt Gauntlets", 283, "Item/Corr.name", 0, "", 1, 0, 3);
+				}
+				if(ArmorMade[91] == 1){
+					AData[Total] = new Armorsmith(92, 255, "CorrGntlt", "Corrupt Gauntlets", 283, "Item/Corr.name", 0, "", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Corrupt Gauntlets
+			if(ArmorFound[92] == 1){//Corrupt Boots
+				if(ArmorMade[92] == 0){
+					AData[Total] = new Armorsmith(93, 256, "CorrBoots", "Corrupt Boots", 283, "Item/Corr.name", 0, "", 1, 0, 3);
+				}
+				if(ArmorMade[92] == 1){
+					AData[Total] = new Armorsmith(93, 256, "CorrBoots", "Corrupt Boots", 283, "Item/Corr.name", 0, "", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Corrupt Boots
 			
-			//ArmorMade[93] = 1;//Admin Armor	257		Null 281	??? 284
+			if(ArmorFound[93] == 1){//Admin Armor
+				if(ArmorMade[93] == 0){
+					AData[Total] = new Armorsmith(94, 257, "AdmArmr", "Admin Armor", 281, "Null", 284, "???", 1, 0, 3);
+				}
+				if(ArmorMade[93] == 1){
+					AData[Total] = new Armorsmith(94, 257, "AdmArmr", "Admin Armor", 281, "Null", 284, "???", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//Admin Armor
 			
-			//ArmorMade[94] = 1;//All Armor		258		Null 281	Glitch 280
+			if(ArmorFound[94] == 1){//All Armor
+				if(ArmorMade[94] == 0){
+					AData[Total] = new Armorsmith(95, 258, "AllArmr", "All Armor", 281, "Null", 280, "Glitch", 1, 0, 3);
+				}
+				if(ArmorMade[94] == 1){
+					AData[Total] = new Armorsmith(95, 258, "AllArmr", "All Armor", 281, "Null", 280, "Glitch", 1, 1, 3);
+				}
+				Total = Total + 1;
+			}//All Armor
 			
 		}
 		return AData;
