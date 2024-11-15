@@ -61,17 +61,17 @@ public class MainClass extends JApplet{
 				
 				int[] Updater;
 				
-				static int XBattleMode = 0;//Xtra, Xtreme?
+				static int XBattleMode = 0;//Xtra, Xtreme? Maybe just X...
 					//0 = No XMode Enemies
-					//1 = XMode enemies can happen at random Chance
+					//1 = XMode enemies can happen at random Chance, sometimes bosses too.
 					//2 = X Bosses always happen!
 					//3 = XEnemies, but no XBosses
 					//4 = XBosses, No X Enemies
 					//5 = All Enemies are always in XMode!
 					//6 = X Enemies always happen, X Bosses not around...
-					//7 = Mode X
+					//7 = Mode X (Both enemies and bosses always X)
 					//8 = Bosses always show up in XForm, but enemies are normal
-					//9 = Enemies are Always X From, Bosses Only Randomly
+					//9 = Enemies are Always X Form, Bosses Only Randomly
 				
 					//10 = Rare enemies can happen at random Chance
 					//11 = R Bosses always happen!
@@ -79,7 +79,7 @@ public class MainClass extends JApplet{
 					//13 = RBosses, No R Enemies
 					//14 = All Enemies are always Rare!
 					//15 = R Enemies always happen, R Bosses not around...
-					//16 = Mode R
+					//16 = Mode R (Both Bosses and enemies are always R Mode)
 					//17 = Bosses always show up in Rare, but enemies are normal
 					//18 = Enemies are Always rare From, Bosses Only Randomly
 				
@@ -97,6 +97,11 @@ public class MainClass extends JApplet{
 					//28 Bosses sometimes R, enemies sometimes X
 				
 					//29 Bosses and enemies sometimes happen R or X randomly
+				
+					//30	Bosses sometimes rare			Enemies always X
+					//31   	Bosses sometimes X				Enemies sometimes R
+					//32    Bosses Always X					enemies sometimes R
+					//33    Bosses always rare				Enemies sometimes X
 				
 					//Or
 					//0 Enemies are always normal

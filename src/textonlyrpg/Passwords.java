@@ -84,6 +84,13 @@ public class Passwords {
 		return passwordAContents;
 	}
 	
+	public static String SaveToPasswordA(String CHP1, String CHP2, String CHP3, String CHP4) {
+		String NewerPassword = "";
+		//CHP1;
+		NewerPassword = CHP1 + CHP2 + CHP3 + CHP4;
+		return NewerPassword;
+	}
+	
 	public static int[] Cheat(int keyPressed, int Var1, int VarM){
 		int[] CheatValue = new int[]{Var1,VarM};
 		

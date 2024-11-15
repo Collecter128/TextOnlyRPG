@@ -1,0 +1,190 @@
+I wanted to document some info. I know this won't become popular or anything.
+I just... wanted it somewhere for someone to read I guess.
+This is here for me as much as it is for other people. 
+If none read it, then I am glad it's down somewhere. 
+Maybe it's the part of me that likes old game mysteries and beta info that makes me want to put this here.
+
+In this game, many things have changed and been removed. 
+I will list some of these changes here, so that others may know of what wasn't.
+
+0. Old Display
+The oldest version of this game was going to be a data entry type form thing.
+It was going to have buttons where most of the actions are done. 
+It didn't really make sense the way it was, since this is when I first...
+started learning about programming. I even considered gridbag. 
+Luckily I discovered I can do a lot more with this method of screen display.
+
+1. Cipher System
+Once, long ago, the game was going to have all text substitution ciphered. It would have been translated back before it was displayed.
+This was... not a good idea. It made things difficult to work with and was buggy as heck.
+
+2. Developer Character
+Once, a character was going to be implemented that talked to the player about stuff.
+Mostly about how they are making a game... this game. 
+They were going to talk about old features or changes that didn't get in it.
+Over time, I realized this character may not be a good fit for the game.
+They didn't have much to talk about too, since it was canceled a while ago.
+
+3. More Monster Types
+More monster types were considered. I has a bunch of them thought out, but I narrowed it down to these few.
+Consider how many monsters are in this game, and think about what it means for me to "narrow it down".
+I realized I had more than enough monsters. So I guess I went with it.
+
+4. Another game
+The crafting system comes from another game idea I had, and might still make someday.
+I thought it would be cool to make them parallel dimentions so I can use the crafting for both.
+Maybe not the best idea, but it lets me do certain things I wouldn't have thought of before.
+Now, the Ability User thing I work on sometimes is connected to my RPG series. Odd right?
+The RPG is a little more loose with how the crafting should work.
+
+5. Cooking
+Every cook recipe was going to have unique dialogue. Every single one.
+It was changed at some point.
+
+6. There was another game planned before this one
+That game was too complicated to make at the time. It was going to be a more proper RPG with the whole shebang. 
+Sounds, music, textures, changing color pallets for enemies and the like. I was planning something big.
+This, was like... my first game. So I had to do something smaller.
+Then I made it more complicated and bigger, and it became a lot more fancy than it was going to be.
+
+7. CodeX was going to be the name of the game.
+I changed it cause text only RPG sounds better and makes more sense. CodeX ended up being something else though.
+I really ahd the idea of making CodeX more important to the game, by making the save a "password".
+I realized that the "password" was really long and complicated and needed to change it somehow.
+So CodeX changed. It is difficult to use and hard to understand. Better than the original idea though.
+
+Some more development info because I wanted to document it somewhere. May contain spoilers.
+"Final" Boss.
+This was like, the first thing planned when I started on bosses/enemies. Even when it expanded to Two the theme was still there.
+Then it became three, so a new type was introduced. That's partly hpw it happened.
+
+It became three a long time ago. Three sets of enemies. Normal, then harder, then the third.
+Then I became interested in adding another layer to it. Instantly three sets became more like 6 and then it became 9.
+There are lots of monster entries now. If this game ever get's made I will be surprised I managed to do all of this.
+There are probably too many. If there is a sequel I may add less monsters, but you know how development plans change.
+
+It would be irresponsible to say I was making the sequel for certain. 
+and...
+It is not a certainty. 
+but...
+I may still make it, but... Well. I started this game like... 10 years ago, stopped and then began again. I don't know how long a sequel would take me.
+Hopefully not long, but if I want to make it with all the things I think it should have, it will probably take a long time for me to make.
+This one is taking a long time to make. 
+Why would I take so long to make a game anyway?
+Well, here is the answer. 
+1. I wanted to make it as cool as I could, even if it takes a while.
+2. Not many people are waiting or care that this game will be made, so I can take a long time making it.
+3. It's okay if it's not the best because it is my first game. I am very noob at programming and I am still learning here and there.
+		
+
+Let's talk secrets. Maj0r spoilers for stuff in the game, but there is still some dev info I want to list somewhere.
+
+Glitches are a good inspiration for some things in this game, even though a lot of glitch like stuff didn't make it into this game.
+Consider this.
+
+Glitches are... complicated. They can be interesting, but at the same time they usually mean something is wrong with a game.
+How do you then add in enemies or things witch glitch properties and not make the game look broken?
+It's really hard to think about how people are going to react to this stuff.
+
+Super maor spoiler for a secret thing here...
+
+Cutscenes and Beta Quest. How does this work?
+
+Well, I wanted to make a thing like that. I took it, looked at it, and set it down in a corner.
+Then I treid to make my own version of it. Something different. It works way better than I could have expected it to.
+Like... I have no idea how it turned out the way it did! But I am glad it works like it does.
+
+Cipher enemy. This was going to be used more, but... Well, I need another cipher. I think the one I use is similar to something that already exists somewhere.
+
+The CodeX screen. Why does it work like this?
+Well, in some games you have mechanics which are easy to use an understand...
+In some other games you have mechanics which are harder and more obscure.
+Then you have some things which do not work easily and sometimes not too well.
+It's sort of like that. One of those mechanics that don't seem like they were made with the game in mind.
+What is it based upon was sort of easy to use unless you wanted to make your own codes.
+That was complicated. You had to know what you were doing and you might still break something.
+They were really popular back then and there were lots of them.
+You can still probably find codes for them online, but they aren't really used anymore.
+"Game Enhancers", Cheat devices. They go by many different names, but they always have this data modify code entry thing to them.
+
+Ah yes. Mirror mode. The mode that was not a mode. It was partly a thing, but didn't become more than it is now.
+
+You have read a lot. Thank you for taking the time to look at this. Now, haw about a story as a reward?
+
+Sometime not too long before te game began...
+
+A Blacksmith worked in his small village. It was far enough away from the other places so that it was quite.
+It was close enough to them to have good business.
+It was a good place to set up shop.
+
+The blacksmith knew almost everyone in town and talked to them regularly while working. It was a nice place.
+
+One day, a small girl from the village came to talk. She waited as another adventurer talked to the blacksmith.
+
+Adventurer: You thinkt his sword can cut though that?
+Blacksmith: Sure can! It can cut through almost anything, maybe even the wind!
+Adventurer: Great! Thanks for the sword. Have a nice day!
+
+The girl walked over to the blacksmith, but remebered to stand away so whe would not get hurt as he worked.
+
+Girl: You made a sword that can cut wind? What aobut a sword that can cut nothing?
+
+The blacksmith chuckled. 
+
+Blacksmith: A sword that can cut nothin isn't too helpful now. It's got to cut something.
+
+The girl frowned.
+
+Girl: No sir. A sword that can cut everything and nothing! 
+
+The blacksmith seemed to understand now. Stioll, he was a little confused.
+
+Blacksmith: Not sure I can make a sword like that. 
+Girl: Okay.
+
+She left, happy with the answer. The blacksmith wasn't too certain though. With the right material, 
+could he make a sword that could cut nothingness? 
+What would happen if it could? 
+
+A few days later, a group of adventurers came with materials. Odd materials. They wanted new gear, so the Blacksmith set to work. 
+He made them all new equipment, and was paid in money and materials.
+Odd materials.
+
+The Blasmith practiced with the odd materials to see what they could do. One peice of "metal" was odd. It wss filled with an emptiness.
+What could one do with a metal filled with nothingness? Could one make a sword that could cut nothing?
+
+After proacticing he was ready. The Blaclsmith took the rest of his foreign materials and began to create a sword.
+It was going to be plain, but very well made. A sword that oculd cut nothing. Perfectly sharp. Straight as an arrow.
+Light, balanced. Flexible and sturdy. It was to be a masterpeice. He even took a whitish gemstone and used that in the sword.
+
+Null Edge. The sword of nothing.
+
+A sword that could cut nothingness.
+What would happen if it was used? At first, the blacksmith was afraid. Then he tried it. He desired to make some water, so he cut the air.
+Water came out. Just a little bit. It was a sword of crazy power!
+
+Afraid to use it too much, the Blacksmith put the sword on display. 
+
+This sword was special. It shouldn't be used too much.
+
+The next day the sword had moved. Had someone tried to steal it? The blacsmith changed all his locks with new ones, and made his shop more secure.
+
+Then it moved again. Odd things seemed to happen and one day a simple slime attacked him in town!
+
+This sword... Was it... bad in some way? The blacksmith had to know. He called upon some help andf waited.
+
+Help came, and they were going to examine the sword.
+
+As if knowing what was going to happen, the sword began to float and move on it's own! 
+It was not wanting to be examined, for then people would know that it was a monster! A monster with plans.
+
+The sword decided to leave and find another place to take over, while hiding as the true mastermind.
+
+No one knows what the sword was thinking, or that it could. None knew how it had gotten smart, even the sword itself.
+
+A certain type of magic was at play here, and it was not a normal type people knew about.
+
+The sword left, being drawn to an immense power somewhere nearby. It hid itself in a place not too close to that snowy mountain, but close enough to take over a town.
+
+It found other monsters to be it's minions, and it made more to fill in the ranks. This is the story of the Null Edge. 
+The empty sword that should not exist.

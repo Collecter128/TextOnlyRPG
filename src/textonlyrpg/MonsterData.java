@@ -165,7 +165,11 @@ public class MonsterData {
 		return MonsterName[Var];
 	}
 	public String getMonsterShortName(int Var){
-		return MonsterShortName[Var];
+		if(Var > MonsterShortName.length - 1) {
+			return MonsterShortName[0];
+		}
+		else
+			return MonsterShortName[Var];
 	}
 	
 	public String getMDescription(){
@@ -545,8 +549,8 @@ public class MonsterData {
 				}
 			}//End of if Monster 359
 			
-			//If monsterdata is 360 - 401
-			if(MonsterNo > 359 && MonsterNo <= 401){
+			//If monsterdata is 360 - 404
+			if(MonsterNo > 359 && MonsterNo <= 404){
 				if(MonsterNo%3 == 0){//1 2
 					MInfo = new MonsterData[]{MonsterData0X.MData(MonsterNo, Var),
 						};

@@ -23,6 +23,18 @@ public class GamePanel extends JPanel implements Runnable{
 	passwordRW PasswordRW = new passwordRW(this);
 	static int Ypos = 190; //CurserPosY
 	static int Xpos = 7; //CurserPosX
+	Color Cursercolor = Color.BLACK;
+	Color CurserColorCutscene = Color.CYAN;
+	Boolean CurserOutline = true;
+	Color CurserOutlineColor = Color.BLUE;
+	Color CurserColorMonsterTurn = Color.gray;
+	Color PoisonColor = new Color(195 , 0, 200);
+	Color CursedColor = new Color(245 , 133, 10);
+	Color StickyColor = Color.magenta;
+	Color UnknownColor = Color.gray;
+	Color AllColor = Color.orange;
+	Color BarrierColor = Color.CYAN;
+	
 	//int Ypos = 70; //CurserPosY
 	//int Xpos = 60; //CurserPosX
 	static int Radius = 5; //CurserRadius
@@ -43,16 +55,27 @@ public class GamePanel extends JPanel implements Runnable{
 	
 	String OldPassword = "OldPassword";//Password being loaded from file
 	String Password = "EmptyPassword";
+	String NewPassword = "NewPassword";
+	String FuturePasswordName = "TestPassword";
 	String FuturePassword = "??";//Random Password displayed at the end
-	static int PasswordMode = 1;//TODO Password Only in active Mode for testing ourposes
+	String FuturePasswordDesc1 = "This is the password that ???";
+	String FuturePasswordDesc2 = "What does it do? Unknown!";
+	static int PasswordMode = 0;//TODO Password Only in active Mode for testing ourposes
 	//0 = Normal Mode, Password screen is only a title screen...
 	//1 = "Active Mode" (During "Normal Gameplay" Cheats?) password screen Accessible from gameplay
 	
 	static int PasswordToggle = 0;
 	int ATurns = 0;//Action Turns
 	int BTurns = 0;//Battle Turns
+	int CTurns = 0;//Crafting Turns
+	
+	String EndCheatCondition = "Type during gameplay";
+	String EndCheatName = "TestCheat";
+	String CheatDesc1 = "Enter cheat to ???";
+	String CheatDesc2 = "Not a real cheat";
 
 	int ScreenType = 0;//Password Screen
+	int PasswordScreenmode = 0;
 	static int ScreenMode = 1;
 		//Nothingness = 0
 		//Normal = 1
@@ -813,7 +836,7 @@ public class GamePanel extends JPanel implements Runnable{
 	}
 	int ItemsFound = Items.ItemTotal(Item1Found);//10;//----------
 	
-	Items NullItem = new Items(00, "", "", 0, 0, 0, 0, "No Disc", 0, 0, 0, new double[]{/*Normal*/0.0, /*Slime*/0.0, /*Ghost*/0.0, /*Golem*/0.0, /*Armor*/0.0, /*Other*/0.0, /*Glitch*/0.0, /*Fire*/0.0, /*Water*/0.0, /*Wind*/0.0, /*Earth*/0.0, /*Electric*/0.0, /*Ice*/0.0, /*Light*/0.0, /*Dark*/0.0, /*Glitch*/0.0, /*Null*/0.0, /*Mystery*/0.0, /*Corrupt*/0.0, /*Admin*/0.0, /*All*/0.0}, /*Speed*/0, /*Luck*/0, /*Dodge*/0, /*Critical*/0, /*Cure*/0, /*NegStatus*/0, new int[]{/*Poison*/0, /*Curse*/0, /*Sticky*/0, /*???*/0, /*All*/0});
+	Items NullItem = new Items(00, "", "", 0, 0, 0, 0, "No Disc", 0, 0, 0, new double[]{/*Normal*/0.0, /*Slime*/0.0, /*Ghost*/0.0, /*Golem*/0.0, /*Armor*/0.0, /*Other*/0.0, /*Glitch*/0.0, /*Fire*/0.0, /*Water*/0.0, /*Wind*/0.0, /*Earth*/0.0, /*Electric*/0.0, /*Ice*/0.0, /*Light*/0.0, /*Dark*/0.0, /*Glitch*/0.0, /*Null*/0.0, /*Mystery*/0.0, /*Corrupt*/0.0, /*Admin*/0.0, /*All*/0.0}, /*Speed*/0, /*Luck*/0, /*Dodge*/0, /*Critical*/0, /*Cure*/0, /*NegStatus*/0, new int[]{/*Poison*/0, /*Curse*/0, /*Sticky*/0, /*???*/0, /*All*/0});//,/*XModifier*/0, /*RModifier*/0
 	Items Item1 = NullItem;
 	Items Item2 = NullItem;
 	Items Item3 = NullItem;
@@ -895,556 +918,560 @@ public class GamePanel extends JPanel implements Runnable{
 	//Doppleganger?
 	///Drain/Vampire Slime
 	
-	int[] Monster1Found = new int[402];{
-		Monster1Found[0] = 1; //Defaulter 0
-		Monster1Found[1] = 1; //00 Coded Edge 1
-		Monster1Found[2] = 1; //CodedEdge 1.5 2
-		Monster1Found[3] = 1; //Gold Edge 3
+	int[] Monster1Found = new int[405];{
+		Monster1Found[0] = 0; //Defaulter 0
+		Monster1Found[1] = 0; //00 Coded Edge 1
+		Monster1Found[2] = 0; //CodedEdge 1.5 2
+		Monster1Found[3] = 0; //Gold Edge 3
 		
-		Monster1Found[4] = 1; //01 Giant Slime 4
-		Monster1Found[5] = 1; //Giant WaterSlime 5
-		Monster1Found[6] = 1; //Emerald Slime 6
+		Monster1Found[4] = 0; //01 Giant Slime 4
+		Monster1Found[5] = 0; //Giant WaterSlime 5
+		Monster1Found[6] = 0; //Emerald Slime 6
 		
-		Monster1Found[7] = 1; //02 lesser wraith/Wraith 3
-		Monster1Found[8] = 1; //Small Wraith
-		Monster1Found[9] = 1; //Silver Wraith
+		Monster1Found[7] = 0; //02 lesser wraith/Wraith 3
+		Monster1Found[8] = 0; //Small Wraith
+		Monster1Found[9] = 0; //Silver Wraith
 		
-		Monster1Found[10] = 1; //03 Great Golem 4
-		Monster1Found[11] = 1; //Great Earth Golem
-		Monster1Found[12] = 1; //Big Golem
+		Monster1Found[10] = 0; //03 Great Golem 4
+		Monster1Found[11] = 0; //Great Earth Golem
+		Monster1Found[12] = 0; //Big Golem
 		
-		Monster1Found[13] = 1; //04 Plate 5
-		Monster1Found[14] = 1; //GalePlate 
-		Monster1Found[15] = 1; //Wind Plate
+		Monster1Found[13] = 0; //04 Plate 5
+		Monster1Found[14] = 0; //GalePlate 
+		Monster1Found[15] = 0; //Wind Plate
 		
-		Monster1Found[16] = 1; //0* Null/Doppleganger 6
-		Monster1Found[17] = 1; //               
-		Monster1Found[18] = 1;//Nothing
+		Monster1Found[16] = 0; //0* Null/Doppleganger 6
+		Monster1Found[17] = 0; //               
+		Monster1Found[18] = 0;//Nothing
 		
-		Monster1Found[19] = 1; //10 Great Slime/Liquid Shadow 7
-		Monster1Found[20] = 1;//Greater Slime
-		Monster1Found[21] = 1; //Honey Slime
+		Monster1Found[19] = 0; //10 Great Slime/Liquid Shadow 7
+		Monster1Found[20] = 0;//Greater Slime
+		Monster1Found[21] = 0; //Honey Slime
 		
-		Monster1Found[22] = 1; //11 Slime 8
-		Monster1Found[23] = 1; //Water Slime
-		Monster1Found[24] = 1; //Gold Slime
+		Monster1Found[22] = 0; //11 Slime 8
+		Monster1Found[23] = 0; //Water Slime
+		Monster1Found[24] = 0; //Gold Slime
 		
-		Monster1Found[25] = 1; //12 Water Wraith 9
-		Monster1Found[26] = 1; //Raging Lake
-		Monster1Found[27] = 1; //Little Pond
+		Monster1Found[25] = 0; //12 Water Wraith 9
+		Monster1Found[26] = 0; //Raging Lake
+		Monster1Found[27] = 0; //Little Pond
 		
-		Monster1Found[28] = 1; //13 Golem Slime 10
-		Monster1Found[29] = 1; //Molten Golem Slime
-		Monster1Found[30] = 1; //Slimy Golem
+		Monster1Found[28] = 0; //13 Golem Slime 10
+		Monster1Found[29] = 0; //Molten Golem Slime
+		Monster1Found[30] = 0; //Slimy Golem
 		
-		Monster1Found[31] = 1; //14 Armored Slime 11
-		Monster1Found[32] = 1; //Armored Heat Slime
-		Monster1Found[33] = 1; //Gilded Slime
+		Monster1Found[31] = 0; //14 Armored Slime 11
+		Monster1Found[32] = 0; //Armored Heat Slime
+		Monster1Found[33] = 0; //Gilded Slime
 		
-		Monster1Found[34] = 1; //1* Sl1me 12
-		Monster1Found[35] = 1; //Potion
-		Monster1Found[36] = 1; //AllSlime
+		Monster1Found[34] = 0; //1* Sl1me 12
+		Monster1Found[35] = 0; //Potion
+		Monster1Found[36] = 0; //AllSlime
 		
-		Monster1Found[37] = 1; //20 Ghoul 13
-		Monster1Found[38] = 1; //Dark Ghoul
-		Monster1Found[39] = 1; //Mini Ghoul
+		Monster1Found[37] = 0; //20 Ghoul 13
+		Monster1Found[38] = 0; //Dark Ghoul
+		Monster1Found[39] = 0; //Mini Ghoul
 		
-		Monster1Found[40] = 1; //21 Ectoplasm 14
-		Monster1Found[41] = 1;//Will o Wisp
-		Monster1Found[42] = 1; //Pnk Ectoplasm
+		Monster1Found[40] = 0; //21 Ectoplasm 14
+		Monster1Found[41] = 0;//Will o Wisp
+		Monster1Found[42] = 0; //Pnk Ectoplasm
 		
-		Monster1Found[43] = 1; //22 Ghost 15
-		Monster1Found[44] = 1;//Fire Ghost
-		Monster1Found[45] = 1;//Gold Ghost
+		Monster1Found[43] = 0; //22 Ghost 15
+		Monster1Found[44] = 0;//Fire Ghost
+		Monster1Found[45] = 0;//Gold Ghost
 		
-		Monster1Found[46] = 1; //23 Possesed Earth 16
-		Monster1Found[47] = 1;//Haunted Earth
-		Monster1Found[48] = 1;//Haunted Gold
+		Monster1Found[46] = 0; //23 Possesed Earth 16
+		Monster1Found[47] = 0;//Haunted Earth
+		Monster1Found[48] = 0;//Haunted Gold
 		
-		Monster1Found[49] = 1; //24 Possesed Armor 17
-		Monster1Found[50] = 1;//Haunted Armor
-		Monster1Found[51] = 1;//SpookyArmor
+		Monster1Found[49] = 0; //24 Possesed Armor 17
+		Monster1Found[50] = 0;//Haunted Armor
+		Monster1Found[51] = 0;//SpookyArmor
 		
-		Monster1Found[52] = 1; //2* Gh0st 18
-		Monster1Found[53] = 1;//GHOST!
-		Monster1Found[54] = 1;//NullGhost
+		Monster1Found[52] = 0; //2* Gh0st 18
+		Monster1Found[53] = 0;//GHOST!
+		Monster1Found[54] = 0;//NullGhost
 		
-		Monster1Found[55] = 1; //30 Sand Golem 19
-		Monster1Found[56] = 1;//PyramidGolem
-		Monster1Found[57] = 1;//CastleGolem
+		Monster1Found[55] = 0; //30 Sand Golem 19
+		Monster1Found[56] = 0;//PyramidGolem
+		Monster1Found[57] = 0;//CastleGolem
 		
-		Monster1Found[58] = 1; //31 Liquid Golem 20
-		Monster1Found[59] = 1;//Mud Golem
-		Monster1Found[60] = 1;//Water Golem
+		Monster1Found[58] = 0; //31 Liquid Golem 20
+		Monster1Found[59] = 0;//Mud Golem
+		Monster1Found[60] = 0;//Water Golem
 		
-		Monster1Found[61] = 1; //32 Ghost Golem 21
-		Monster1Found[62] = 1;//Wind Ghost Golem
-		Monster1Found[63] = 1;//ElecZGhostGolem
+		Monster1Found[61] = 0; //32 Ghost Golem 21
+		Monster1Found[62] = 0;//Wind Ghost Golem
+		Monster1Found[63] = 0;//ElecZGhostGolem
 		
-		Monster1Found[64] = 1; //33 Golem 22
-		Monster1Found[65] = 1;//Earth Golem
-		Monster1Found[66] = 1;//Gold Golem
+		Monster1Found[64] = 0; //33 Golem 22
+		Monster1Found[65] = 0;//Earth Golem
+		Monster1Found[66] = 0;//Gold Golem
 		
-		Monster1Found[67] = 1; //34 Armored Golem 23
-		Monster1Found[68] = 1;//Wind Armored Golem
-		Monster1Found[69] = 1;//FireArmoredGolem
+		Monster1Found[67] = 0; //34 Armored Golem 23
+		Monster1Found[68] = 0;//Wind Armored Golem
+		Monster1Found[69] = 0;//FireArmoredGolem
 		
-		Monster1Found[70] = 1; //3* G0l3m 24
-		Monster1Found[71] = 1;//Golem Pieces
-		Monster1Found[72] = 1;//Gld Brick Golem
+		Monster1Found[70] = 0; //3* G0l3m 24
+		Monster1Found[71] = 0;//Golem Pieces
+		Monster1Found[72] = 0;//Gld Brick Golem
 		
-		Monster1Found[73] = 1; //40 Armor 25
-		Monster1Found[74] = 1;//Wind Armor
-		Monster1Found[75] = 1;//Gold Armor
+		Monster1Found[73] = 0; //40 Armor 25
+		Monster1Found[74] = 0;//Wind Armor
+		Monster1Found[75] = 0;//Gold Armor
 		
-		Monster1Found[76] = 1; //41 slimearmor/Liquid Armor 26
-		Monster1Found[77] = 1;//Water Slime Armor
-		Monster1Found[78] = 1;//Gold Slime Armor
+		Monster1Found[76] = 0; //41 slimearmor/Liquid Armor 26
+		Monster1Found[77] = 0;//Water Slime Armor
+		Monster1Found[78] = 0;//Gold Slime Armor
 		
-		Monster1Found[79] = 1; //42 Ghost Armor 27
-		Monster1Found[80] = 1;//Fire Ghost Armor
-		Monster1Found[81] = 1;//WindGhostArmor
+		Monster1Found[79] = 0; //42 Ghost Armor 27
+		Monster1Found[80] = 0;//Fire Ghost Armor
+		Monster1Found[81] = 0;//WindGhostArmor
 		
-		Monster1Found[82] = 1; //43 Golem Armor 28
-		Monster1Found[83] = 1;//Earth Golem Armor
-		Monster1Found[84] = 1;//FireGolemArmor
+		Monster1Found[82] = 0; //43 Golem Armor 28
+		Monster1Found[83] = 0;//Earth Golem Armor
+		Monster1Found[84] = 0;//FireGolemArmor
 		
-		Monster1Found[85] = 1; //44 Armor Lv.0 29
-		Monster1Found[86] = 1;//Normal Armor
-		Monster1Found[87] = 1;//Golden Armor
+		Monster1Found[85] = 0; //44 Armor Lv.0 29
+		Monster1Found[86] = 0;//Normal Armor
+		Monster1Found[87] = 0;//Golden Armor
 		
-		Monster1Found[88] = 1; //4* Or Armor/Armored Armor 30
-		Monster1Found[89] = 1;//z Armor
-		Monster1Found[90] = 1;//AdminArmor
+		Monster1Found[88] = 0; //4* Or Armor/Armored Armor 30
+		Monster1Found[89] = 0;//z Armor
+		Monster1Found[90] = 0;//AdminArmor
 		
-		Monster1Found[91] = 1; //*0 RNdm /Pancaker 31
-		Monster1Found[92] = 1;//?????
-		Monster1Found[93] = 1;//Lottery
+		Monster1Found[91] = 0; //*0 RNdm /Pancaker 31
+		Monster1Found[92] = 0;//?????
+		Monster1Found[93] = 0;//Lottery
 		
-		Monster1Found[94] = 1; //*1 Token Generator 32
-		Monster1Found[95] = 1;//Slime Presser
-		Monster1Found[96] = 1;//AdminSlime
+		Monster1Found[94] = 0; //*1 Token Generator 32
+		Monster1Found[95] = 0;//Slime Presser
+		Monster1Found[96] = 0;//AdminSlime
 		
-		Monster1Found[97] = 1; //*2 Pltrghst 33
-		Monster1Found[98] = 1;//Strange Candle
-		Monster1Found[99] = 1;//AdminGhost
+		Monster1Found[97] = 0; //*2 Pltrghst 33
+		Monster1Found[98] = 0;//Strange Candle
+		Monster1Found[99] = 0;//AdminGhost
 		
-		Monster1Found[100] = 1; //*3 G l m 34
-		Monster1Found[101] = 1;//Green GoLeM
-		Monster1Found[102] = 1;//AdminGolem
+		Monster1Found[100] = 0; //*3 G l m 34
+		Monster1Found[101] = 0;//Green GoLeM
+		Monster1Found[102] = 0;//AdminGolem
 		
-		Monster1Found[103] = 1; //*4 RArm/Rusty Armor 35
-		Monster1Found[104] = 1;//Left Gauntlet
-		Monster1Found[105] = 1;//Body
+		Monster1Found[103] = 0; //*4 RArm/Rusty Armor 35
+		Monster1Found[104] = 0;//Left Gauntlet
+		Monster1Found[105] = 0;//Body
 		
-		Monster1Found[106] = 1; //** Glitch/Null 36
-		Monster1Found[107] = 1;//<Glitch>
-		Monster1Found[108] = 1;//ERROR
+		Monster1Found[106] = 0; //** Glitch/Null 36
+		Monster1Found[107] = 0;//<Glitch>
+		Monster1Found[108] = 0;//ERROR
 		
 		//--------------------------------------------------
 		
-		Monster1Found[109] = 1;// 00 Coded Edge Form2
-		Monster1Found[110] = 1;//Coded Edge FormX
-		Monster1Found[111] = 1;//Treasure Edge
+		Monster1Found[109] = 0;// 00 Coded Edge Form2
+		Monster1Found[110] = 0;//Coded Edge FormX
+		Monster1Found[111] = 0;//Treasure Edge
 		
-		Monster1Found[112] = 1;// 01 Giant Jell
-		Monster1Found[113] = 1;//BlueGiant Jell
-		Monster1Found[114] = 1;//Gold Jell
+		Monster1Found[112] = 0;// 01 Giant Jell
+		Monster1Found[113] = 0;//BlueGiant Jell
+		Monster1Found[114] = 0;//Gold Jell
 		
-		Monster1Found[115] = 1;//02 Grand Phantasm
-		Monster1Found[116] = 1;// Cursed Phantom
-		Monster1Found[117] = 1;// Blue Phantasm
+		Monster1Found[115] = 0;//02 Grand Phantasm
+		Monster1Found[116] = 0;// Cursed Phantom
+		Monster1Found[117] = 0;// Blue Phantasm
 		
-		Monster1Found[118] = 1;//03 Statue
-		Monster1Found[119] = 1;// Durable Statue
-		Monster1Found[120] = 1;//Gold Statue
+		Monster1Found[118] = 0;//03 Statue
+		Monster1Found[119] = 0;// Durable Statue
+		Monster1Found[120] = 0;//Gold Statue
 		
-		Monster1Found[121] = 1;//04 Mail
-		Monster1Found[122] = 1;// Spiked Mail
-		Monster1Found[123] = 1;//Gilded Mail
+		Monster1Found[121] = 0;//04 Mail
+		Monster1Found[122] = 0;// Spiked Mail
+		Monster1Found[123] = 0;//Gilded Mail
 		
-		Monster1Found[124] = 1;//0* <Doppleganger>
-		Monster1Found[125] = 1;//Doppleganger
-		Monster1Found[126] = 1;//BodyDouble
+		Monster1Found[124] = 0;//0* <Doppleganger>
+		Monster1Found[125] = 0;//Doppleganger
+		Monster1Found[126] = 0;//BodyDouble
 		
-		Monster1Found[127] = 1;//10 Elec Slime
-		Monster1Found[128] = 1;//Lightning Slime
-		Monster1Found[129] = 1;//LightSlime
+		Monster1Found[127] = 0;//10 Elec Slime
+		Monster1Found[128] = 0;//Lightning Slime
+		Monster1Found[129] = 0;//LightSlime
 		
-		Monster1Found[130] = 1;//11 Jell
-		Monster1Found[131] = 1;// Drk Blue Jell
-		Monster1Found[132] = 1;// Silver Jell
+		Monster1Found[130] = 0;//11 Jell
+		Monster1Found[131] = 0;// Drk Blue Jell
+		Monster1Found[132] = 0;// Silver Jell
 		
-		Monster1Found[133] = 1;//12 Ghost Slime
-		Monster1Found[134] = 1;//Misty Ghost Slime
-		Monster1Found[135] = 1;//MistSlime
+		Monster1Found[133] = 0;//12 Ghost Slime
+		Monster1Found[134] = 0;//Misty Ghost Slime
+		Monster1Found[135] = 0;//MistSlime
 		
-		Monster1Found[136] = 1;//13 Hard Golem Slime
-		Monster1Found[137] = 1;//Icy Golem Slime
-		Monster1Found[138] = 1;//WindGolemSlime
+		Monster1Found[136] = 0;//13 Hard Golem Slime
+		Monster1Found[137] = 0;//Icy Golem Slime
+		Monster1Found[138] = 0;//WindGolemSlime
 		
-		Monster1Found[139] = 1;//14 Metal Slime
-		Monster1Found[140] = 1;//Hard Metal Slime
-		Monster1Found[141] = 1;//Mag Slime
+		Monster1Found[139] = 0;//14 Metal Slime
+		Monster1Found[140] = 0;//Hard Metal Slime
+		Monster1Found[141] = 0;//Mag Slime
 		
-		Monster1Found[142] = 1;//1* Recov/heal Slime
-		Monster1Found[143] = 1;//Drain/Vamp Slime
-		Monster1Found[144] = 1;//Barr/Prot Slime
+		Monster1Found[142] = 0;//1* Recov/heal Slime
+		Monster1Found[143] = 0;//Drain/Vamp Slime
+		Monster1Found[144] = 0;//Barr/Prot Slime
 		
-		Monster1Found[145] = 1;//20 Wraith
-		Monster1Found[146] = 1;//Light Wraith
-		Monster1Found[147] = 1;//Gold Wraith
+		Monster1Found[145] = 0;//20 Wraith
+		Monster1Found[146] = 0;//Light Wraith
+		Monster1Found[147] = 0;//Gold Wraith
 		
-		Monster1Found[148] = 1;//21 Water Wrath
-		Monster1Found[149] = 1;//Boiling Wrath
-		Monster1Found[150] = 1;//Snowcone
+		Monster1Found[148] = 0;//21 Water Wrath
+		Monster1Found[149] = 0;//Boiling Wrath
+		Monster1Found[150] = 0;//Snowcone
 		
-		Monster1Found[151] = 1;//22 Specter
-		Monster1Found[152] = 1;//Wight
-		Monster1Found[153] = 1;//Gold Specter
+		Monster1Found[151] = 0;//22 Specter
+		Monster1Found[152] = 0;//Wight
+		Monster1Found[153] = 0;//Gold Specter
 		
-		Monster1Found[154] = 1;//23 Solid Shade
-		Monster1Found[155] = 1;//Solid Air Shade
-		Monster1Found[156] = 1;//EarthShade
+		Monster1Found[154] = 0;//23 Solid Shade
+		Monster1Found[155] = 0;//Solid Air Shade
+		Monster1Found[156] = 0;//EarthShade
 		
-		Monster1Found[157] = 1;//24 Armored Shade
-		Monster1Found[158] = 1;//Time Shadow
-		Monster1Found[159] = 1;//MetalShade
+		Monster1Found[157] = 0;//24 Armored Shade
+		Monster1Found[158] = 0;//Time Shadow
+		Monster1Found[159] = 0;//MetalShade
 		
-		Monster1Found[160] = 1;//2* Tresspasser
-		Monster1Found[161] = 1;//Invader
-		Monster1Found[162] = 1;//Seeker
+		Monster1Found[160] = 0;//2* Tresspasser
+		Monster1Found[161] = 0;//Invader
+		Monster1Found[162] = 0;//Seeker
 		
-		Monster1Found[163] = 1;//30 Steam Golem	
-		Monster1Found[164] = 1;//Multi-Element Golem
-		Monster1Found[165] = 1;//NullGolem
+		Monster1Found[163] = 0;//30 Steam Golem	
+		Monster1Found[164] = 0;//Multi-Element Golem
+		Monster1Found[165] = 0;//NullGolem
 		
-		Monster1Found[166] = 1;//31 Slime Golem	
-		Monster1Found[167] = 1;//Elec Slime Golem
-		Monster1Found[168] = 1;//WaterGolem
+		Monster1Found[166] = 0;//31 Slime Golem	
+		Monster1Found[167] = 0;//Elec Slime Golem
+		Monster1Found[168] = 0;//WaterGolem
 		
-		Monster1Found[169] = 1;//32 Specter Golem
-		Monster1Found[170] = 1;//Shadey Golem
-		Monster1Found[171] = 1;//Cold Golem
+		Monster1Found[169] = 0;//32 Specter Golem
+		Monster1Found[170] = 0;//Shadey Golem
+		Monster1Found[171] = 0;//Cold Golem
 		
-		Monster1Found[172] = 1;//33 Hard Golem
-		Monster1Found[173] = 1;//Harder Golem
-		Monster1Found[174] = 1;//Soft Golem
+		Monster1Found[172] = 0;//33 Hard Golem
+		Monster1Found[173] = 0;//Harder Golem
+		Monster1Found[174] = 0;//Soft Golem
 		
-		Monster1Found[175] = 1;//34 Heavy Golem	
-		Monster1Found[176] = 1;//Dense Golem
-		Monster1Found[177] = 1;//IronGolem
+		Monster1Found[175] = 0;//34 Heavy Golem	
+		Monster1Found[176] = 0;//Dense Golem
+		Monster1Found[177] = 0;//IronGolem
 		
-		Monster1Found[178] = 1;//3* Hammer Golem
-		Monster1Found[179] = 1;// Double Hammer Golem
-		Monster1Found[180] = 1;//Earth Hammer Golem
+		Monster1Found[178] = 0;//3* Hammer Golem
+		Monster1Found[179] = 0;// Double Hammer Golem
+		Monster1Found[180] = 0;//Earth Hammer Golem
 		
-		Monster1Found[181] = 1;//40 Quick Plate	
-		Monster1Found[182] = 1;//Quicker Plate
-		Monster1Found[183] = 1;//Water Plate
+		Monster1Found[181] = 0;//40 Quick Plate	
+		Monster1Found[182] = 0;//Quicker Plate
+		Monster1Found[183] = 0;//Water Plate
 		
-		Monster1Found[184] = 1;//41 Liquid Armor
-		Monster1Found[185] = 1;//Poison Armor
-		Monster1Found[186] = 1;//Water Armor
+		Monster1Found[184] = 0;//41 Liquid Armor
+		Monster1Found[185] = 0;//Poison Armor
+		Monster1Found[186] = 0;//Water Armor
 		
-		Monster1Found[187] = 1;//42 Phantom Armor
-		Monster1Found[188] = 1;//Cursed Phantom Armor
-		Monster1Found[189] = 1;//coolArmor
+		Monster1Found[187] = 0;//42 Phantom Armor
+		Monster1Found[188] = 0;//Cursed Phantom Armor
+		Monster1Found[189] = 0;//coolArmor
 		
-		Monster1Found[190] = 1;//43 Heavy Armor	
-		Monster1Found[191] = 1;//Heavy Earth Armor
-		Monster1Found[192] = 1;//LightArmor
+		Monster1Found[190] = 0;//43 Heavy Armor	
+		Monster1Found[191] = 0;//Heavy Earth Armor
+		Monster1Found[192] = 0;//LightArmor
 		
-		Monster1Found[193] = 1;//44 Dark Armor
-		Monster1Found[194] = 1;//D.Armor
-		Monster1Found[195] = 1;//Null Armor
+		Monster1Found[193] = 0;//44 Dark Armor
+		Monster1Found[194] = 0;//D.Armor
+		Monster1Found[195] = 0;//Null Armor
 		
-		Monster1Found[196] = 1;//4* E Guard
-		Monster1Found[197] = 1;//E Guardian
-		Monster1Found[198] = 1;//Blocker
+		Monster1Found[196] = 0;//4* E Guard
+		Monster1Found[197] = 0;//E Guardian
+		Monster1Found[198] = 0;//Blocker
 		
-		Monster1Found[199] = 1;//*0 Pancaker
-		Monster1Found[200] = 1;//Pancaker W. Syrup
-		Monster1Found[201] = 1;//Cherry Cake
+		Monster1Found[199] = 0;//*0 Pancaker
+		Monster1Found[200] = 0;//Pancaker W. Syrup
+		Monster1Found[201] = 0;//Cherry Cake
 		
-		Monster1Found[202] = 1;//*1 Token Generator
-		Monster1Found[203] = 1;//Token Multiplier
-		Monster1Found[204] = 1;//SlotMchine
+		Monster1Found[202] = 0;//*1 Token Generator
+		Monster1Found[203] = 0;//Token Multiplier
+		Monster1Found[204] = 0;//SlotMchine
 		
-		Monster1Found[205] = 1;//*2 Static
-		Monster1Found[206] = 1;//Mist
-		Monster1Found[207] = 1;//Cloud
+		Monster1Found[205] = 0;//*2 Static
+		Monster1Found[206] = 0;//Mist
+		Monster1Found[207] = 0;//Cloud
 		
-		Monster1Found[208] = 1;//*3 30 7 15 12 5 13
-		Monster1Found[209] = 1;//Wall
-		Monster1Found[210] = 1;//Forcefield
+		Monster1Found[208] = 0;//*3 30 7 15 12 5 13
+		Monster1Found[209] = 0;//Wall
+		Monster1Found[210] = 0;//Forcefield
 		
-		Monster1Found[211] = 1;//*4 M Guard
-		Monster1Found[212] = 1;//M Blocker
-		Monster1Found[213] = 1;//Spooky Bones
+		Monster1Found[211] = 0;//*4 M Guard
+		Monster1Found[212] = 0;//M Blocker
+		Monster1Found[213] = 0;//Spooky Bones
 		
-		Monster1Found[214] = 1;//** Null Edge
-		Monster1Found[215] = 1;//Erase Edge
-		Monster1Found[216] = 1;//Empty Blade
+		Monster1Found[214] = 0;//** Null Edge
+		Monster1Found[215] = 0;//Erase Edge
+		Monster1Found[216] = 0;//Empty Blade
 		
 		//--------------------------------------------------
 		
-		Monster1Found[217] = 1;//00 Ice Dragon
-		Monster1Found[218] = 1;//Red Ice Dragon
-		Monster1Found[219] = 1;//Pink Ice Dragon
+		Monster1Found[217] = 0;//00 Ice Dragon
+		Monster1Found[218] = 0;//Red Ice Dragon
+		Monster1Found[219] = 0;//Pink Ice Dragon
 		
-		Monster1Found[220] = 1;//01 Cold Jam 
-		Monster1Found[221] = 1;//Amber Cold Jam
-		Monster1Found[222] = 1;//Gold Jam
+		Monster1Found[220] = 0;//01 Cold Jam 
+		Monster1Found[221] = 0;//Amber Cold Jam
+		Monster1Found[222] = 0;//Gold Jam
 		
-		Monster1Found[223] = 1;//02 Frozen Curse 
-		Monster1Found[224] = 1;//Freezing Curse
-		Monster1Found[225] = 1;//No curse
+		Monster1Found[223] = 0;//02 Frozen Curse 
+		Monster1Found[224] = 0;//Freezing Curse
+		Monster1Found[225] = 0;//No curse
 		
-		Monster1Found[226] = 1;//03 Gaint Statue
-		Monster1Found[227] = 1;//Frozen TitanStatue
-		Monster1Found[228] = 1;//TitanStatue
+		Monster1Found[226] = 0;//03 Gaint Statue
+		Monster1Found[227] = 0;//Frozen TitanStatue
+		Monster1Found[228] = 0;//TitanStatue
 		
-		Monster1Found[229] = 1;//04 Coded Knight 
-		Monster1Found[230] = 1;//Coded Knight R
-		Monster1Found[231] = 1;//Silver Knight
+		Monster1Found[229] = 0;//04 Coded Knight 
+		Monster1Found[230] = 0;//Coded Knight R
+		Monster1Found[231] = 0;//Silver Knight
 		
-		Monster1Found[232] = 1;//0* Frost Edge 
-		Monster1Found[233] = 1;//Frozen Edge
-		Monster1Found[234] = 1;//Ice Cleavor
+		Monster1Found[232] = 0;//0* Frost Edge 
+		Monster1Found[233] = 0;//Frozen Edge
+		Monster1Found[234] = 0;//Ice Cleavor
 		
-		Monster1Found[235] = 1;//10 Liquid Shadow
-		Monster1Found[236] = 1;//Dark Matter
-		Monster1Found[237] = 1;//Light Matter
+		Monster1Found[235] = 0;//10 Liquid Shadow
+		Monster1Found[236] = 0;//Dark Matter
+		Monster1Found[237] = 0;//Light Matter
 		
-		Monster1Found[238] = 1;//11 Extra Rare Slime
-		Monster1Found[239] = 1;//Very Extra Rare Slime
-		Monster1Found[240] = 1;//XXR Slime
+		Monster1Found[238] = 0;//11 Extra Rare Slime
+		Monster1Found[239] = 0;//Very Extra Rare Slime
+		Monster1Found[240] = 0;//XXR Slime
 		
-		Monster1Found[241] = 1;//12 Transparent Slime
-		Monster1Found[242] = 1;//Stealth Slime
-		Monster1Found[243] = 1;//Polka Slime
+		Monster1Found[241] = 0;//12 Transparent Slime
+		Monster1Found[242] = 0;//Stealth Slime
+		Monster1Found[243] = 0;//Polka Slime
 		
-		Monster1Found[244] = 1;//13 Icicle Slime
-		Monster1Found[245] = 1;//Purple Icicle Slime
-		Monster1Found[246] = 1;//Popsicle Slime
+		Monster1Found[244] = 0;//13 Icicle Slime
+		Monster1Found[245] = 0;//Purple Icicle Slime
+		Monster1Found[246] = 0;//Popsicle Slime
 		
-		Monster1Found[247] = 1;//14 Armor Jell
-		Monster1Found[248] = 1;//Jell Armored Slime
-		Monster1Found[249] = 1;//GrnArmorJell
+		Monster1Found[247] = 0;//14 Armor Jell
+		Monster1Found[248] = 0;//Jell Armored Slime
+		Monster1Found[249] = 0;//GrnArmorJell
 		
-		Monster1Found[250] = 1;//1* Jelly!
-		Monster1Found[251] = 1;//Sticky Jelly!
-		Monster1Found[252] = 1;//Blue Jelly
+		Monster1Found[250] = 0;//1* Jelly!
+		Monster1Found[251] = 0;//Sticky Jelly!
+		Monster1Found[252] = 0;//Blue Jelly
 		
-		Monster1Found[253] = 1;//20 Frozen Wraith
-		Monster1Found[254] = 1;//Lich
-		Monster1Found[255] = 1;//Chili Lich
+		Monster1Found[253] = 0;//20 Frozen Wraith
+		Monster1Found[254] = 0;//Lich
+		Monster1Found[255] = 0;//Chili Lich
 		
-		Monster1Found[256] = 1;//21 Ectoplasm Lv.9
-		Monster1Found[257] = 1;//Will o Wisp Lv.9
-		Monster1Found[258] = 1;//GrnEctopsm
+		Monster1Found[256] = 0;//21 Ectoplasm Lv.9
+		Monster1Found[257] = 0;//Will o Wisp Lv.9
+		Monster1Found[258] = 0;//GrnEctopsm
 		
-		Monster1Found[259] = 1;//22 Lingering Grudge
-		Monster1Found[260] = 1;//Following Grudge
-		Monster1Found[261] = 1;//LazyGrudge
+		Monster1Found[259] = 0;//22 Lingering Grudge
+		Monster1Found[260] = 0;//Following Grudge
+		Monster1Found[261] = 0;//LazyGrudge
 		
-		Monster1Found[262] = 1;//23 Ice Shadow
-		Monster1Found[263] = 1;//Frozen Shadow
-		Monster1Found[264] = 1;//GoldShadow
+		Monster1Found[262] = 0;//23 Ice Shadow
+		Monster1Found[263] = 0;//Frozen Shadow
+		Monster1Found[264] = 0;//GoldShadow
 		
-		Monster1Found[265] = 1;//24 Cursed Armor
-		Monster1Found[266] = 1;//Forbiddon Armor
-		Monster1Found[267] = 1;//SealedArmor
+		Monster1Found[265] = 0;//24 Cursed Armor
+		Monster1Found[266] = 0;//Forbiddon Armor
+		Monster1Found[267] = 0;//SealedArmor
 		
-		Monster1Found[268] = 1;//2* Radio Static
-		Monster1Found[269] = 1;//Wight Noise
-		Monster1Found[270] = 1;//BlueScreen
+		Monster1Found[268] = 0;//2* Radio Static
+		Monster1Found[269] = 0;//Wight Noise
+		Monster1Found[270] = 0;//BlueScreen
 		
-		Monster1Found[271] = 1;//30 Ice Golem
-		Monster1Found[272] = 1;//Black Ice Golem
-		Monster1Found[273] = 1;//Shaved Ice Golem
+		Monster1Found[271] = 0;//30 Ice Golem
+		Monster1Found[272] = 0;//Black Ice Golem
+		Monster1Found[273] = 0;//Shaved Ice Golem
 		
-		Monster1Found[274] = 1;//31 Magma Golem
-		Monster1Found[275] = 1;//Volcano Golem
-		Monster1Found[276] = 1;//AshGolem
+		Monster1Found[274] = 0;//31 Magma Golem
+		Monster1Found[275] = 0;//Volcano Golem
+		Monster1Found[276] = 0;//AshGolem
 		
-		Monster1Found[277] = 1;//32 Chaotic Possesed Earth
-		Monster1Found[278] = 1;//Chaotic Haunted Earth
-		Monster1Found[279] = 1;//Pebbles
+		Monster1Found[277] = 0;//32 Chaotic Possesed Earth
+		Monster1Found[278] = 0;//Chaotic Haunted Earth
+		Monster1Found[279] = 0;//Pebbles
 		
-		Monster1Found[280] = 1;//33 Shiny Golem	
-		Monster1Found[281] = 1;//Sparkling Golem
-		Monster1Found[282] = 1;//Dull Golem
+		Monster1Found[280] = 0;//33 Shiny Golem	
+		Monster1Found[281] = 0;//Sparkling Golem
+		Monster1Found[282] = 0;//Dull Golem
 		
-		Monster1Found[283] = 1;//34 Ore Golem
-		Monster1Found[284] = 1;//Crystal Golem
-		Monster1Found[285] = 1;//Ruby Golem
+		Monster1Found[283] = 0;//34 Ore Golem
+		Monster1Found[284] = 0;//Crystal Golem
+		Monster1Found[285] = 0;//Ruby Golem
 		
-		Monster1Found[286] = 1;//3* Broken Golem
-		Monster1Found[287] = 1;//Breaker Golem
-		Monster1Found[288] = 1;//FixedGolem
+		Monster1Found[286] = 0;//3* Broken Golem
+		Monster1Found[287] = 0;//Breaker Golem
+		Monster1Found[288] = 0;//FixedGolem
 		
-		Monster1Found[289] = 1;//40 Coded Armor
-		Monster1Found[290] = 1;//Coded Armor S
-		Monster1Found[291] = 1;//Codeword
+		Monster1Found[289] = 0;//40 Coded Armor
+		Monster1Found[290] = 0;//Coded Armor S
+		Monster1Found[291] = 0;//Codeword
 	
-		Monster1Found[292] = 1;//41 River Armor
-		Monster1Found[293] = 1;//Lake Armor
-		Monster1Found[294] = 1;//SteamArmor
+		Monster1Found[292] = 0;//41 River Armor
+		Monster1Found[293] = 0;//Lake Armor
+		Monster1Found[294] = 0;//SteamArmor
 		
-		Monster1Found[295] = 1;//42 Mist Armor
-		Monster1Found[296] = 1;//Fog Armor
-		Monster1Found[297] = 1;//SkyArmor
+		Monster1Found[295] = 0;//42 Mist Armor
+		Monster1Found[296] = 0;//Fog Armor
+		Monster1Found[297] = 0;//SkyArmor
 		
-		Monster1Found[298] = 1;//43 Mountian Armor
-		Monster1Found[299] = 1;//Chasm Armor
-		Monster1Found[300] = 1;//FlowerArmor
+		Monster1Found[298] = 0;//43 Mountian Armor
+		Monster1Found[299] = 0;//Chasm Armor
+		Monster1Found[300] = 0;//FlowerArmor
 		
-		Monster1Found[301] = 1;//44 Money Armor	
-		Monster1Found[302] = 1;//Treasure Armor
-		Monster1Found[303] = 1;//Fortune Armor
+		Monster1Found[301] = 0;//44 Money Armor	
+		Monster1Found[302] = 0;//Treasure Armor
+		Monster1Found[303] = 0;//Fortune Armor
 		
-		Monster1Found[304] = 1;//4* Prototype Mech
-		Monster1Found[305] = 1;//Prototype Mrk.2
-		Monster1Found[306] = 1;//Golden Automaton
+		Monster1Found[304] = 0;//4* Prototype Mech
+		Monster1Found[305] = 0;//Prototype Mrk.2
+		Monster1Found[306] = 0;//Golden Automaton
 		
-		Monster1Found[307] = 1;//*0 Broken Sword
-		Monster1Found[308] = 1;//Ruined Sword
-		Monster1Found[309] = 1;//Fixed Sword
+		Monster1Found[307] = 0;//*0 Broken Sword
+		Monster1Found[308] = 0;//Ruined Sword
+		Monster1Found[309] = 0;//Fixed Sword
 		
-		Monster1Found[310] = 1;//*1 Mad Subtractor
-		Monster1Found[311] = 1;//Poison Adder
-		Monster1Found[312] = 1;//Null Viper
+		Monster1Found[310] = 0;//*1 Mad Subtractor
+		Monster1Found[311] = 0;//Poison Adder
+		Monster1Found[312] = 0;//Null Viper
 		
-		Monster1Found[313] = 1;//*2 Negative Image
-		Monster1Found[314] = 1;//Mirror Image
-		Monster1Found[315] = 1;//Drawing
+		Monster1Found[313] = 0;//*2 Negative Image
+		Monster1Found[314] = 0;//Mirror Image
+		Monster1Found[315] = 0;//Drawing
 		
-		Monster1Found[316] = 1;//*3 Terra Cotta Warrier
-		Monster1Found[317] = 1;//Super Fighting Terra Cotta
-		Monster1Found[318] = 1;//Stone Leg
+		Monster1Found[316] = 0;//*3 Terra Cotta Warrier
+		Monster1Found[317] = 0;//Super Fighting Terra Cotta
+		Monster1Found[318] = 0;//Stone Leg
 		
-		Monster1Found[319] = 1;//*4 D. A[]m[]r
-		Monster1Found[320] = 1;//DisArmor
-		Monster1Found[321] = 1;//All Armor
+		Monster1Found[319] = 0;//*4 D. A[]m[]r
+		Monster1Found[320] = 0;//DisArmor
+		Monster1Found[321] = 0;//All Armor
 		
-		Monster1Found[322] = 1;//** Unknown Enemy
-		Monster1Found[323] = 1;//Mystery Enemy
-		Monster1Found[324] = 1;//Known Enemy
+		Monster1Found[322] = 0;//** Unknown Enemy
+		Monster1Found[323] = 0;//Mystery Enemy
+		Monster1Found[324] = 0;//Known Enemy
 		
 		//--------------------------------------------------
 		
-		Monster1Found[325] = 1; //TestSlime 37
-		Monster1Found[326] = 1;//BetaSlime
-		Monster1Found[327] = 1;//RareSlime
+		Monster1Found[325] = 0; //TestSlime 37
+		Monster1Found[326] = 0;//BetaSlime
+		Monster1Found[327] = 0;//RareSlime
 		
-		Monster1Found[328] = 1; //TestGhost 38
-		Monster1Found[329] = 1;//BetaGhost
-		Monster1Found[330] = 1;//RareGhost
+		Monster1Found[328] = 0; //TestGhost 38
+		Monster1Found[329] = 0;//BetaGhost
+		Monster1Found[330] = 0;//RareGhost
 		
-		Monster1Found[331] = 1; //TestGolem 39
-		Monster1Found[332] = 1;//BetaGolem
-		Monster1Found[333] = 1;//RareGolem
+		Monster1Found[331] = 0; //TestGolem 39
+		Monster1Found[332] = 0;//BetaGolem
+		Monster1Found[333] = 0;//RareGolem
 		
-		Monster1Found[334] = 1; //TestArmor 40
-		Monster1Found[335] = 1;//BetaArmor
-		Monster1Found[336] = 1;//RareArmor
+		Monster1Found[334] = 0; //TestArmor 40
+		Monster1Found[335] = 0;//BetaArmor
+		Monster1Found[336] = 0;//RareArmor
 		
-		Monster1Found[337] = 1; //TestBoss 41
-		Monster1Found[338] = 1;//BetaBoss
-		Monster1Found[339] = 1;//RareBoss
+		Monster1Found[337] = 0; //TestBoss 41
+		Monster1Found[338] = 0;//BetaBoss
+		Monster1Found[339] = 0;//RareBoss
 		
-		Monster1Found[340] = 1; //TestMonster6 42
-		Monster1Found[341] = 1;//BetaMonster6
-		Monster1Found[342] = 1;//Secret6
+		Monster1Found[340] = 0; //TestMonster6 42
+		Monster1Found[341] = 0;//BetaMonster6
+		Monster1Found[342] = 0;//Secret6
 		
-		Monster1Found[343] = 1; //TestMonster7 43
-		Monster1Found[344] = 1;//BetaMonster7
-		Monster1Found[345] = 1;//Secret7
+		Monster1Found[343] = 0; //TestMonster7 43
+		Monster1Found[344] = 0;//BetaMonster7
+		Monster1Found[345] = 0;//Secret7
 		
-		Monster1Found[346] = 1; //TestMonster8 44
-		Monster1Found[347] = 1;//BetaMonster8
-		Monster1Found[348] = 1;//Secret8
+		Monster1Found[346] = 0; //TestMonster8 44
+		Monster1Found[347] = 0;//BetaMonster8
+		Monster1Found[348] = 0;//Secret8
 		
-		Monster1Found[349] = 1; //TestMonster9 45
-		Monster1Found[350] = 1;//BetaMonster9
-		Monster1Found[351] = 1;//Secret9
+		Monster1Found[349] = 0; //TestMonster9 45
+		Monster1Found[350] = 0;//BetaMonster9
+		Monster1Found[351] = 0;//Secret9
 		
-		Monster1Found[352] = 1; //TestMonster10 46
-		Monster1Found[353] = 1;//BetaMonster10
-		Monster1Found[354] = 1;//Secret10
+		Monster1Found[352] = 0; //TestMonster10 46
+		Monster1Found[353] = 0;//BetaMonster10
+		Monster1Found[354] = 0;//Secret10
 		
-		Monster1Found[355] = 1; //Dummy 47
-		Monster1Found[356] = 1;//Scarecrow
-		Monster1Found[357] = 1;//Target
+		Monster1Found[355] = 0; //Dummy 47
+		Monster1Found[356] = 0;//Scarecrow
+		Monster1Found[357] = 0;//Target
 		
-		Monster1Found[358] = 1; //FF
-		Monster1Found[359] = 1; //Gamebox
-		
-		//------------------------------------------------
-		
-		Monster1Found[360] = 1; //Nameless
-		Monster1Found[361] = 1; //Shapeless
-		Monster1Found[362] = 1; //Formless
+		Monster1Found[358] = 0; //FF
+		Monster1Found[359] = 0; //Gamebox
 		
 		//------------------------------------------------
 		
-		Monster1Found[363] = 1; //Red Armor 51
-		Monster1Found[364] = 1; //Crimson Armor
-		Monster1Found[365] = 1; //Cookie Armor
+		Monster1Found[360] = 0; //Nameless
+		Monster1Found[361] = 0; //Shapeless
+		Monster1Found[362] = 0; //Formless
 		
-		Monster1Found[366] = 1;//Pink Master
-		Monster1Found[367] = 1;//Sakura Don
-		Monster1Found[368] = 1;//Fusia Fighter
+		//------------------------------------------------
 		
-		Monster1Found[369] = 1;//Enemy Spy
-		Monster1Found[370] = 1;//Ninja
-		Monster1Found[371] = 1;//Thief
+		Monster1Found[363] = 0; //Red Armor 51
+		Monster1Found[364] = 0; //Crimson Armor
+		Monster1Found[365] = 0; //Cookie Armor
 		
-		Monster1Found[372] = 1;//Warlock	
-		Monster1Found[373] = 1;//Evil Warlock
-		Monster1Found[374] = 1;//Magician
+		Monster1Found[366] = 0;//Pink Master
+		Monster1Found[367] = 0;//Sakura Don
+		Monster1Found[368] = 0;//Fusia Fighter
 		
-		Monster1Found[375] = 1;//Catapult
-		Monster1Found[376] = 1;//Gatling
-		Monster1Found[377] = 1;//Cannon
+		Monster1Found[369] = 0;//Enemy Spy
+		Monster1Found[370] = 0;//Ninja
+		Monster1Found[371] = 0;//Thief
 		
-		Monster1Found[378] = 1;//Pos Logger
-		Monster1Found[379] = 1;//Compass Rose
-		Monster1Found[380] = 1;//Comp Lost
+		Monster1Found[372] = 0;//Warlock	
+		Monster1Found[373] = 0;//Evil Warlock
+		Monster1Found[374] = 0;//Magician
 		
-		Monster1Found[381] = 1;//Victory Sword
-		Monster1Found[382] = 1;//Victory Blade
-		Monster1Found[383] = 1;//Victory Dagger
+		Monster1Found[375] = 0;//Catapult
+		Monster1Found[376] = 0;//Gatling
+		Monster1Found[377] = 0;//Cannon
 		
-		Monster1Found[384] = 1;//Blue Candle
-		Monster1Found[385] = 1;//Green Candle
-		Monster1Found[386] = 1;//Gold Candle
+		Monster1Found[378] = 0;//Pos Logger
+		Monster1Found[379] = 0;//Compass Rose
+		Monster1Found[380] = 0;//Comp Lost
 		
-		Monster1Found[387] = 1;//Barrier	
-		Monster1Found[388] = 1;//Aura
-		Monster1Found[389] = 1;//Bubble
+		Monster1Found[381] = 0;//Victory Sword
+		Monster1Found[382] = 0;//Victory Blade
+		Monster1Found[383] = 0;//Victory Dagger
 		
-		Monster1Found[390] = 1;//Shield	
-		Monster1Found[391] = 1;//Barricade
-		Monster1Found[392] = 1;//Buckler
+		Monster1Found[384] = 0;//Blue Candle
+		Monster1Found[385] = 0;//Green Candle
+		Monster1Found[386] = 0;//Gold Candle
 		
-		Monster1Found[393] = 1;//Hyper Armor
-		Monster1Found[394] = 1;//Aura Plate
-		Monster1Found[395] = 1;//H Aura Mail
+		Monster1Found[387] = 0;//Barrier	
+		Monster1Found[388] = 0;//Aura
+		Monster1Found[389] = 0;//Bubble
 		
-		Monster1Found[396] = 1;//Arm0r
-		Monster1Found[397] = 1;//Brittle Armor
-		Monster1Found[398] = 1;//Mystery Armor
+		Monster1Found[390] = 0;//Shield	
+		Monster1Found[391] = 0;//Barricade
+		Monster1Found[392] = 0;//Buckler
 		
-		Monster1Found[399] = 1;//01000010 01101001 01101110 01100001 01110010 01111001
-		Monster1Found[400] = 1;//48 65 78 63 6f 64 65
-		Monster1Found[401] = 1;//Safxoh
+		Monster1Found[393] = 0;//Hyper Armor
+		Monster1Found[394] = 0;//Aura Plate
+		Monster1Found[395] = 0;//H Aura Mail
+		
+		Monster1Found[396] = 0;//Arm0r
+		Monster1Found[397] = 0;//Brittle Armor
+		Monster1Found[398] = 0;//Mystery Armor
+		
+		Monster1Found[399] = 0;//01000010 01101001 01101110 01100001 01110010 01111001
+		Monster1Found[400] = 0;//48 65 78 63 6f 64 65
+		Monster1Found[401] = 0;//Safxoh
+		
+		Monster1Found[402] = 0;//Masked
+		Monster1Found[403] = 0;//Echo
+		Monster1Found[404] = 0;//Missing
 	}
 	
 	
-	static int[] Monster1Defeated = new int[402];{//NoDefeated
+	static int[] Monster1Defeated = new int[405];{//NoDefeated
 		Monster1Defeated[0] = 0; //Defaulter 0
 		
 		Monster1Defeated[1] = 0;//Coded Edge 1
@@ -1991,6 +2018,10 @@ public class GamePanel extends JPanel implements Runnable{
 		Monster1Defeated[399] = 0; //01000010 01101001 01101110 01100001 01110010 01111001
 		Monster1Defeated[400] = 0; //48 65 78 63 6f 64 65
 		Monster1Defeated[401] = 0; //Safxoh
+		
+		Monster1Defeated[402] = 0; //Masked
+		Monster1Defeated[403] = 0; //Echo
+		Monster1Defeated[404] = 0; //Missing
 
 	}
 	
@@ -2058,7 +2089,7 @@ public class GamePanel extends JPanel implements Runnable{
 	int ItemPlacement = 0;//rename? Item Position
 	int ItemNo = 0;
 	String ItemName = "";
-	Items NullItemV0 = new Items(00, "", "", 0, 0, 0, -5, "No Disc", 0, 0, 0, new double[]{/*Normal*/0.0, /*Slime*/0.0, /*Ghost*/0.0, /*Golem*/0.0, /*Armor*/0.0, /*Other*/0.0, /*Glitch*/0.0, /*Fire*/0.0, /*Water*/0.0, /*Wind*/0.0, /*Earth*/0.0, /*Electric*/0.0, /*Ice*/0.0, /*Light*/0.0, /*Dark*/0.0, /*Glitch*/0.0, /*Null*/0.0, /*Mystery*/0.0, /*Corrupt*/0.0, /*Admin*/0.0, /*All*/0.0}, /*Speed*/0, /*Luck*/0, /*Dodge*/0, /*Critical*/0, /*Cure*/0, /*NegStatus*/0, new int[]{/*Poison*/0, /*Curse*/0, /*Sticky*/0, /*???*/0, /*All*/0});
+	Items NullItemV0 = new Items(00, "", "", 0, 0, 0, -5, "No Disc", 0, 0, 0, new double[]{/*Normal*/0.0, /*Slime*/0.0, /*Ghost*/0.0, /*Golem*/0.0, /*Armor*/0.0, /*Other*/0.0, /*Glitch*/0.0, /*Fire*/0.0, /*Water*/0.0, /*Wind*/0.0, /*Earth*/0.0, /*Electric*/0.0, /*Ice*/0.0, /*Light*/0.0, /*Dark*/0.0, /*Glitch*/0.0, /*Null*/0.0, /*Mystery*/0.0, /*Corrupt*/0.0, /*Admin*/0.0, /*All*/0.0}, /*Speed*/0, /*Luck*/0, /*Dodge*/0, /*Critical*/0, /*Cure*/0, /*NegStatus*/0, new int[]{/*Poison*/0, /*Curse*/0, /*Sticky*/0, /*???*/0, /*All*/0});//,/*XModifier*/0, /*RModifier*/0
 	
 	Items CurrentItem = NullItem;
 	
@@ -2519,7 +2550,7 @@ public class GamePanel extends JPanel implements Runnable{
 	AreaData Area7 = NULLData; AreaData Area8 = NULLData;
 	AreaData Area9 = NULLData; AreaData Area10 = NULLData;
 	
-	AreaData[] AreaD = AreaData.AList(Area1Found, CurrentArea.AreaNo, AccessArea);{
+	AreaData[] AreaD = AreaData.AList(Area1Found, CurrentArea.AreaNo, AccessArea, Gamemode);{
 		//Initialize area Display for MoveScreen
 		if(AreasFound >=1){ 
 			Area1 = AreaD[0]; }
@@ -2634,7 +2665,7 @@ public class GamePanel extends JPanel implements Runnable{
 	}
 	
 	int[] WeaponRecipe = new int[68];{
-		WeaponRecipe[0] = 1;//Sword from MetalB
+		WeaponRecipe[0] = 0;//Sword from MetalB
 		WeaponRecipe[1] = 1;//TestItem1 from TestItem1?
 		WeaponRecipe[2] = 1;//TestItem2 from TestItem1
 		WeaponRecipe[3] = 1;//TestItem4 from TestItem1
@@ -3211,7 +3242,8 @@ public class GamePanel extends JPanel implements Runnable{
 	Items CurrentBoots = NullItem;
 	
 	int CutsceneMode = 0;//Used for TalkTalkTalking!
-	TalkTextCutscene NullCutscene = new TalkTextCutscene(0, "NULL", "", new int[]{0}, new int[][]{{0, 0}}, 1);//, new int[]{80}, new int[]{80}
+	TalkTextCutscene NullCutscene = new TalkTextCutscene(0, "NULL", "", new int[]{0}, new int[][]{{0, 0}}, 
+			/*XChance*/-100,/*RChance*/-100,/*CMode*/1, /*isBoss*/false);//, new int[]{80}, new int[]{80}
 	TalkTextCutscene CurrentCutscene = NullCutscene;
 	int CutsceneText = 0;
 	
@@ -3224,6 +3256,15 @@ public class GamePanel extends JPanel implements Runnable{
 	int M = 0;
 	int Var = 0;
 	int EventS = 0;
+		//0 No event
+		//1 Battle Start
+		//2 Item Found
+		//3 Money Found
+		//4 Exp Gained
+		//5 Battle End (Enemy defeated)
+		//6 Cutscene? Not used... Not finished.
+		//7 Level Up
+		//8 Escape Battle
 	int ExamineUnlocked = 1; //May Rename
 	int ItemUnlocked = 1; //May Rename
 	int NotesUnlocked = 1; //May Rename
@@ -3454,7 +3495,7 @@ public class GamePanel extends JPanel implements Runnable{
 						Area8 = NULLData;
 						Area9 = NULLData;
 						Area10 = NULLData;
-						AreaD = AreaData.AList(Area1Found, CurrentArea.AreaNo, AccessArea);{
+						AreaD = AreaData.AList(Area1Found, CurrentArea.AreaNo, AccessArea, Gamemode);{
 							if(AreasFound >=1){
 								Area1 = AreaD[0 + AreaPlacement];
 							}
@@ -4342,7 +4383,7 @@ public class GamePanel extends JPanel implements Runnable{
 							Area8 = NULLData;
 							Area9 = NULLData;
 							Area10 = NULLData;
-							AreaD = AreaData.AList(Area1Found, CurrentArea.AreaNo, AccessArea);{
+							AreaD = AreaData.AList(Area1Found, CurrentArea.AreaNo, AccessArea, Gamemode);{
 								Area1 = AreaD[0 + AreaPlacement];
 								Area2 = AreaD[1 + AreaPlacement];
 								Area3 = AreaD[2 + AreaPlacement];
@@ -5136,7 +5177,7 @@ public class GamePanel extends JPanel implements Runnable{
 				if(Ypos == 95 && Xpos == 125){
 					Ypos = 95;
 					Xpos = 75;
-					CurrentItem = new Items(CookItem3.CookedItem, CookItem3.ItemName, CookItem3.ItemName, 0, 0, 0, -5, CookItem3.ItemDescription, 0, 0, 0, new double[]{/*Normal*/0.0, /*Slime*/0.0, /*Ghost*/0.0, /*Golem*/0.0, /*Armor*/0.0, /*Other*/0.0, /*Glitch*/0.0, /*Fire*/0.0, /*Water*/0.0, /*Wind*/0.0, /*Earth*/0.0, /*Electric*/0.0, /*Ice*/0.0, /*Light*/0.0, /*Dark*/0.0, /*Glitch*/0.0, /*Null*/0.0, /*Mystery*/0.0, /*Corrupt*/0.0, /*Admin*/0.0, /*All*/0.0}, /*Speed*/0, /*Luck*/0, /*Dodge*/0, /*Critical*/0, /*Cure*/0, /*NegStatus*/0, new int[]{/*Poison*/0, /*Curse*/0, /*Sticky*/0, /*???*/0, /*All*/0});
+					CurrentItem = new Items(CookItem3.CookedItem, CookItem3.ItemName, CookItem3.ItemName, 0, 0, 0, -5, CookItem3.ItemDescription, 0, 0, 0, new double[]{/*Normal*/0.0, /*Slime*/0.0, /*Ghost*/0.0, /*Golem*/0.0, /*Armor*/0.0, /*Other*/0.0, /*Glitch*/0.0, /*Fire*/0.0, /*Water*/0.0, /*Wind*/0.0, /*Earth*/0.0, /*Electric*/0.0, /*Ice*/0.0, /*Light*/0.0, /*Dark*/0.0, /*Glitch*/0.0, /*Null*/0.0, /*Mystery*/0.0, /*Corrupt*/0.0, /*Admin*/0.0, /*All*/0.0}, /*Speed*/0, /*Luck*/0, /*Dodge*/0, /*Critical*/0, /*Cure*/0, /*NegStatus*/0, new int[]{/*Poison*/0, /*Curse*/0, /*Sticky*/0, /*???*/0, /*All*/0});//,/*XModifier*/0, /*RModifier*/0
 					Text1 = CookItem3.ItemDescription;//???
 				}
 				//g.drawString("Cook", 80, 100);
@@ -5484,7 +5525,7 @@ public class GamePanel extends JPanel implements Runnable{
 					if(Ypos == 30 || Ypos == 45 || Ypos == 60 || Ypos == 75 || Ypos == 90 || Ypos == 105 || Ypos == 120){
 						Ypos = 95;
 						Xpos = 75;
-						CurrentItem = new Items(CookItem3.CookedItem, CookItem3.ItemName, CookItem3.ItemName, 0, 0, 0, 0, CookItem3.ItemDescription, 0, 0, 0, new double[]{/*Normal*/0.0, /*Slime*/0.0, /*Ghost*/0.0, /*Golem*/0.0, /*Armor*/0.0, /*Other*/0.0, /*Glitch*/0.0, /*Fire*/0.0, /*Water*/0.0, /*Wind*/0.0, /*Earth*/0.0, /*Electric*/0.0, /*Ice*/0.0, /*Light*/0.0, /*Dark*/0.0, /*Glitch*/0.0, /*Null*/0.0, /*Mystery*/0.0, /*Corrupt*/0.0, /*Admin*/0.0, /*All*/0.0}, /*Speed*/0, /*Luck*/0, /*Dodge*/0, /*Critical*/0, /*Cure*/0, /*NegStatus*/0, new int[]{/*Poison*/0, /*Curse*/0, /*Sticky*/0, /*???*/0, /*All*/0});
+						CurrentItem = new Items(CookItem3.CookedItem, CookItem3.ItemName, CookItem3.ItemName, 0, 0, 0, 0, CookItem3.ItemDescription, 0, 0, 0, new double[]{/*Normal*/0.0, /*Slime*/0.0, /*Ghost*/0.0, /*Golem*/0.0, /*Armor*/0.0, /*Other*/0.0, /*Glitch*/0.0, /*Fire*/0.0, /*Water*/0.0, /*Wind*/0.0, /*Earth*/0.0, /*Electric*/0.0, /*Ice*/0.0, /*Light*/0.0, /*Dark*/0.0, /*Glitch*/0.0, /*Null*/0.0, /*Mystery*/0.0, /*Corrupt*/0.0, /*Admin*/0.0, /*All*/0.0}, /*Speed*/0, /*Luck*/0, /*Dodge*/0, /*Critical*/0, /*Cure*/0, /*NegStatus*/0, new int[]{/*Poison*/0, /*Curse*/0, /*Sticky*/0, /*???*/0, /*All*/0});//,/*XModifier*/0, /*RModifier*/0
 						Text1 = CookItem3.ItemDescription;
 						Text2 = "";
 					}
@@ -5535,7 +5576,7 @@ public class GamePanel extends JPanel implements Runnable{
 		}
 		if(Keyhandler.EnterPressed) {
 			//MainClass.PlayerPressedEnter();
-			
+			ATurns = ATurns +1;
 			//Random Numbers Test
 			Random generator = new Random();
 			int Random = generator.nextInt(100);
@@ -5595,6 +5636,7 @@ public class GamePanel extends JPanel implements Runnable{
 					iT = iT + 1;
 				}
 				UpdateMonster();
+				MonstersFound = MonsterData.MTotal(Monster1Found);
 				CurrentM = 0;
 				SetM(BattleM.MonsterD[CurrentM]);//CurrentMonster
 				MHP1 = BattleData.SetMHp(BattleM.MonsterD, 1);
@@ -5625,6 +5667,7 @@ public class GamePanel extends JPanel implements Runnable{
 				BattleToggle = 1;
 				EventS = 0;
 			}//Battle Start End
+			
 			
 			if(EventS == 5){//BattleEnd
 				EnterOK = 0;
@@ -5779,6 +5822,26 @@ public class GamePanel extends JPanel implements Runnable{
 				//Active Cutscene Mode, occures during normal gameplay
 				//Normal Cutscene Mode: Advances with press of Enter
 			}
+			if(EventS == 8){//BattleEnd Via Escape
+				EnterOK = 0;
+				EnemyEscapedToggle = 0;
+				Turn = 0;
+				BattleToggle = 0;
+				ScreenMode = AreaScreenMode;
+				if(BattleLocation == 1){
+					ScreenType = 1;
+					Text1 = "";
+					Text2 = "";
+				}
+				if(BattleLocation == 14){//Inventor Screen
+					ScreenType = 14;
+					Xpos = 15;
+					Ypos = 30;
+					Text1 = "";
+					Text2 = "";
+				}
+				EventS = 0;
+			}//Battle End End
 			
 			if((CutsceneMode == 0 || CutsceneMode == 5 || CutsceneMode == 6 || CutsceneMode == 7 || CutsceneMode == 8) && BattleEventMode == 0){//TalkTalkTalkMode is Off! ... It is off right?
 			
@@ -5902,20 +5965,73 @@ public class GamePanel extends JPanel implements Runnable{
 				int iArea = 0;
 				while(iArea < CurrentArea.Battle.length){
 					Random = generator.nextInt(100);
+					//x;
 					 if(Random <= CurrentArea.BattleChance[iArea] && AreaEventAction == 0){//if(AreaItemP < Random && Random <= AreaItemP + AreaBattleP && AreaEventAction == 0){
 						 Text1X = 30;//Text1X = 80;
 						 Text1 = "Monster found";// or Battle Start?
 						 Text2 = "";
 						 BattleLocation = 1;
 						Random = generator.nextInt(100);
-
-						//TODO	int XModifier = 0;
-						if((MainClass.XBattleMode != 0 && MainClass.XBattleMode != 4 && MainClass.XBattleMode != 8 && Random <= CurrentArea.XChance[0]) || MainClass.XBattleMode == 5 || MainClass.XBattleMode == 6 || MainClass.XBattleMode == 9){//XBattleMode == 1 &&
-							BattleM = BattleData.GetBattleData(CurrentArea.XBattle[iArea]);
+						int RandomR = generator.nextInt(100);
+	
+						//x;
+						
+						//Enemies are always X Mode
+						if(MainClass.XBattleMode == 5 || MainClass.XBattleMode == 6 || MainClass.XBattleMode == 7 || MainClass.XBattleMode == 9 || MainClass.XBattleMode == 25 || MainClass.XBattleMode == 30) {
+							BattleM = BattleDataX.GetBattleData(CurrentArea.Battle[iArea]);
 						}
+						//Enemies are always R Mode
+						else if(MainClass.XBattleMode == 14 || MainClass.XBattleMode == 15 || MainClass.XBattleMode == 16 || MainClass.XBattleMode == 18 || MainClass.XBattleMode == 26 || MainClass.XBattleMode == 27) {
+							BattleM = BattleDataR.GetBattleData(CurrentArea.Battle[iArea]);
+						}
+						
+						//Enemeis sometimes X Mode
+						else if((MainClass.XBattleMode ==1 || MainClass.XBattleMode == 3 || MainClass.XBattleMode == 19 
+								|| MainClass.XBattleMode == 20 || MainClass.XBattleMode == 28 
+								|| MainClass.XBattleMode == 29 || MainClass.XBattleMode == 33)
+								&& Random < CurrentArea.XChance[iArea]){
+							
+							BattleM = BattleDataX.GetBattleData(CurrentArea.Battle[iArea]);
+						}
+						
+						//Enemies sometimes R Mode
+						else if((MainClass.XBattleMode ==10 || MainClass.XBattleMode == 12 || MainClass.XBattleMode == 19 
+								|| MainClass.XBattleMode ==21 || MainClass.XBattleMode == 29 
+								|| MainClass.XBattleMode == 31 || MainClass.XBattleMode == 32)
+								&& RandomR < CurrentArea.RChance[iArea]){
+							
+							BattleM = BattleDataR.GetBattleData(CurrentArea.Battle[iArea]);
+						}
+						
+						//Otherwise Enemies are X Mode
+						else if(MainClass.XBattleMode == 21){
+							BattleM = BattleDataX.GetBattleData(CurrentArea.Battle[iArea]);
+						}
+						
+						//Otherwise enemies are R Mode
+						else if(MainClass.XBattleMode == 20){
+							BattleM = BattleDataR.GetBattleData(CurrentArea.Battle[iArea]);
+						}
+						
+						//Otherwise enemies are normal
 						else{
 							BattleM = BattleData.GetBattleData(CurrentArea.Battle[iArea]);
 						}
+						
+						
+						
+						
+						
+
+//						//TODO	int XModifier = 0;
+//						if((MainClass.XBattleMode != 0 && MainClass.XBattleMode != 4 && MainClass.XBattleMode != 8 && Random <= CurrentArea.XChance[0]) || MainClass.XBattleMode == 5 || MainClass.XBattleMode == 6 || MainClass.XBattleMode == 9){//XBattleMode == 1 &&
+//							BattleM = BattleData.GetBattleData(CurrentArea.XBattle[iArea]);
+//						}
+//						else{
+//							BattleM = BattleData.GetBattleData(CurrentArea.Battle[iArea]);
+//						}
+						
+						
 						MNo = BattleM.MonsterD[0].MonsterID;
 						DefeatToggle = 1;
 						EnterOK = 1;
@@ -5924,9 +6040,9 @@ public class GamePanel extends JPanel implements Runnable{
 //						MHP1 = ???;
 //						Turn = 0;
 //						BattleToggle = 1;
-					}
+					}//end of if a battle happens
 					 iArea += 1;
-				}
+				}//End of check which battles in an area can happen.
 				}
 				
 				if(AreaEventAction == 0){
@@ -6355,7 +6471,7 @@ public class GamePanel extends JPanel implements Runnable{
 							Text2 = "";
 							Turn = 0;
 							MTurn = 0;
-							EventS = 5;
+							EventS = 8;
 							EnterOK = 1;
 						}
 						else{
@@ -9993,7 +10109,7 @@ public class GamePanel extends JPanel implements Runnable{
 		if(Keyhandler.DashPressed && CutsceneMode != 1 && CutsceneMode != 2 && CutsceneMode != 5 && CutsceneMode != 6) {
 			//MainClass.PlayerPressedDown();
 			if(EnterOK == 0){
-				
+				Var = 1;
 			}
 		}// / pressed end
 		if(Keyhandler.HPressed && CutsceneMode != 1 && CutsceneMode != 2 && CutsceneMode != 5 && CutsceneMode != 6) {
@@ -10096,6 +10212,34 @@ public class GamePanel extends JPanel implements Runnable{
 			}
 		}// P pressed end
 		
+		if(Keyhandler.TPressed && CutsceneMode != 1 && CutsceneMode != 2 && CutsceneMode != 5 && CutsceneMode != 6) {
+			//MainClass.PlayerPressedDown();
+			if(EnterOK == 0){
+				
+			}
+		}// T pressed end
+		
+		if(Keyhandler.FPressed && CutsceneMode != 1 && CutsceneMode != 2 && CutsceneMode != 5 && CutsceneMode != 6) {
+			//MainClass.PlayerPressedDown();
+			if(EnterOK == 0){
+				
+			}
+		}// F pressed end
+		
+		if(Keyhandler.GPressed && CutsceneMode != 1 && CutsceneMode != 2 && CutsceneMode != 5 && CutsceneMode != 6) {
+			//MainClass.PlayerPressedDown();
+			if(EnterOK == 0){
+				
+			}
+		}// G pressed end
+		
+		if(Keyhandler.XPressed && CutsceneMode != 1 && CutsceneMode != 2 && CutsceneMode != 5 && CutsceneMode != 6) {
+			//MainClass.PlayerPressedDown();
+			if(EnterOK == 0){
+				
+			}
+		}// X pressed end
+		
 		
 	}//update end
 	
@@ -10104,34 +10248,16 @@ public class GamePanel extends JPanel implements Runnable{
 		super.paintComponent(g);
 		
 		//set color 
-				g.setColor(Color.BLACK); 
-				if(ScreenMode == 0){//Nothingness
-					g.setColor(Color.LIGHT_GRAY);
-				}
-				if(ScreenMode == 3){//Negative
-					g.setColor(Color.black); 
-					g.fillRect(0, 0, 500, 500);
-					g.setColor(Color.white);
-				}
-				if(ScreenMode == 4){//Entered Forbiddon Area / Area is on fire?
-					g.setColor(Color.RED); 
-					g.fillRect(0, 0, 500, 500);
-					g.setColor(Color.black);
-				}
-				if(ScreenMode == 6){//Mystery
-					g.setColor(Color.LIGHT_GRAY); 
-					g.fillRect(0, 0, 500, 500);
-					g.setColor(Color.DARK_GRAY);
-				}
-				if(ScreenMode == 7){//Midnight
-					g.setColor(new Color(10 , 10, 100)); 
-					g.fillRect(0, 0, 500, 500);
-					g.setColor(Color.white);
-				}
-				if(ScreenMode == 8) {//Water
-					g.setColor(Color.BLUE);
-					g.fillRect(0, 0, 500, 500);
-				}
+		GameColorPallet CurrentPallet = GameColorPallet.GetGameColorPallet(ScreenMode);
+		
+		g.setColor(CurrentPallet.BGColor);
+		g.fillRect(0, 0, 500, 500);
+		g.setColor(CurrentPallet.TextColor);
+		Cursercolor = CurrentPallet.CurserColor;
+		CurserColorCutscene = CurrentPallet.CurserCutsceneColor;
+		CurserOutlineColor = CurrentPallet.CurserCutsceneOutlineColor;
+		CurserColorMonsterTurn = CurrentPallet.CurserMonster;
+				
 				//RGB
 				//White is (255, 255, 255) and black is (0,0,0).
 				//Color c = new Color(int Red, int Green, int Blue)
@@ -10171,7 +10297,7 @@ public class GamePanel extends JPanel implements Runnable{
 				//NotesFound = TestNote1Found + TestNote2Found + TestNote3Found + TestNote4Found + TestNote5Found + TestNote6Found + TestNote7Found + TestNote8Found + TestNote9Found + TestNote10Found;---------------?
 				//System.out.println(Ypos);
 				
-				//Action Screen     For that into screen when you first enter town, or some other important event
+				//Action Screen     For that intro screen when you first enter town, or some other important event
 				if(ScreenType == 8){
 					//g.drawString("Test String", X, Y);
 					//g.drawString("TestNote", 30, 35);
@@ -10209,16 +10335,13 @@ public class GamePanel extends JPanel implements Runnable{
 							g.drawString("Status: ", 5, 60);
 							g.setColor(Color.yellow);
 							g.drawString("Poison!", 46, 60);
-							g.setColor(Color.white);
+							g.setColor(CurrentPallet.TextColor);
 						}
 						else{
 							g.drawString("Status: ", 5, 60);
 							g.setColor(purple);
 							g.drawString("Poison!", 46, 60);
-							g.setColor(Color.black);
-						}
-						if(ScreenMode == 7){
-							g.setColor(Color.white);
+							g.setColor(CurrentPallet.TextColor);
 						}
 					}
 					else	
@@ -10231,16 +10354,13 @@ public class GamePanel extends JPanel implements Runnable{
 							g.drawString("Status: Cursed!", 5, 60);
 							g.setColor(Color.cyan);
 							g.drawString("Cursed!", 45, 60);
-							g.setColor(Color.white);
+							g.setColor(CurrentPallet.TextColor);
 						}
 						else{
 							g.drawString("Status: Cursed!", 5, 60);
 							g.setColor(RedOrange);
 							g.drawString("Cursed!", 45, 60);
-							g.setColor(Color.black);
-						}
-						if(ScreenMode == 7){
-							g.setColor(Color.white);
+							g.setColor(CurrentPallet.TextColor);
 						}
 					}
 					else	
@@ -10252,16 +10372,13 @@ public class GamePanel extends JPanel implements Runnable{
 							g.drawString("Status: ", 5, 60);
 							g.setColor(Color.BLUE);
 							g.drawString("Sticky!", 46, 60);
-							g.setColor(Color.white);
+							g.setColor(CurrentPallet.TextColor);
 						}
 						else{
 							g.drawString("Status: ", 5, 60);
 							g.setColor(Color.magenta);
 							g.drawString("Sticky!", 46, 60);
-							g.setColor(Color.black);
-						}
-						if(ScreenMode == 7){
-							g.setColor(Color.white);
+							g.setColor(CurrentPallet.TextColor);
 						}
 					}
 					else	
@@ -10273,16 +10390,13 @@ public class GamePanel extends JPanel implements Runnable{
 							g.drawString("Status: ", 5, 60);
 							g.setColor(Color.LIGHT_GRAY);
 							g.drawString("????", 46, 60);
-							g.setColor(Color.white);
+							g.setColor(CurrentPallet.TextColor);
 						}
 						else{
 							g.drawString("Status: ", 5, 60);
 							g.setColor(Color.gray);
 							g.drawString("????", 46, 60);
-							g.setColor(Color.black);
-						}
-						if(ScreenMode == 7){
-							g.setColor(Color.white);
+							g.setColor(CurrentPallet.TextColor);
 						}
 					}
 					else
@@ -10301,16 +10415,13 @@ public class GamePanel extends JPanel implements Runnable{
 								g.setColor(purple);
 							}
 							g.drawString("All", 46, 60);
-							g.setColor(Color.white);
+							g.setColor(CurrentPallet.TextColor);
 						}
 						else{
 							g.drawString("Status: ", 5, 60);
 							g.setColor(Color.orange);
 							g.drawString("All", 46, 60);
-							g.setColor(Color.black);
-						}
-						if(ScreenMode == 7){
-							g.setColor(Color.white);
+							g.setColor(CurrentPallet.TextColor);
 						}
 					}
 					else
@@ -10404,16 +10515,13 @@ public class GamePanel extends JPanel implements Runnable{
 							g.drawString("Status: ", 5, 60);
 							g.setColor(Color.yellow);
 							g.drawString("Poison!", 46, 60);
-							g.setColor(Color.white);
+							g.setColor(CurrentPallet.TextColor);
 						}
 						else{
 							g.drawString("Status: ", 5, 60);
 							g.setColor(purple);
 							g.drawString("Poison!", 46, 60);
-							g.setColor(Color.black);
-						}
-						if(ScreenMode == 7){
-							g.setColor(Color.white);
+							g.setColor(CurrentPallet.TextColor);
 						}
 					}
 					else	
@@ -10426,16 +10534,13 @@ public class GamePanel extends JPanel implements Runnable{
 							g.drawString("Status: Cursed!", 5, 60);
 							g.setColor(Color.cyan);
 							g.drawString("Cursed!", 45, 60);
-							g.setColor(Color.white);
+							g.setColor(CurrentPallet.TextColor);
 						}
 						else{
 							g.drawString("Status: Cursed!", 5, 60);
 							g.setColor(RedOrange);
 							g.drawString("Cursed!", 45, 60);
-							g.setColor(Color.black);
-						}
-						if(ScreenMode == 7){
-							g.setColor(Color.white);
+							g.setColor(CurrentPallet.TextColor);
 						}
 					}
 					else	
@@ -10447,16 +10552,13 @@ public class GamePanel extends JPanel implements Runnable{
 							g.drawString("Status: ", 5, 60);
 							g.setColor(Color.BLUE);
 							g.drawString("Sticky!", 46, 60);
-							g.setColor(Color.white);
+							g.setColor(CurrentPallet.TextColor);
 						}
 						else{
 							g.drawString("Status: ", 5, 60);
 							g.setColor(Color.magenta);
 							g.drawString("Sticky!", 46, 60);
-							g.setColor(Color.black);
-						}
-						if(ScreenMode == 7){
-							g.setColor(Color.white);
+							g.setColor(CurrentPallet.TextColor);
 						}
 					}
 					else	
@@ -10468,16 +10570,13 @@ public class GamePanel extends JPanel implements Runnable{
 							g.drawString("Status: ", 5, 60);
 							g.setColor(Color.LIGHT_GRAY);
 							g.drawString("????", 46, 60);
-							g.setColor(Color.white);
+							g.setColor(CurrentPallet.TextColor);
 						}
 						else{
 							g.drawString("Status: ", 5, 60);
 							g.setColor(Color.gray);
 							g.drawString("????", 46, 60);
-							g.setColor(Color.black);
-						}
-						if(ScreenMode == 7){
-							g.setColor(Color.white);
+							g.setColor(CurrentPallet.TextColor);
 						}
 					}
 					else
@@ -10496,16 +10595,13 @@ public class GamePanel extends JPanel implements Runnable{
 								g.setColor(purple);
 							}
 							g.drawString("All", 46, 60);
-							g.setColor(Color.white);
+							g.setColor(CurrentPallet.TextColor);
 						}
 						else{
 							g.drawString("Status: ", 5, 60);
 							g.setColor(Color.orange);
 							g.drawString("All", 46, 60);
-							g.setColor(Color.black);
-						}
-						if(ScreenMode == 7){
-							g.setColor(Color.white);
+							g.setColor(CurrentPallet.TextColor);
 						}
 					}
 					else
@@ -11040,16 +11136,21 @@ public class GamePanel extends JPanel implements Runnable{
 					g.drawString(Monster10.getMonsterShortName(CurrentRandoName[9]), 120, 155);
 					g.drawString("Enter", 80, 180);
 					g.drawString("Select>", 80, 195);
-					if(MonstersFound > 10 && MonsterPage < 2){
+					
+					if(MonstersFound == 0 && Gamemode != 6) {
+						//Nothing here?
+					}
+					else if(MonstersFound > 10 && MonsterPage < 2){
 						g.drawString("Exit", 5, 195);
 					}
-					if(MonstersFound > 10 && MonsterPage >= 2){
+					else if(MonstersFound > 10 && MonsterPage >= 2){
 						//g.drawString("<", 5, 180);
 						g.drawString("Back", 5, 195);
 					}
-					if(MonstersFound <= 10){
+					else if(MonstersFound <= 10){
 						g.drawString("Back", 5, 195);
 					}
+					
 					
 					if(MonstersFound > 10 && MonsterPage * 10 > MonstersFound){
 						g.drawString("Exit", 150, 195);
@@ -11397,26 +11498,206 @@ public class GamePanel extends JPanel implements Runnable{
 				if(ScreenType == 17){
 					g.drawString(Text1, Text1X, 150);
 					g.drawString(Text2, Text2X, 165);//70
-					g.drawString("Enter", 80, 180);
-					g.drawString("Select>", 80, 195);
+					if(Gamemode == 6) {
+						g.drawString("Enter", 80, 180);
+						g.drawString("Select>", 80, 195);
+					}
+					else
+						g.drawString("Listen", 80, 195);
 					g.drawString("Move", 150, 195); //Next?
 				}//Tavern Screen End
 				
-				g.drawString(HiddenText1, 250, 60);
-				g.drawString(HiddenText2, 250, 75);
+				//Credits Screen
+				if(ScreenType == 18){
+					g.drawString("Game Made by", 30, 30);
+					g.drawString("Levi Little", 50, 50);
+					g.drawString("Special Thanks to", 30, 70);
+					g.drawString("Many java tutorials", 50, 90);
+					g.drawString("Press Enter to continue", 50, 180);
+				}//Credits Screen End
+				
+				//Cheat Screen
+				if(ScreenType == 19){
+					g.drawString("New Cheat!", 30, 30);
+					g.drawString(EndCheatCondition, 30, 50);
+					g.drawString(EndCheatName, 50, 70);
+					g.drawString(CheatDesc1, 30, 90);
+					g.drawString(CheatDesc2, 30, 110);
+					g.drawString("Press Enter to continue", 50, 180);
+				}//Cheat Screen End
+				
+				//Special Save Screen
+				if(ScreenType == 20){
+					g.drawString("Save over file to play:", 30, 30);
+					g.drawString(FuturePasswordName, 50, 50);
+					g.drawString(FuturePasswordDesc1, 30, 70);
+					g.drawString(FuturePasswordDesc2, 30, 90);
+					g.drawString("Select an option:", 50, 160);
+					g.drawString("Yes", 50, 180);
+					g.drawString("No", 150, 180);
+				}//Special Save Screen End
+				
+				//Special Save Warning Screen
+				if(ScreenType == 21){
+					g.drawString("Save over file?", 30, 30);
+					g.drawString("Are you sure?", 30, 50);
+					g.drawString("This will replace current save", 30, 70);
+					g.drawString("with a different one", 30, 90);
+					g.drawString("Select an option:", 50, 160);
+					g.drawString("Yes", 50, 180);
+					g.drawString("No", 150, 180);
+				}//Special Save Warning Screen End
+				
+				//The End Screen
+				if(ScreenType == 22){
+					g.drawString("The End", 30, 50);
+					g.drawString("Thank you for playing!", 30, 70);
+					g.drawString("A Turns: " + ATurns, 30, 90);
+					g.drawString("B Turns: " + BTurns, 30, 110);
+					g.drawString("C Turns: " + CTurns, 30, 130);
+					
+					g.drawString("Load from save", 50, 160);
+					g.drawString("Return to Title", 50, 180);
+				}//The End Screen End
+				
+				//Code X Title Screen
+				if(ScreenType == 23){
+					g.drawString("Code X", 70, 30);
+					g.drawString("Game Enhancer", 50, 50);
+					g.drawString("by Collecter128", 50, 70);
+					g.drawLine(0, 80, 500, 80);
+					
+					g.drawString("Continue", 50, 120);
+					g.drawString("Exit to game", 50, 150);
+					
+				}//Code X Title Screen End
+				
+				//Code X Warning Screen
+				if(ScreenType == 24){
+					g.drawString("Warning!", 70, 25);
+					g.drawString("using the CodeX Game Enhancer", 10, 50);
+					g.drawString("will change your save file...", 10, 70);
+					g.drawString("And cause it to reload the save.", 10, 90);
+					g.drawString("You will lose unsaved progress.", 10, 110);
+					g.drawString("Use may corrupt save file", 10, 130);
+					
+					g.drawLine(0, 140, 500, 140);
+					g.drawString("Continue", 50, 155);
+					g.drawString("Return to title", 50, 175);
+				}//Code X Warning Screen End
+				
+				//Code X Warning Screen
+				if(ScreenType == 24){
+					g.drawString("Warning!", 70, 25);
+					g.drawString("using the CodeX Game Enhancer", 10, 50);
+					g.drawString("will change your save file...", 10, 70);
+					g.drawString("And cause it to reload the save.", 10, 90);
+					g.drawString("You will lose unsaved progress.", 10, 110);
+					g.drawString("Use may corrupt save file", 10, 130);
+					
+					g.drawLine(0, 140, 500, 140);
+					g.drawString("Continue", 50, 155);
+					g.drawString("Return to title", 50, 175);
+				}//Code X Warning Screen End
+				
+				//Code X Menu Screen
+				if(ScreenType == 25){
+					g.drawString("CodeX use options:", 30, 20);
+					
+					g.drawString("Modify Data Value", 50, 50);
+					g.drawString("Data Value Info", 50, 70);
+					g.drawString("More CodeX Info", 50, 90);
+					g.drawString("Back to warning", 50, 110);
+				}//Code X Menu Screen End
+				
+				//Code X Change Code Screen
+				if(ScreenType == 26){
+					g.drawString("Modify Game Data", 30, 20);
+					g.drawLine(0, 30, 500, 30);
+					g.drawString("Data Index", 50, 50);
+					//if() {
+						g.drawString("< ", 90, 70);
+					//}
+					g.drawString("XXX", 110, 70);
+					//if() {
+						g.drawString(" >", 150, 70);
+					//}
+					g.drawString("Data Value", 50, 90);
+					//if() {
+						g.drawString("< ", 90, 110);
+					//}
+					g.drawString("XXX", 110, 110);
+					//if() {
+						g.drawString(" >", 150, 110);
+					//}
+					g.drawLine(0, 120, 500, 120);
+					g.drawString("Save Value to File", 50, 140);
+					g.drawString("Load Game File", 50, 160);
+					g.drawString("Back to Menu", 50, 180);
+				}//Code X Change Code Screen End
+				
+				//Code X cheats Screen "Data Value info"
+				if(ScreenType == 27){
+					g.drawString("Dava Value Info", 30, 20);
+					g.drawString("< ", 50, 100);
+					g.drawString("Cheatname" + " >", 60, 100);
+					g.drawString("Cheat Desc goes here", 30, 120);
+					
+					g.drawString("Use left and right to select", 20, 50);
+					g.drawString("Press Enter to view details", 20, 70);
+					g.drawString("Back to Menu", 50, 170);
+				}//Code X cheats Screen "Data Value info" End
+				
+				//Code X cheats info screen
+				if(ScreenType == 28){
+					//g.drawString("Cheat Info", 30, 20);
+					g.drawString("Cheatname", 60, 25);
+					g.drawString("Cheat Desc goes here", 30, 45);
+					g.drawString("Cheat Desc2 goes here", 30, 65);
+					g.drawLine(0, 75, 500, 75);
+					
+					g.drawString("Data Index: " + "XXX", 30, 95);
+					g.drawString("Value:      " + "XXX", 30, 115);
+					
+					g.drawString("Data Index: " + "XXX", 30, 140);
+					g.drawString("Value:      " + "XXX", 30, 160);
+					
+					g.drawLine(0, 170, 500, 170);
+					g.drawString("Back to Menu", 50, 190);
+				}//Code X cheats info screen End
+				
+				//Code X cheats info screen
+				if(ScreenType == 29){
+					g.drawString("Additional Info", 30, 20);
+					g.drawString("This tool is hard to use", 20, 35);
+					g.drawString("But it can do a lot!", 20, 50);
+					g.drawString("It may even break your save!", 20, 65);
+					g.drawString("So be careful with it...", 20, 80);
+					g.drawString("Change game's data values", 20, 95);
+					g.drawString("It changes your save file", 20, 110);
+					g.drawString("If you use it right...", 20, 125);
+					g.drawString("You might find something new!", 20, 140);
+					g.drawString("Change Variable X in Code", 20, 155);
+					
+					g.drawLine(0, 170, 500, 170);
+					g.drawString("Back to Menu", 50, 190);
+				}//Code X cheats info screen End
+				
+				//g.drawString(HiddenText1, 250, 60);
+				//g.drawString(HiddenText2, 250, 75);
 				
 				//Paints cursor//TODO Curserpos during enemy Turn? and during Inventor Screen
-				if((ScreenType !=6 && ScreenType !=8 && (Gamemode != 6 && Gamemode != 0)) || (ScreenType !=6 && ScreenType !=8 && MTurn == 0 && (Gamemode == 6 || Gamemode == 0))){ //Paints cursor (except on notes page 2).
+				if((ScreenType !=6 && ScreenType !=8 && (Gamemode != 6 && Gamemode != 0)) || 
+						(ScreenType !=6 && ScreenType !=8 && MTurn == 0 && (Gamemode == 6 || Gamemode == 0))
+						){ //Paints cursor (except on notes page 2).
 					if(CutsceneMode == 1 || CutsceneMode == 3 || CutsceneMode == 5 || CutsceneMode == 7 || Gamemode == 0){
 						//CutsceneMode != 0 //TalkTalkTalkMode is On!
 						//CutsceneToggle == 1
-						if(ScreenMode == 3){//Negative
-							g.setColor(RedOrange); 
-						}
-						else
-							g.setColor(Color.cyan); 
+						
+						g.setColor(CurserColorCutscene); //CurserColorCutscene
+						
 					}
-					if(MTurn != 0 || Status == 4 || Status == 5 && Gamemode != 0){
+					if(MTurn != 0 || Status == 4 || Status == 5 && Gamemode != 0){//Monster's turn
 						if(ScreenMode == 0){//Nothingness
 							g.setColor(Color.white); 
 						}
@@ -11424,27 +11705,18 @@ public class GamePanel extends JPanel implements Runnable{
 							g.setColor(Color.lightGray); 
 						}
 						else
-							g.setColor(Color.gray);
+							g.setColor(CurserColorMonsterTurn);
 					}
 					g.fillOval(Xpos - Radius, Ypos - Radius, 2 * Radius, 2 * Radius); 
-					if(ScreenMode == 0){//Nothingness
-						g.setColor(Color.lightGray); 
-					}
-					else if(ScreenMode == 3 || ScreenMode == 7){//Negative or Midnight
-						g.setColor(Color.WHITE); 
-					}
-					else
-						g.setColor(Color.BLACK); 
+
 				}
 				if(ScreenType == 2 && MTurn != 0){//30, 45
 					if(CutsceneMode == 1 || CutsceneMode == 3 || CutsceneMode == 5 || CutsceneMode == 7 || Gamemode == 0){
 						//CutsceneMode != 0 //TalkTalkTalkMode is On!
 						//CutsceneToggle == 1
-						if(ScreenMode == 3){//Negative
-							g.setColor(RedOrange); 
-						}
-						else
-							g.setColor(Color.cyan); 
+
+						g.setColor(CurserColorCutscene); //CurserColorCutscene
+						
 					}
 					if(Status == 4 || Status == 5 && Gamemode != 0){
 						if(ScreenMode == 0){//Nothingness
@@ -11456,15 +11728,10 @@ public class GamePanel extends JPanel implements Runnable{
 						else
 							g.setColor(Color.gray);
 					}
+					
 					g.fillOval(20, 35, 2 * Radius, 2 * Radius);
-					if(ScreenMode == 0){//Nothingness
-						g.setColor(Color.lightGray); 
-					}
-					else if(ScreenMode == 3){//Negative
-						g.setColor(Color.WHITE); 
-					}
-					else
-						g.setColor(Color.BLACK); 
+					
+					
 				}//??
 				//Image Placement: g.drawImage(ImageName, XPos, YPos, frame); 
 				//g.drawImage("ImageName", 0, 0, this); 
@@ -11487,8 +11754,102 @@ public class GamePanel extends JPanel implements Runnable{
 	
 	public void CutsceneEventEffect(){
 		if(CurrentCutscene.EventsIncluded[CutsceneText][0] == 1){//Find Monster
+			//x;
+			Random generator = new Random();
+			int RandomCutsceneXEnemyChance = generator.nextInt(100);
+			int RandomCutsceneREnemyChance = generator.nextInt(100);
+			
+			if(CurrentCutscene.isBossCutscene) {//This is a Boolean
+				//Bosses are Always X Mode 2, 7, 8, 26, 32
+				if(MainClass.XBattleMode == 2 || MainClass.XBattleMode == 7 ||MainClass.XBattleMode == 8 ||MainClass.XBattleMode == 26 ||MainClass.XBattleMode == 32) {
+					BattleM = BattleDataX.GetBattleData(CurrentCutscene.EventsIncluded[CutsceneText][1]);
+				}
+					
+				//Bosses are always R Mode 11, 16, 17, 25, 33
+				else if(MainClass.XBattleMode == 11 || MainClass.XBattleMode == 16 || MainClass.XBattleMode == 17 || MainClass.XBattleMode == 25 || MainClass.XBattleMode == 33) {
+					BattleM = BattleDataR.GetBattleData(CurrentCutscene.EventsIncluded[CutsceneText][1]);
+				}
+				
+				//X Bosses Have a random Chance 1, 4, 9, 22, 23, 27, 29, 31
+				else if((MainClass.XBattleMode == 1 || MainClass.XBattleMode == 4 ||
+						MainClass.XBattleMode == 9 || MainClass.XBattleMode == 22 ||
+						MainClass.XBattleMode == 23 || MainClass.XBattleMode == 27 ||
+						MainClass.XBattleMode == 29 || MainClass.XBattleMode == 31 )
+						&& RandomCutsceneXEnemyChance < CurrentCutscene.XChance) {
+					BattleM = BattleDataX.GetBattleData(CurrentCutscene.EventsIncluded[CutsceneText][1]);
+				}
+				
+				//R Bosses have a random chance 13, 18, 22, 24, 28, 29, 30
+				else if((MainClass.XBattleMode == 13 || MainClass.XBattleMode == 18 ||
+						MainClass.XBattleMode == 22 || MainClass.XBattleMode == 24 ||
+						MainClass.XBattleMode == 28 || MainClass.XBattleMode == 29 ||
+						MainClass.XBattleMode == 30)
+						&& RandomCutsceneREnemyChance < CurrentCutscene.RChance) {
+					BattleM = BattleDataR.GetBattleData(CurrentCutscene.EventsIncluded[CutsceneText][1]);
+				}
+				
+				//Otherwise Boss is an X Boss 24
+				else if(MainClass.XBattleMode == 24) {
+					BattleM = BattleDataX.GetBattleData(CurrentCutscene.EventsIncluded[CutsceneText][1]);
+				}
+				
+				//Otherwise Boss is an R Boss 23
+				else if(MainClass.XBattleMode == 23) {
+					BattleM = BattleDataR.GetBattleData(CurrentCutscene.EventsIncluded[CutsceneText][1]);
+				}
+				
+				//Normal Boss
+				else {
+					BattleM = BattleData.GetBattleData(CurrentCutscene.EventsIncluded[CutsceneText][1]);
+				}
+			}//End of if cutscene enemy is a boss
+			else {//Cutscene enemy is not a boss
+				//Enemies are always X Mode
+				if(MainClass.XBattleMode == 5 || MainClass.XBattleMode == 6 || MainClass.XBattleMode == 7 || MainClass.XBattleMode == 9 || MainClass.XBattleMode == 25 || MainClass.XBattleMode == 30) {
+					BattleM = BattleDataX.GetBattleData(CurrentCutscene.EventsIncluded[CutsceneText][1]);
+				}
+				//Enemies are always R Mode
+				else if(MainClass.XBattleMode == 14 || MainClass.XBattleMode == 15 || MainClass.XBattleMode == 16 || MainClass.XBattleMode == 18 || MainClass.XBattleMode == 26 || MainClass.XBattleMode == 27) {
+					BattleM = BattleDataR.GetBattleData(CurrentCutscene.EventsIncluded[CutsceneText][1]);
+					
+				}
+				
+				//Enemeis sometimes X Mode
+				else if((MainClass.XBattleMode ==1 || MainClass.XBattleMode == 3 || MainClass.XBattleMode == 19 
+						|| MainClass.XBattleMode == 20 || MainClass.XBattleMode == 28 
+						|| MainClass.XBattleMode == 29 || MainClass.XBattleMode == 33)
+						&& RandomCutsceneXEnemyChance < CurrentCutscene.XChance){
+				
+					BattleM = BattleDataX.GetBattleData(CurrentCutscene.EventsIncluded[CutsceneText][1]);
+				}
+				
+				//Enemies sometimes R Mode
+				else if((MainClass.XBattleMode ==10 || MainClass.XBattleMode == 12 || MainClass.XBattleMode == 19 
+						|| MainClass.XBattleMode ==21 || MainClass.XBattleMode == 29 
+						|| MainClass.XBattleMode == 31 || MainClass.XBattleMode == 32)
+						&& RandomCutsceneREnemyChance < CurrentCutscene.RChance){
+					
+					BattleM = BattleDataR.GetBattleData(CurrentCutscene.EventsIncluded[CutsceneText][1]);
+				}
+				
+				//Otherwise Enemies are X Mode
+				else if(MainClass.XBattleMode == 21){
+					BattleM = BattleDataX.GetBattleData(CurrentCutscene.EventsIncluded[CutsceneText][1]);
+				}
+				
+				//Otherwise enemies are R Mode
+				else if(MainClass.XBattleMode == 20){
+					BattleM = BattleDataR.GetBattleData(CurrentCutscene.EventsIncluded[CutsceneText][1]);
+				}
+				
+				//Otherwise enemies are normal
+				else{
+					BattleM = BattleData.GetBattleData(CurrentCutscene.EventsIncluded[CutsceneText][1]);
+				}
+			}//End of if cutscene Enemey X or R or Normal
+			
 			BattleLocation = ScreenType;
-			BattleM = BattleData.GetBattleData(CurrentCutscene.EventsIncluded[CutsceneText][1]);
+			//BattleM = BattleData.GetBattleData(CurrentCutscene.EventsIncluded[CutsceneText][1]);
 			MNo = BattleM.MonsterD[0].MonsterID;
 			DefeatToggle = 1;
 			EnterOK = 1;
@@ -11624,20 +11985,20 @@ public class GamePanel extends JPanel implements Runnable{
 			Gamemode = CurrentCutscene.EventsIncluded[CutsceneText][1];
 		}//Gamemode Change Event End
 
-//		else if(CurrentCutscene.EventsIncluded[CutsceneText][0] == 19){//Change Player Level
-//			Level = CurrentCutscene.EventsIncluded[CutsceneText][1];
-//		}//Change Player Level Event End
-//		
-//		else if(CurrentCutscene.EventsIncluded[CutsceneText][0] == 20){//Change Current Level Cap
-//			LevelMAX = CurrentCutscene.EventsIncluded[CutsceneText][1];
-//		}//Change Player Level Event End
-//		
-//		else if(CurrentCutscene.EventsIncluded[CutsceneText][0] == 21){//Find Weapon Recipe
-//			WeaponRecipe[CurrentCutscene.EventsIncluded[CutsceneText][1]] = 1;
-//		}//Find Weapon Recipe Event End
-//		else if(CurrentCutscene.EventsIncluded[CutsceneText][0] == 22){//Find Weapon Recipe
-//			ArmorRecipe[CurrentCutscene.EventsIncluded[CutsceneText][1]] = 1;
-//		}//Find Weapon Recipe Event End
+		else if(CurrentCutscene.EventsIncluded[CutsceneText][0] == 19){//Change Player Level
+			Level = CurrentCutscene.EventsIncluded[CutsceneText][1];
+		}//Change Player Level Event End
+		
+		else if(CurrentCutscene.EventsIncluded[CutsceneText][0] == 20){//Change Current Level Cap
+			LevelMAX = CurrentCutscene.EventsIncluded[CutsceneText][1];
+		}//Change Player Level Event End
+		
+		else if(CurrentCutscene.EventsIncluded[CutsceneText][0] == 21){//Find Weapon Recipe
+			WeaponRecipe[CurrentCutscene.EventsIncluded[CutsceneText][1]] = 1;
+		}//Find Weapon Recipe Event End
+		else if(CurrentCutscene.EventsIncluded[CutsceneText][0] == 22){//Find Armor Recipe
+			ArmorRecipe[CurrentCutscene.EventsIncluded[CutsceneText][1]] = 1;
+		}//Find Armor Recipe Event End
 		
 		//Other???
 		//Get XP?
@@ -12073,7 +12434,7 @@ public class GamePanel extends JPanel implements Runnable{
 			Area5 = NULLData; Area6 = NULLData;
 			Area7 = NULLData; Area8 = NULLData;
 			Area9 = NULLData; Area10 = NULLData;
-			AreaD = AreaData.AList(Area1Found, CurrentArea.AreaNo, AccessArea);{
+			AreaD = AreaData.AList(Area1Found, CurrentArea.AreaNo, AccessArea, Gamemode);{
 				//Initialize area Display for MoveScreen
 				AreasFound = AreaData.ATotal(Area1Found, CurrentArea.AreaNo, AccessArea);
 				if(AreasFound >=1){ 
@@ -13243,7 +13604,7 @@ public void NewishGame(){
 			//4 = Other Story
 			//5 = Glitch
 			//6 = Beta
-		MainClass.XBattleMode = 0;
+		MainClass.XBattleMode = 0;//19?
 		
 		AccessArea = AreaData.LoadAreaPathNormal();
 		AreasFound = AreaData.ATotal(Area1Found, GamePanel.CurrentArea.AreaNo, AccessArea);
@@ -13251,14 +13612,69 @@ public void NewishGame(){
 		CurrentArea = AreaData.AData(9, 0, MainClass.SEventSecond);//Town Gate
 		AreaName = CurrentArea.AreaName;
 		AreaNumber = CurrentArea.AreaNo;
-		ScreenType = 1;
+		ScreenType = 18;
 		ScreenMode = CurrentArea.ScreenMode;
 		AreaScreenMode = ScreenMode;
 		Xpos = CurrentArea.Xpos;
 		Ypos = CurrentArea.Ypos;
 		Text1 = "";
 		Text2 = "";
-		ScreenType = 8;
+		ScreenType = 1;
+		
+		//ScreenType = 19;//Credits and cheat screens Test
+		//Xpos = 40;//Credits and cheat screens Test 
+		//Ypos = 175;//Credits and cheat screens Test
+		
+		//ScreenType = 21;//Special Save and warning screens Test
+		//Xpos = 40;//Special Save and warning screens Test 
+		//Ypos = 155;//Special Save and warning screens Test
+		
+//		ScreenType = 22;//End Screen Test
+//		Xpos = 40;//End Screen Test 
+//		Ypos = 155;//End Screen Test
+		
+		//ScreenMode = 10;
+//		ScreenType = 23;//CodeX Title Screen
+//		Xpos = 40;//CodeX Title Test 
+//		Ypos = 115;//CodeX Title Test (continue option)
+//		//Ypos = 145;//CodeX Title Test (Back to normal game option)
+		
+//		ScreenType = 24;//CodeX warning Screen
+//		Xpos = 40;//CodeX warning Test 
+//		Ypos = 150;//CodeX warning Test (continue option)
+//		//Ypos = 170;//CodeX warning Test (Back to title option)
+		
+//		ScreenType = 25;//CodeX Menu Screen
+//		Xpos = 40;//CodeX Menu Test 
+//		Ypos = 45;//CodeX Menu Test (Modify Data option)
+//		//Ypos = 65;//CodeX Menu Test (Data Values option)
+//		//Ypos = 85;//CodeX Menu Test (More Info Option)
+//		//Ypos = 105;//CodeX Menu Test (Back to warning Option)
+		
+		//ScreenType = 26;//CodeX Change Code Screen
+		//Xpos = 40;//CodeX Change Code Test Upper Options
+		//Ypos = 65;//CodeX Change Code Test (Data Index)
+		//Ypos = 105;//CodeX Change Code Test (Data Values)
+		//Xpos = 40;//CodeX Change Code Test lower options
+		//Ypos = 135;//CodeX Menu Test (Save data Option)
+		//Ypos = 155;//CodeX Menu Test (Load Game from password Option)
+		//Ypos = 175;//CodeX Menu Test (Back to Menu Option)
+		
+//		ScreenType = 27;//CodeX Data Values Code Screen
+//		Xpos = 40;//CodeX Data Values Code Test 
+//		//Ypos = 95;//CodeX Data Values Code Test  (Cheat)
+//		Ypos = 165;//CodeX Data Values Code Test (Back to menu)
+		
+		//ScreenType = 28;//CodeX Cheat Code Screen
+		//Xpos = 20;//CodeX Cheat Code Test 
+		//Ypos = 95;//CodeX Cheat Code Test  (Cheat)
+		//Xpos = 40;//CodeX Cheat Code Test 
+		//Ypos = 185;//CodeX Cheat Code Test (Back to menu)
+		
+		//ScreenType = 29;//CodeX More info Screen
+		//Xpos = 40;//CodeX More info Test 
+		//Ypos = 185;//CodeX More info Test 
+		
 		//Loading New Game Cutscene
 		CurrentCutscene = TalkTextCutscene.CutsceneList(26);
 		Text1X = 30;
@@ -13278,5 +13694,12 @@ public void LoadGamefromPassword() {
 	CHP3 = loadingfrompasswordint[2] - 48;
 	CHP4 = loadingfrompasswordint[3] - 48;
 }//Load from Password End
+
+public void SaveGametoPassword() {
+	
+	NewPassword = Integer.toString(CHP1 + CHP2 + CHP3 + CHP4);
+	Password = NewPassword;
+	PasswordRW.savePassword(Password);
+}
 	
 }//JPanel Class End

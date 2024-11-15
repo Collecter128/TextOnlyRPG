@@ -16,12 +16,12 @@ public class passwordRW {
 		
 	}
 	
-	public static void savePassword(){
+	public static void savePassword(String NewerPassword){
 		
 		try {
 			BufferedWriter bw = new BufferedWriter(new FileWriter("password.txt"));
 			//String.valueof(int)
-			bw.write("PasswordTest");
+			bw.write(NewerPassword);
 			//bw.newLine();
 			
 			bw.close();
