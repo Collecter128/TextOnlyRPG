@@ -256,7 +256,7 @@ public class Movement {//RPG
 				MoveData[0] = 105;
 				MoveData[1] = 15;
 			}
-			if(YPosLoc == 190 && StuffFound == 7){
+			if(YPosLoc == 190 && StuffFound >= 7){
 				MoveData[0] = 120;
 				MoveData[1] = 15;
 			}
@@ -264,26 +264,26 @@ public class Movement {//RPG
 				MoveData[0] = 120;
 				MoveData[1] = 15;
 			}
-			if(YPosLoc == 190 && StuffFound == 8){
-				MoveData[0] = 135;
-				MoveData[1] = 15;
-			}
+//			if(YPosLoc == 190 && StuffFound == 8){
+//				MoveData[0] = 135;
+//				MoveData[1] = 15;
+//			}
 			if(YPosLoc == 150 && StuffFound > 8){
 				MoveData[0] = 135;
 				MoveData[1] = 15;
 			}
-			if(YPosLoc == 190 && StuffFound == 9){
-				MoveData[0] = 150;
-				MoveData[1] = 15;
-			}
+//			if(YPosLoc == 190 && StuffFound == 9){
+//				MoveData[0] = 150;
+//				MoveData[1] = 15;
+//			}
 			if(YPosLoc == 165 && StuffFound > 9){
 				MoveData[0] = 150;
 				MoveData[1] = 15;
 			}
-			if(YPosLoc == 190 && StuffFound > 9){
-				MoveData[0] = 165;
-				MoveData[1] = 15;//30?
-			}
+//			if(YPosLoc == 190 && StuffFound > 9){
+//				MoveData[0] = 165;
+//				MoveData[1] = 15;//30?
+//			}
 		}//Inventor UP End
 		
 		//ElderScreen Up
@@ -676,27 +676,27 @@ public class Movement {//RPG
 		
 		if(ScreenData == 14){//Inventor Screen Down
 			//Update data and other stuff
-			if(YPosLoc == 150 && StuffFound > 9){
-				MoveData[0] = 165;
-				MoveData[1] = 15;//30
-			}
-			if(YPosLoc == 150 && StuffFound == 9){
-				MoveData[0] = 190;
-				MoveData[1] = 140;
-			}
-			if(YPosLoc == 135 && StuffFound > 8){
-				MoveData[0] = 150;
-				MoveData[1] = 15;
-			}
-			if(YPosLoc == 135 && StuffFound == 8){
-				MoveData[0] = 190;
-				MoveData[1] = 140;
-			}
+//			if(YPosLoc == 150 && StuffFound > 9){
+//				MoveData[0] = 165;
+//				MoveData[1] = 15;//30
+//			}
+//			if(YPosLoc == 150 && StuffFound == 9){
+//				MoveData[0] = 190;
+//				MoveData[1] = 140;
+//			}
+//			if(YPosLoc == 135 && StuffFound > 8){
+//				MoveData[0] = 150;
+//				MoveData[1] = 15;
+//			}
+//			if(YPosLoc == 135 && StuffFound == 8){
+//				MoveData[0] = 190;
+//				MoveData[1] = 140;
+//			}
 			if(YPosLoc == 120 && StuffFound > 7){
 				MoveData[0] = 135;
 				MoveData[1] = 15;
 			}
-			if(YPosLoc == 120 && StuffFound == 7){
+			if(YPosLoc == 120 && StuffFound >= 7){
 				MoveData[0] = 190;
 				MoveData[1] = 140;
 			}

@@ -32,7 +32,7 @@ I realized I had more than enough monsters. So I guess I went with it.
 
 4. Another game
 The crafting system comes from another game idea I had, and might still make someday.
-I thought it would be cool to make them parallel dimentions so I can use the crafting for both.
+I thought it would be cool to make them parallel dimensions so I can use the crafting for both.
 Maybe not the best idea, but it lets me do certain things I wouldn't have thought of before.
 Now, the Ability User thing I work on sometimes is connected to my RPG series. Odd right?
 The RPG is a little more loose with how the crafting should work.
@@ -91,7 +91,7 @@ Super maor spoiler for a secret thing here...
 Cutscenes and Beta Quest. How does this work?
 
 Well, I wanted to make a thing like that. I took it, looked at it, and set it down in a corner.
-Then I treid to make my own version of it. Something different. It works way better than I could have expected it to.
+Then I tried to make my own version of it. Something different. It works way better than I could have expected it to.
 Like... I have no idea how it turned out the way it did! But I am glad it works like it does.
 
 Cipher enemy. This was going to be used more, but... Well, I need another cipher. I think the one I use is similar to something that already exists somewhere.
@@ -121,13 +121,13 @@ The blacksmith knew almost everyone in town and talked to them regularly while w
 
 One day, a small girl from the village came to talk. She waited as another adventurer talked to the blacksmith.
 
-Adventurer: You thinkt his sword can cut though that?
+Adventurer: You think this sword can cut though that?
 Blacksmith: Sure can! It can cut through almost anything, maybe even the wind!
 Adventurer: Great! Thanks for the sword. Have a nice day!
 
-The girl walked over to the blacksmith, but remebered to stand away so whe would not get hurt as he worked.
+The girl walked over to the blacksmith, but remembered to stand away so whe would not get hurt as he worked.
 
-Girl: You made a sword that can cut wind? What aobut a sword that can cut nothing?
+Girl: You made a sword that can cut wind? What about a sword that can cut nothing?
 
 The blacksmith chuckled. 
 
@@ -137,7 +137,7 @@ The girl frowned.
 
 Girl: No sir. A sword that can cut everything and nothing! 
 
-The blacksmith seemed to understand now. Stioll, he was a little confused.
+The blacksmith seemed to understand now. Still, he was a little confused.
 
 Blacksmith: Not sure I can make a sword like that. 
 Girl: Okay.
@@ -150,12 +150,12 @@ A few days later, a group of adventurers came with materials. Odd materials. The
 He made them all new equipment, and was paid in money and materials.
 Odd materials.
 
-The Blasmith practiced with the odd materials to see what they could do. One peice of "metal" was odd. It wss filled with an emptiness.
+The Blacksmith practiced with the odd materials to see what they could do. One peice of "metal" was odd. It wss filled with an emptiness.
 What could one do with a metal filled with nothingness? Could one make a sword that could cut nothing?
 
-After proacticing he was ready. The Blaclsmith took the rest of his foreign materials and began to create a sword.
-It was going to be plain, but very well made. A sword that oculd cut nothing. Perfectly sharp. Straight as an arrow.
-Light, balanced. Flexible and sturdy. It was to be a masterpeice. He even took a whitish gemstone and used that in the sword.
+After practicing he was ready. The Blacksmith took the rest of his foreign materials and began to create a sword.
+It was going to be plain, but very well made. A sword that could cut nothing. Perfectly sharp. Straight as an arrow.
+Light, balanced. Flexible and sturdy. It was to be a masterpiece. He even took a whitish gemstone and used that in the sword.
 
 Null Edge. The sword of nothing.
 
@@ -188,3 +188,54 @@ The sword left, being drawn to an immense power somewhere nearby. It hid itself 
 
 It found other monsters to be it's minions, and it made more to fill in the ranks. This is the story of the Null Edge. 
 The empty sword that should not exist.
+
+Super Duper Spoilers for people on things below this point. BEWARE!
+I'm serious. This is deeper game lore you should not spoil for others unless they want to know everything.
+
+What is the 7th? Why is it not used?
+Enemies were going to have special event versions. Versions only used in events and special occasions.
+After I rewrote the Battles code I realized I could just do this differently, if I still do it.
+There was going to be a 7th mode, but it was going to be different, having all secret things and everything together in one mode.
+I decided to do this... differently. 
+
+Glitches look like... glitches? Right? RIGHT?
+I was a little afraid of going all out. There are reasons. 
+You have to be careful not to make the game look too broken.
+There are things... I could have gone a little further I guess.
+I mostly had fun with it. You can probably tell by some of the enemy names...
+
+Why is the game coded like this? It's not too good.
+I know. So, I barely knew coding when I started this thing. Then I got better and made it work better.
+Yes. This is the better version. The old one was terrible.
+The code is held together with bandages and tape. barely working, but it SEEMS to be working.
+Actually, funny story. I once was going to make the game more confusingly coded on purpose. 
+That was a bad idea, and I started making it less confusingly coded.
+YES. this is the less confusing version.
+I know what a switch case is, I just didn't when I made it originally.
+I am sorry to anyone who doesn't like it. I really am. I am not too good.
+Some programmers probably cringe so hard when they see this game it looks like they ate a hundred lemons.
+If I make another I may try to improve it a little bit.
+BUT! It will probably use this engine with modifications.
+
+When will there be more? (no one probably asks this but I still have an answer)
+For anyone who wants another game... It may be a while.
+I have ideas, but not a solid plan for more. If I do make a sequel...
+It will probably be bigger in some ways, maybe smaller in others.
+
+I want to include real quick something. Something for other people.
+If you want to make your own game like this... Go ahead but...
+Please give me credit. I would love to see your cool new ideas, but I want to be know for at least doing this, as little as it has done.
+If you do want to make something I would love to share with you what inspired me to make this, in the hopes it would inspire you too.
+More seasoned developers could make something a thousand times better than mine, I just... want a little credit. Thank you.
+
+Text only huh? What about...
+Yeah, So originally I was going to make a normal RPG, but then I decided to go with something less fancy.
+It was due to my lack of programming skills that I decided to make this game instead.
+I made some sprites to use as a reference, but never intended to use them for anything.
+I felt like... I didn't want to waste them.
+
+The Missing Cheat:
+There is a cheat that didn't make it into the game. Rainbowall. 
+It was supposed to make the All Status rainbow instead of just one color.
+The test version of this had random colors, so it was kind of intense looking.
+If this ends up in the game anyway, it means I found something less harsh on the eyes.

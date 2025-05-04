@@ -117,20 +117,34 @@ public class AreaData {//Chances before or after? Rarity
 	public static AreaData AData(int Area, int Gamemode, int second){
 		AreaData AData[] = new AreaData[] {new AreaData(000, "", "No Data", 1, "AdminArea", /*ItemChance*/new int[]{1}, new int[]{10}, /*MoneyChance*/new int[]{3}, new int[]{33}, /*BattleChance*/new int[]{11}, new int[]{33}, /*XBattleChance*/new int[]{11}, new int[]{0}, /*RBattleChance*/new int[]{11}, new int[]{0}, /*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},/*Ypos, Xpos*/ 70, 60, /*Cutscene*/new int[][]{{0, 0}}, /*ScreenMode*/1, /*RandomText*/new String[] {"", ""})};
 		
-		//if(second = 0){//Second Set Not Activated
+		if(second == 0){//Second Set Not Activated
 			if(Area >= 0 && Area <=35){
-				AData = AreaData1A.AData1(Area, 0, 0); 
+				AData = AreaData1A.AData1(Area, Gamemode, 0); 
 			}
 			else
-				AData = AreaData1B.AData1(Area, 0, 0);
-		//}
-		//else{//Second Set Activated
-			//if(Area >= 0 && Area <=35){
-			//	AData = new AreaData[]{AreaData2A.AData2(Area, Gamemode, 0)};
-			//}
-			//else
-			//	AData = new AreaData[]{AreaData2B.AData2(Area, Gamemode, 0)};
-		//}
+				AData = AreaData1B.AData1(Area, Gamemode, 0);
+		}
+		else if(second == 1){//Glitch Monsters have come!
+			if(Area >= 0 && Area <=35){
+				AData = AreaData2A.AData1(Area, Gamemode, 0);
+			}
+			else
+				AData = AreaData2B.AData1(Area, Gamemode, 0);
+		}
+		else if(second == 2){//Second Set Activated
+			if(Area >= 0 && Area <=35){
+				AData = AreaData3A.AData1(Area, Gamemode, 0);
+			}
+			else
+				AData = AreaData3B.AData1(Area, Gamemode, 0);
+		}
+		else if(second == 3){//Third Set Activated
+			if(Area >= 0 && Area <=35){
+				AData = AreaData4A.AData1(Area, Gamemode, 0);
+			}
+			else
+				AData = AreaData4B.AData1(Area, Gamemode, 0);
+		}
 		
 		//Town Area
 			
@@ -148,7 +162,7 @@ public class AreaData {//Chances before or after? Rarity
 	}
 	
 	//AreaList
-	public static AreaData[] AList(int[] Area1, int CurrentAreaNo, int[][] AreaAccess, int Gamemode){
+	public static AreaData[] AList(int[] Area1, int CurrentAreaNo, int[][] AreaAccess, int Gamemode, int Second){
 		int ATotal = ATotal(Area1, CurrentAreaNo, AreaAccess);
 		AreaData[] AData = new AreaData[ATotal];{
 			int i = 0;
@@ -171,7 +185,7 @@ public class AreaData {//Chances before or after? Rarity
 			//TODO AData(i2 + 1, 0, ???)
 			while (i2 < (Area1.length)){
 				if(Area1[i2] == 1 && AreaAccess[CurrentAreaNo - 1][i2] != 0){
-					AData[Total] = AData(i2 + 1, Gamemode, 0);
+					AData[Total] = AData(i2 + 1, Gamemode, Second);
 					Total = Total + 1;
 				}
 				i2 = i2 + 1;

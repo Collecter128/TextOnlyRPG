@@ -57,7 +57,11 @@ public class MainClass extends JApplet{
 						0//12 = Conversation with ???
 						};{//Story Event Flag
 				}
-				static int SEventSecond = 1;
+				static int SEventSecond = 0;
+					//0 = The First Set
+					//1 = Glitch Enemies Appear!
+					//2 = The Second Set
+					//3 = The Third Set
 				
 				int[] Updater;
 				

@@ -23,7 +23,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*BattleChance*/new int[]{1}, new int[]{66}, 
 							/*XBattleChance*/new int[]{22}, new int[]{0}, /*RBattleChance*/new int[]{22}, new int[]{0}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},/*Ypos, Xpos*/30, 30, /*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"Welcome!", "Buy something!"}),
+							/*ScreenMode*/1, /*RandomText*/new String[] {"Shop: Very fresh!", "Very cheap!"}),
 					//1 = Normal Mode
 					new AreaData(1, "Market", "a quiet markerplace", 13, "TownArea", 
 							/*ItemChance*/new int[]{1}, new int[]{20}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -79,7 +79,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},/*Ypos, Xpos*/70, 60, 
 							/*Cutscene*/new int[][]{{4, 29},{11, 37}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"Hello there!", ""}),
+							/*ScreenMode*/1, /*RandomText*/new String[] {"Elder: Oh my!", "A dragon?"}),
 					//1 = Normal Mode
 					new AreaData(2, "Elder", "Elder's Office", 11, "TownArea", 
 							/*ItemChance*/new int[]{1}, new int[]{20}, /*MoneyChance*/new int[]{1}, new int[]{10}, 
@@ -141,7 +141,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22},new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},/*Ypos, Xpos*/30, 5, 
 							/*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"Welcome!", ""}),
+							/*ScreenMode*/1, /*RandomText*/new String[] {"Cook: Great!", "It turned out good."}),
 					//1 = Normal Mode
 					new AreaData(3, "Cook", "Cooks Kitchen", 4, "TownArea", 
 							/*ItemChance*/new int[]{1}, new int[]{20}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -203,7 +203,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},/*Ypos, Xpos*/190, 140, 
 							/*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"Hey there!", "This is my shop"}),
+							/*ScreenMode*/1, /*RandomText*/new String[] {"Smith: Yeah", "I like bombs."}),
 					//1 = Normal Mode
 					new AreaData(4, "WeaponSmith", "WeaponSmith's Shop", 10, "TownArea", 
 							/*ItemChance*/new int[]{1}, new int[]{20}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -265,7 +265,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},/*Ypos, Xpos*/190, 140, 
 							/*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"Hiya bud.", "Wanna make something?"}),
+							/*ScreenMode*/1, /*RandomText*/new String[] {"Smith: Alloys!", "I like metallurgy."}),
 					//1 = Normal Mode
 					new AreaData(5, "ArmorSmith", "ArmorSmith's Shop", 16, "TownArea", 
 							/*ItemChance*/new int[]{1}, new int[]{20}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -326,7 +326,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*BattleChance*/new int[]{1}, new int[]{66}, /*XBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*RBattleChance*/new int[]{22}, new int[]{-100}, /*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},/*Ypos, Xpos*/190, 140, 
 							/*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}),
+							/*ScreenMode*/1, /*RandomText*/new String[] {"Owner: Just water?", "Buy some food!"}),
 					//1 = Normal Mode
 					new AreaData(6, "Tavern", "Tavern", 17, "TownArea", 
 							/*ItemChance*/new int[]{1}, new int[]{20}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -381,7 +381,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*BattleChance*/new int[]{1}, new int[]{66}, /*XBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*RBattleChance*/new int[]{22}, new int[]{-100}, /*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},/*Ypos, Xpos*/190, 140, 
 							/*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}),
+							/*ScreenMode*/1, /*RandomText*/new String[] {"Inventor?: Ready?", "Prepare for battle!"}),
 					//1 = Normal Mode
 					new AreaData(7, "Inventor", "Inventor's Shop", 14, "TownArea", 
 							/*ItemChance*/new int[]{1}, new int[]{20}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -438,7 +438,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*BattleChance*/new int[]{11}, new int[]{66}, /*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},/*Ypos, Xpos*/70, 60, 
 							/*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+							/*ScreenMode*/1, /*RandomText*/new String[] {"Spy: I lost my papers", "Help me find them."}), //Single time Only Event
 					//1 = Normal Mode
 					new AreaData(8, "Alley", "A place off the normal path.", 1, "Town Area", 
 							/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -494,7 +494,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*BattleChance*/new int[]{11}, new int[]{00}, /*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}}, /*Ypos, Xpos*/70, 60, 
 							/*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}),
+							/*ScreenMode*/1, /*RandomText*/new String[] {"Guard: Welcome.", "We need your help."}),
 					//1 = Normal Mode
 					new AreaData(9, "Town Gate", "The North Town Gate", 1, "TownArea", 
 							/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{1}, new int[]{10}, 
@@ -564,7 +564,7 @@ public class AreaData1A {//Chances before or after? Rarity
 									/*Slime5*/
 									///*EventType1*/{7},/*EventType2*/{1},/*EventData*/{43},/*EventFlag*/{9},/*EventChance*/{100}}, 
 							/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{3, 27}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}),
+							/*ScreenMode*/1, /*RandomText*/new String[] {"Fire!", "I need to be careful."}),
 					//1 = Normal Mode
 					new AreaData(10, "Field Area1", "A Grassy Field", 1, "FieldArea", 
 							/*ItemChance*/new int[]{5}, new int[]{30}, /*MoneyChance*/new int[]{3}, new int[]{50}, 
@@ -686,7 +686,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{7},/*EventType2*/{1},/*EventData*/{35},/*EventFlag*/{10},/*EventChance*/{100}}, 
 							/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}),
+							/*ScreenMode*/1, /*RandomText*/new String[] {"Unfinished: So your here.", "..."}),
 					//1 = Normal Mode
 					new AreaData(11, "Field Area2", "A Grassy Field", 1, "FieldArea", 
 							/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{77}, 
@@ -749,7 +749,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},
 							/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+							/*ScreenMode*/1, /*RandomText*/new String[] {"Water?", "A foot deep."}), //Single time Only Event
 					//1 = Normal Mode
 					new AreaData(12, "Grassy Feild", "Has taller grass", 1, "Feild Area", 
 							/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -813,7 +813,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*RBattleChance*/new int[]{22}, new int[]{40, 40}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}}, 
 							/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}),
+							/*ScreenMode*/1, /*RandomText*/new String[] {"A person?", "No. A ghost."}),
 					//1 = Normal Mode
 					new AreaData(13, "Haunted Field", "Dark Foggy Field", 1, "FieldArea", 
 							/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{77}, 
@@ -879,7 +879,7 @@ public class AreaData1A {//Chances before or after? Rarity
 						/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 						/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},
 						/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-						/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+						/*ScreenMode*/1, /*RandomText*/new String[] {"I found a paper.", "I need to return it."}), //Single time Only Event
 				//1 = Normal Mode
 				new AreaData(14, "Castle Ruins", "Only some walls remain.", 1, "Feild Castle", 
 						/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -943,7 +943,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},
 							/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+							/*ScreenMode*/1, /*RandomText*/new String[] {"Water!", "I can breath?"}), //Single time Only Event
 					//1 = Normal Mode
 					new AreaData(15, "Wide Feild", "Wide open area", 1, "Feild Area", 
 							/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -1008,7 +1008,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},
 							/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+							/*ScreenMode*/1, /*RandomText*/new String[] {"A pillar?", "How odd."}), //Single time Only Event
 					//1 = Normal Mode
 					new AreaData(16, "Rocky Field", "A feild near a cliff", 1, "Feild Area", 
 							/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -1072,7 +1072,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},
 							/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+							/*ScreenMode*/1, /*RandomText*/new String[] {"A pillar?", "Who made this?"}), //Single time Only Event
 					//1 = Normal Mode
 					new AreaData(17, "Cave", "A small dark cave", 1, "Cave Area", 
 							/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -1135,7 +1135,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},
 							/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+							/*ScreenMode*/1, /*RandomText*/new String[] {"It stretches on.", "Too big..."}), //Single time Only Event
 					//1 = Normal Mode
 					new AreaData(18, "Endless Feild", "Stretches on and on?", 1, "Feild Area", 
 							/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -1198,7 +1198,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},
 							/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/0, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+							/*ScreenMode*/0, /*RandomText*/new String[] {"A Pillar?", "Even it is white."}), //Single time Only Event
 					//1 = Normal Mode
 					new AreaData(19, "NULL Area", "White empty area", 1, "Null Area", 
 							/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -1262,7 +1262,7 @@ public class AreaData1A {//Chances before or after? Rarity
 						/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 						/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},
 						/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-						/*ScreenMode*/0, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+						/*ScreenMode*/0, /*RandomText*/new String[] {"Null...", "Like nothing?"}), //Single time Only Event
 				//1 = Normal Mode
 				new AreaData(20, "NULL Area 2", "Contains mystical carvings in too white stone", 1, "NULL Area", 
 						/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -1326,7 +1326,7 @@ public class AreaData1A {//Chances before or after? Rarity
 					/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 					/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},
 					/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-					/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+					/*ScreenMode*/1, /*RandomText*/new String[] {"Monster here.", "They may be strong."}), //Single time Only Event
 			//1 = Normal Mode
 			new AreaData(21, "Dark Field", "Black rocky area", 1, "Dark Area", 
 					/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -1392,7 +1392,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},
 							/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+							/*ScreenMode*/1, /*RandomText*/new String[] {"Ugh.", "Need to watch footing."}), //Single time Only Event
 					//1 = Normal Mode
 					new AreaData(22, "Mountain Trail1", "The stone is reddish", 1, "Mountain Area", 
 							/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -1456,7 +1456,7 @@ public class AreaData1A {//Chances before or after? Rarity
 						/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 						/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},
 						/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-						/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+						/*ScreenMode*/1, /*RandomText*/new String[] {"It's a pillar.", "Down here?"}), //Single time Only Event
 				//1 = Normal Mode
 				new AreaData(23, "Mountain Stream", "A little down from the regular path", 1, "Mountain Area", 
 						/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -1520,7 +1520,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},
 							/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+							/*ScreenMode*/1, /*RandomText*/new String[] {"Who are you?", "I'm Alexander."}), //Single time Only Event
 					//1 = Normal Mode
 					new AreaData(24, "Mountain Trail2", "Higher up the mountain", 1, "Mountain Area", 
 							/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -1584,7 +1584,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},
 							/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+							/*ScreenMode*/1, /*RandomText*/new String[] {"A pillar.", "All the way up here?"}), //Single time Only Event
 					//1 = Normal Mode
 					new AreaData(25, "Mountain Top", "The top of the mountain", 1, "Mountain Area", 
 							/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -1647,7 +1647,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},
 							/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+							/*ScreenMode*/1, /*RandomText*/new String[] {"A box.", "It's a room."}), //Single time Only Event
 					//1 = Normal Mode
 					new AreaData(26, "Under the Mountain", "You can see the mountain above you?", 1, "Mountain Area", 
 							/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -1711,7 +1711,7 @@ public class AreaData1A {//Chances before or after? Rarity
 						/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 						/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},
 						/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-						/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+						/*ScreenMode*/1, /*RandomText*/new String[] {"A portal led here...", "Odd."}), //Single time Only Event
 				//1 = Normal Mode
 				new AreaData(27, "Dark Mountain", "Black rocky area", 1, "Dark Area", 
 						/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -1777,7 +1777,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},
 							/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+							/*ScreenMode*/1, /*RandomText*/new String[] {"A trader's wagon", "All the way out here?"}), //Single time Only Event
 					//1 = Normal Mode
 					new AreaData(28, "Desert Area 1", "Mostly just sand", 1, "Desert Area", 
 							/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -1841,7 +1841,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},
 							/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+							/*ScreenMode*/1, /*RandomText*/new String[] {"It's so big!", ""}), //Single time Only Event
 					//1 = Normal Mode
 					new AreaData(29, "Desert Area 2", "Still mostly sand", 1, "Desert Area", 
 							/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -1905,7 +1905,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},
 							/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+							/*ScreenMode*/1, /*RandomText*/new String[] {"A pillar in the water...", "Strange."}), //Single time Only Event
 					//1 = Normal Mode
 					new AreaData(30, "DesertOasis", "Contains trees, plants, and water!", 1, "Desert Area", 
 							/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -1968,7 +1968,7 @@ public class AreaData1A {//Chances before or after? Rarity
 						/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 						/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},
 						/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-						/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+						/*ScreenMode*/1, /*RandomText*/new String[] {"Wonder what's inside.", "I might not find out."}), //Single time Only Event
 				//1 = Normal Mode
 				new AreaData(31, "Pyramid", "Suprisingly open inside", 1, "Desert Area", 
 						/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -2031,7 +2031,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},
 							/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/7, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+							/*ScreenMode*/7, /*RandomText*/new String[] {"What happened?", "It's night?"}), //Single time Only Event
 					//1 = Normal Mode
 					new AreaData(32, "Midnight Desert", "Always nighttime?", 1, "Desert Area", 
 							/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -2095,7 +2095,7 @@ public class AreaData1A {//Chances before or after? Rarity
 						/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 						/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},
 						/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-						/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+						/*ScreenMode*/1, /*RandomText*/new String[] {"The sand is black.", "Interesting."}), //Single time Only Event
 				//1 = Normal Mode
 				new AreaData(33, "Dark Desert", "Filled with black sand", 1, "Dark Area", 
 						/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -2160,7 +2160,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},
 							/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+							/*ScreenMode*/1, /*RandomText*/new String[] {"A secret Basement.", "Wow."}), //Single time Only Event
 					//1 = Normal Mode
 					new AreaData(34, "Castle Floor 0", "A secret place?", 1, "Castle Area", 
 							/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 
@@ -2224,7 +2224,7 @@ public class AreaData1A {//Chances before or after? Rarity
 							/*XBattleChance*/new int[]{22}, new int[]{-100}, /*RBattleChance*/new int[]{22}, new int[]{-100}, 
 							/*Events*/new int[][]{/*EventType1*/{0},/*EventType2*/{0},/*EventData*/{0},/*EventFlag*/{0},/*EventChance*/{0}},
 							/*Ypos, Xpos*/70, 60, /*Cutscene*/new int[][]{{0, 0}}, 
-							/*ScreenMode*/1, /*RandomText*/new String[] {"", ""}), //Single time Only Event
+							/*ScreenMode*/1, /*RandomText*/new String[] {"It's abandoned.", "By who though?"}), //Single time Only Event
 					//1 = Normal Mode
 					new AreaData(35, "Castle Floor 1", "A large castle", 1, "Castle Area", 
 							/*ItemChance*/new int[]{1}, new int[]{0}, /*MoneyChance*/new int[]{3}, new int[]{33}, 

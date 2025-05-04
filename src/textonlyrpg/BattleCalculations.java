@@ -776,4 +776,47 @@ public class BattleCalculations {
 		
 		return Hp;
 	}//RecoverGlitchedHP End
+	
+	public static double[] CalculatePlayerWeakenesses(Items CalcHood, Items CalcHelmet, Items CalcRobe, Items CalcArmor, Items CalcShirt, Items CalcGuantlets, Items CalcGloves, Items CalcPants, Items CalcSocks, Items CalcBoots) {
+		double[] CalculatedDouble = new double[]{
+				/*Normal*/1 + CalcHood.Weaknesses[0] + CalcHelmet.Weaknesses[0] + CalcRobe.Weaknesses[0] + CalcArmor.Weaknesses[0] + CalcShirt.Weaknesses[0] + CalcGuantlets.Weaknesses[0] + CalcGloves.Weaknesses[0] + CalcPants.Weaknesses[0] + CalcSocks.Weaknesses[0] + CalcBoots.Weaknesses[0], 
+				/*Slime*/1 + CalcHood.Weaknesses[1] + CalcHelmet.Weaknesses[1] + CalcRobe.Weaknesses[1] + CalcArmor.Weaknesses[1] + CalcShirt.Weaknesses[1] + CalcGuantlets.Weaknesses[1] + CalcGloves.Weaknesses[1] + CalcPants.Weaknesses[1] + CalcSocks.Weaknesses[1] + CalcBoots.Weaknesses[1], 
+				/*Ghost*/1 + CalcHood.Weaknesses[2] + CalcHelmet.Weaknesses[2] + CalcRobe.Weaknesses[2] + CalcArmor.Weaknesses[2] + CalcShirt.Weaknesses[2] + CalcGuantlets.Weaknesses[2] + CalcGloves.Weaknesses[2] + CalcPants.Weaknesses[2] + CalcSocks.Weaknesses[2] + CalcBoots.Weaknesses[2], 
+				/*Golem*/1 + CalcHood.Weaknesses[3] + CalcHelmet.Weaknesses[3] + CalcRobe.Weaknesses[3] + CalcArmor.Weaknesses[3] + CalcShirt.Weaknesses[3] + CalcGuantlets.Weaknesses[3] + CalcGloves.Weaknesses[3] + CalcPants.Weaknesses[3] + CalcSocks.Weaknesses[3] + CalcBoots.Weaknesses[3], 
+				/*Armor*/1 + CalcHood.Weaknesses[4] + CalcHelmet.Weaknesses[4] + CalcRobe.Weaknesses[4] + CalcArmor.Weaknesses[4] + CalcShirt.Weaknesses[4] + CalcGuantlets.Weaknesses[4] + CalcGloves.Weaknesses[4] + CalcPants.Weaknesses[4] + CalcSocks.Weaknesses[4] + CalcBoots.Weaknesses[4], 
+				/*Other*/1 + CalcHood.Weaknesses[5] + CalcHelmet.Weaknesses[5] + CalcRobe.Weaknesses[5] + CalcArmor.Weaknesses[5] + CalcShirt.Weaknesses[5] + CalcGuantlets.Weaknesses[5] + CalcGloves.Weaknesses[5] + CalcPants.Weaknesses[5] + CalcSocks.Weaknesses[5] + CalcBoots.Weaknesses[5], 
+				/*Glitch*/1 + CalcHood.Weaknesses[6] + CalcHelmet.Weaknesses[6] + CalcRobe.Weaknesses[6] + CalcArmor.Weaknesses[6] + CalcShirt.Weaknesses[6] + CalcGuantlets.Weaknesses[6] + CalcGloves.Weaknesses[6] + CalcPants.Weaknesses[6] + CalcSocks.Weaknesses[6] + CalcBoots.Weaknesses[6], 
+				/*Fire*/1 + CalcHood.Weaknesses[7] + CalcHelmet.Weaknesses[7] + CalcRobe.Weaknesses[7] + CalcArmor.Weaknesses[7] + CalcShirt.Weaknesses[7] + CalcGuantlets.Weaknesses[7] + CalcGloves.Weaknesses[7] + CalcPants.Weaknesses[7] + CalcSocks.Weaknesses[7] + CalcBoots.Weaknesses[7], 
+				/*Water*/1 + CalcHood.Weaknesses[8] + CalcHelmet.Weaknesses[8] + CalcRobe.Weaknesses[8] + CalcArmor.Weaknesses[8] + CalcShirt.Weaknesses[8] + CalcGuantlets.Weaknesses[8] + CalcGloves.Weaknesses[8] + CalcPants.Weaknesses[8] + CalcSocks.Weaknesses[8] + CalcBoots.Weaknesses[8], 
+				/*Wind*/1 + CalcHood.Weaknesses[9] + CalcHelmet.Weaknesses[9] + CalcRobe.Weaknesses[9] + CalcArmor.Weaknesses[9] + CalcShirt.Weaknesses[9] + CalcGuantlets.Weaknesses[9] + CalcGloves.Weaknesses[9] + CalcPants.Weaknesses[9] + CalcSocks.Weaknesses[9] + CalcBoots.Weaknesses[9], 
+				/*Earth*/1 + CalcHood.Weaknesses[10] + CalcHelmet.Weaknesses[10] + CalcRobe.Weaknesses[10] + CalcArmor.Weaknesses[10] + CalcShirt.Weaknesses[10] + CalcGuantlets.Weaknesses[10] + CalcGloves.Weaknesses[10] + CalcPants.Weaknesses[10] + CalcSocks.Weaknesses[10] + CalcBoots.Weaknesses[10], 
+				/*Electric*/1 + CalcHood.Weaknesses[11] + CalcHelmet.Weaknesses[11] + CalcRobe.Weaknesses[11] + CalcArmor.Weaknesses[11] + CalcShirt.Weaknesses[11] + CalcGuantlets.Weaknesses[11] + CalcGloves.Weaknesses[11] + CalcPants.Weaknesses[11] + CalcSocks.Weaknesses[11] + CalcBoots.Weaknesses[11], 
+				/*Ice*/1 + CalcHood.Weaknesses[12] + CalcHelmet.Weaknesses[12] + CalcRobe.Weaknesses[12] + CalcArmor.Weaknesses[12] + CalcShirt.Weaknesses[12] + CalcGuantlets.Weaknesses[12] + CalcGloves.Weaknesses[12] + CalcPants.Weaknesses[12] + CalcSocks.Weaknesses[12] + CalcBoots.Weaknesses[12], 
+				/*Light*/1 + CalcHood.Weaknesses[13] + CalcHelmet.Weaknesses[13] + CalcRobe.Weaknesses[13] + CalcArmor.Weaknesses[13] + CalcShirt.Weaknesses[13] + CalcGuantlets.Weaknesses[13] + CalcGloves.Weaknesses[13] + CalcPants.Weaknesses[13] + CalcSocks.Weaknesses[13] + CalcBoots.Weaknesses[13], 
+				/*Dark*/1 + CalcHood.Weaknesses[14] + CalcHelmet.Weaknesses[14] + CalcRobe.Weaknesses[14] + CalcArmor.Weaknesses[14] + CalcShirt.Weaknesses[14] + CalcGuantlets.Weaknesses[14] + CalcGloves.Weaknesses[14] + CalcPants.Weaknesses[14] + CalcSocks.Weaknesses[14] + CalcBoots.Weaknesses[14], 
+				/*Glitch*/1 + CalcHood.Weaknesses[15] + CalcHelmet.Weaknesses[15] + CalcRobe.Weaknesses[15] + CalcArmor.Weaknesses[15] + CalcShirt.Weaknesses[15] + CalcGuantlets.Weaknesses[15] + CalcGloves.Weaknesses[15] + CalcPants.Weaknesses[15] + CalcSocks.Weaknesses[15] + CalcBoots.Weaknesses[15], 
+				/*Null*/1 + CalcHood.Weaknesses[16] + CalcHelmet.Weaknesses[16] + CalcRobe.Weaknesses[16] + CalcArmor.Weaknesses[16] + CalcShirt.Weaknesses[16] + CalcGuantlets.Weaknesses[16] + CalcGloves.Weaknesses[16] + CalcPants.Weaknesses[16] + CalcSocks.Weaknesses[16] + CalcBoots.Weaknesses[16], 
+				/*Mystery*/1 + CalcHood.Weaknesses[17] + CalcHelmet.Weaknesses[17] + CalcRobe.Weaknesses[17] + CalcArmor.Weaknesses[17] + CalcShirt.Weaknesses[17] + CalcGuantlets.Weaknesses[17] + CalcGloves.Weaknesses[17] + CalcPants.Weaknesses[17] + CalcSocks.Weaknesses[17] + CalcBoots.Weaknesses[17], 
+				/*Corrupt*/1 + CalcHood.Weaknesses[18] + CalcHelmet.Weaknesses[18] + CalcRobe.Weaknesses[18] + CalcArmor.Weaknesses[18] + CalcShirt.Weaknesses[18] + CalcGuantlets.Weaknesses[18] + CalcGloves.Weaknesses[18] + CalcPants.Weaknesses[18] + CalcSocks.Weaknesses[18] + CalcBoots.Weaknesses[18], 
+				/*Admin*/1 + CalcHood.Weaknesses[19] + CalcHelmet.Weaknesses[19] + CalcRobe.Weaknesses[19] + CalcArmor.Weaknesses[19] + CalcShirt.Weaknesses[19] + CalcGuantlets.Weaknesses[19] + CalcGloves.Weaknesses[19] + CalcPants.Weaknesses[19] + CalcSocks.Weaknesses[19] + CalcBoots.Weaknesses[19], 
+				/*All*/1 + CalcHood.Weaknesses[20] + CalcHelmet.Weaknesses[20] + CalcRobe.Weaknesses[20] + CalcArmor.Weaknesses[20] + CalcShirt.Weaknesses[20] + CalcGuantlets.Weaknesses[20] + CalcGloves.Weaknesses[20] + CalcPants.Weaknesses[20] + CalcSocks.Weaknesses[20] + CalcBoots.Weaknesses[20]};
+		
+		return CalculatedDouble;
+	}
+	
+	public static int[] CalculatePlayerStatusResist(Items CalcHood, Items CalcHelmet, Items CalcRobe, Items CalcArmor, Items CalcShirt, Items CalcGuantlets, Items CalcGloves, Items CalcPants, Items CalcSocks, Items CalcBoots) {
+		int[] CalculatedResist = new int[]{
+				/*Poison*/CalcHood.StatusResist[0] + CalcHelmet.StatusResist[0] + CalcRobe.StatusResist[0] + CalcArmor.StatusResist[0] + CalcShirt.StatusResist[0] + CalcGuantlets.StatusResist[0] + CalcGloves.StatusResist[0] + CalcPants.StatusResist[0] + CalcSocks.StatusResist[0] + CalcBoots.StatusResist[0], 
+				/*Curse*/CalcHood.StatusResist[1] + CalcHelmet.StatusResist[1] + CalcRobe.StatusResist[1] + CalcArmor.StatusResist[1] + CalcShirt.StatusResist[1] + CalcGuantlets.StatusResist[1] + CalcGloves.StatusResist[1] + CalcPants.StatusResist[1] + CalcSocks.StatusResist[1] + CalcBoots.StatusResist[1], 
+				/*Sticky*/CalcHood.StatusResist[2] + CalcHelmet.StatusResist[2] + CalcRobe.StatusResist[2] + CalcArmor.StatusResist[2] + CalcShirt.StatusResist[2] + CalcGuantlets.StatusResist[2] + CalcGloves.StatusResist[2] + CalcPants.StatusResist[2] + CalcSocks.StatusResist[2] + CalcBoots.StatusResist[2], 
+				/*???*/CalcHood.StatusResist[3] + CalcHelmet.StatusResist[3] + CalcRobe.StatusResist[3] + CalcArmor.StatusResist[3] + CalcShirt.StatusResist[3] + CalcGuantlets.StatusResist[3] + CalcGloves.StatusResist[3] + CalcPants.StatusResist[3] + CalcSocks.StatusResist[3] + CalcBoots.StatusResist[3], 
+				/*All*/CalcHood.StatusResist[4] + CalcHelmet.StatusResist[4] + CalcRobe.StatusResist[4] + CalcArmor.StatusResist[4] + CalcShirt.StatusResist[4] + CalcGuantlets.StatusResist[4] + CalcGloves.StatusResist[4] + CalcPants.StatusResist[4] + CalcSocks.StatusResist[4] + CalcBoots.StatusResist[4]};
+		
+		return CalculatedResist;
+	}
+	
+	public void Testmethod(int value){
+		value = 6;
+	}
+	
 }

@@ -27,7 +27,12 @@ public class Keyhandler implements KeyListener{
 	static boolean IPressed = false;
 	static boolean CPressed = false;
 	static boolean HPressed = false;
-
+	
+	static boolean TPressed = false;
+	static boolean FPressed = false;
+	static boolean GPressed = false;
+	static boolean XPressed = false;
+	
 	@Override
 	public void keyTyped(KeyEvent e) {
 		
@@ -128,6 +133,22 @@ public class Keyhandler implements KeyListener{
 			HPressed = true;
 			
 		}//KeyCode H End
+		if(keycode == KeyEvent.VK_T) {
+			TPressed = true;
+			
+		}//KeyCode T End
+		if(keycode == KeyEvent.VK_F) {
+			FPressed = true;
+			
+		}//KeyCode F End
+		if(keycode == KeyEvent.VK_G) {
+			GPressed = true;
+			
+		}//KeyCode G End
+		if(keycode == KeyEvent.VK_X) {
+			XPressed = true;
+			
+		}//KeyCode X End
 		
 	}//Key Pressed End
 
@@ -200,6 +221,18 @@ public class Keyhandler implements KeyListener{
 		if(keycode == KeyEvent.VK_H) {
 			HPressed = false;
 		}//KeyCode H End
+		if(keycode == KeyEvent.VK_T) {
+			TPressed = false;
+		}//KeyCode T End
+		if(keycode == KeyEvent.VK_F) {
+			FPressed = false;
+		}//KeyCode F End
+		if(keycode == KeyEvent.VK_G) {
+			GPressed = false;
+		}//KeyCode G End
+		if(keycode == KeyEvent.VK_X) {
+			XPressed = false;
+		}//KeyCode X End
 	}//KeyReleased End
 
 	

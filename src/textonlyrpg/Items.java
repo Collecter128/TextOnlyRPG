@@ -36,10 +36,12 @@ public class Items {
 	//6 = Barrier?  
 	int[] StatusResist = new int[]{/*Poison*/0, /*Curse*/0, /*Sticky*/0, /*???*/0, /*All*/0, /*Barrier*/0};
 	//int ItemAmount; 
+	int XModifier;
+	int RModifier;
 	static int i = 0;
 	
 	
-	public Items(int ItemNo, String ItemName, String ItemShortName, int MDmg1, int MDmg2, int MDmg3, int MDmg4, String ItemDisc, int ItemType, int ItemType2, int ItemElement, double[] Weaknesses, int Speed, int Luck, int Dodge, int Critical, int Cure, int NegStatus, int[]StatusResist){
+	public Items(int ItemNo, String ItemName, String ItemShortName, int MDmg1, int MDmg2, int MDmg3, int MDmg4, String ItemDisc, int ItemType, int ItemType2, int ItemElement, double[] Weaknesses, int Speed, int Luck, int Dodge, int Critical, int Cure, int NegStatus, int[]StatusResist){//, int XModifier, int RModifier
 		this.ItemNo = ItemNo;
 		this.ItemName = ItemName;
 		this.ItemShortname = ItemShortName;
@@ -59,6 +61,8 @@ public class Items {
 		this.Cure = Cure;
 		this.NegStatus = NegStatus;
 		this.StatusResist = StatusResist;
+		//this.XModifier = XModifier;
+		//this.RModifier = RModifier;
 	}
 	
 	public int getItemNo(){
@@ -161,7 +165,7 @@ public class Items {
 	
 	public static Items ItemData(int ItemNo, int Var){//, int Var
 		
-		Items ItemData = new Items(00, "", "", 0, 0, 0, -5, "No Disc", 0, 0, 0, new double[]{/*Normal*/0.0, /*Slime*/0.0, /*Ghost*/0.0, /*Golem*/0.0, /*Armor*/0.0, /*Other*/0.0, /*Glitch*/0.0, /*Fire*/0.0, /*Water*/0.0, /*Wind*/0.0, /*Earth*/0.0, /*Electric*/0.0, /*Ice*/0.0, /*Light*/0.0, /*Dark*/0.0, /*Glitch*/0.0, /*Null*/0.0, /*Mystery*/0.0, /*Corrupt*/0.0, /*Admin*/0.0, /*All*/0.0}, /*Speed*/0, /*Luck*/0, /*Dodge*/0, /*Critical*/0, /*Cure*/0, /*NegStatus*/0, new int[]{/*Poison*/0, /*Curse*/0, /*Sticky*/0, /*???*/0, /*All*/0, 0});;
+		Items ItemData = new Items(00, "", "", 0, 0, 0, -5, "No Disc", 0, 0, 0, new double[]{/*Normal*/0.0, /*Slime*/0.0, /*Ghost*/0.0, /*Golem*/0.0, /*Armor*/0.0, /*Other*/0.0, /*Glitch*/0.0, /*Fire*/0.0, /*Water*/0.0, /*Wind*/0.0, /*Earth*/0.0, /*Electric*/0.0, /*Ice*/0.0, /*Light*/0.0, /*Dark*/0.0, /*Glitch*/0.0, /*Null*/0.0, /*Mystery*/0.0, /*Corrupt*/0.0, /*Admin*/0.0, /*All*/0.0}, /*Speed*/0, /*Luck*/0, /*Dodge*/0, /*Critical*/0, /*Cure*/0, /*NegStatus*/0, new int[]{/*Poison*/0, /*Curse*/0, /*Sticky*/0, /*???*/0, /*All*/0, 0});;//,/*XModifier*/0, /*RModifier*/0
 //		MInfo = new MonsterData[]{
 //				//0 = Cutscene Quest
 //				new MonsterData(000, "00", "Coded Edge", /*MHP*/0, 1, 5, 0, 1, /*MAtk*/0, 0, 1, 5, 1, /*MDef*/0, 0, 0, 7, 1, "No Data", /*ItemDrop?*/11, 50, /*Exp*/0, /*Money*/3, 30, /*Weakness*/new double[]{1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0}, /*WeaknessType*/new int[]{0, 0, 0, 0, 0, 0, 0}, new int[][]{{1, 20, 1},{1, 20, 1}}),
@@ -387,7 +391,7 @@ public class Items {
 			}
 		//	Water + Chocolate = Hot Chocolate
 			if(ItemNo == 49){
-				ItemData = new Items(49, "Hot Chocolate", "HtChocolat", 0, 0, 0, -1, "A tasty chocolate drink", 2, 6, 0, new double[]{/*Normal*/0.0, /*Slime*/0.5, /*Ghost*/0.0, /*Golem*/0.0, /*Armor*/0.0, /*Other*/0.0, /*Glitch*/0.0, /*Fire*/-0.2, /*Water*/0.2, /*Wind*/0.0, /*Earth*/0.0, /*Electric*/0.2, /*Ice*/0.0, /*Light*/0.0, /*Dark*/0.0, /*Glitch*/0.0, /*Null*/0.0, /*Mystery*/0.0, /*Corrupt*/0.0, /*Admin*/0.0, /*All*/0.0}, /*Speed*/0, /*Luck*/0, /*Dodge*/0, /*Critical*/0, /*Cure*/6, /*NegStatus*/0, new int[]{/*Poison*/0, /*Curse*/0, /*Sticky*/0, /*???*/0, /*All*/0, /*Barrier*/0});
+				ItemData = new Items(49, "Hot Chocolate", "HtChocolat", 0, 0, 0, -1, "A tasty chocolate drink", 2, 6, 7, new double[]{/*Normal*/0.0, /*Slime*/0.5, /*Ghost*/0.0, /*Golem*/0.0, /*Armor*/0.0, /*Other*/0.0, /*Glitch*/0.0, /*Fire*/-0.2, /*Water*/0.2, /*Wind*/0.0, /*Earth*/0.0, /*Electric*/0.2, /*Ice*/0.0, /*Light*/0.0, /*Dark*/0.0, /*Glitch*/0.0, /*Null*/0.0, /*Mystery*/0.0, /*Corrupt*/0.0, /*Admin*/0.0, /*All*/0.0}, /*Speed*/0, /*Luck*/0, /*Dodge*/0, /*Critical*/0, /*Cure*/6, /*NegStatus*/0, new int[]{/*Poison*/0, /*Curse*/0, /*Sticky*/0, /*???*/0, /*All*/0, /*Barrier*/0});
 			}
 		//	Chocolate + Pancake Mix = Chocolate Pancakes
 			if(ItemNo == 50){
@@ -1369,7 +1373,7 @@ public class Items {
 		}
 		//Beta Corrupt Item
 		if(ItemNo == 282){
-			ItemData = new Items(282, "RustyMetal", "HvyM3tle", 0, 0, 0, -5, "Looks l+ke R_sted MEt l", 3, 0, 18, new double[]{/*Normal*/0.0, /*Slime*/0.0, /*Ghost*/0.0, /*Golem*/0.0, /*Armor*/0.0, /*Other*/0.0, /*Glitch*/0.0, /*Fire*/0.0, /*Water*/0.0, /*Wind*/0.0, /*Earth*/0.0, /*Electric*/0.0, /*Ice*/0.0, /*Light*/0.0, /*Dark*/0.0, /*Glitch*/0.0, /*Null*/0.0, /*Mystery*/0.0, /*Corrupt*/0.0, /*Admin*/0.0, /*All*/0.0}, /*Speed*/0, /*Luck*/-5, /*Dodge*/-5, /*Critical*/0, /*Cure*/0, /*NegStatus*/0, new int[]{/*Poison*/0, /*Curse*/0, /*Sticky*/0, /*???*/0, /*All*/0, 0});
+			ItemData = new Items(282, "RustyMetal", "HvyM3tlel", 0, 0, 0, -5, "Looks l+ke R_sted MEt l", 3, 0, 18, new double[]{/*Normal*/0.0, /*Slime*/0.0, /*Ghost*/0.0, /*Golem*/0.0, /*Armor*/0.0, /*Other*/0.0, /*Glitch*/0.0, /*Fire*/0.0, /*Water*/0.0, /*Wind*/0.0, /*Earth*/0.0, /*Electric*/0.0, /*Ice*/0.0, /*Light*/0.0, /*Dark*/0.0, /*Glitch*/0.0, /*Null*/0.0, /*Mystery*/0.0, /*Corrupt*/0.0, /*Admin*/0.0, /*All*/0.0}, /*Speed*/0, /*Luck*/-5, /*Dodge*/-5, /*Critical*/0, /*Cure*/0, /*NegStatus*/0, new int[]{/*Poison*/0, /*Curse*/0, /*Sticky*/0, /*???*/0, /*All*/0, 0});
 		}
 		//Corrupt Item
 		if(ItemNo == 283){
